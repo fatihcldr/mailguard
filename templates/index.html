@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Mail Tespit Modeli</title>
+  <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <div class="header">
+        <h1>Mail Tespit Modeli</h1>
+        <p class="muted">.eml dosyanızı yükleyin ve analiz sonucunu görüntüleyin.</p>
+      </div>
+
+      <form id="scanForm" class="form">
+        <label class="label" for="file">Dosya (.eml)</label>
+        <div class="fileWrap">
+          <input type="file" name="file" id="file" accept=".eml" required />
+        </div>
+
+        <button type="submit" id="submitBtn" class="btn">Analiz Et</button>
+
+        <div id="loadingRow" class="loadingRow hidden">
+          <div class="spinner" aria-hidden="true"></div>
+          <span>Analiz ediliyor...</span>
+        </div>
+
+        <p id="errorMsg" class="error hidden"></p>
+      </form>
+    </div>
+  </div>
+
+  <script>
+    const form = document.getElementById("scanForm");
+    const submitBtn = document.getElementById("submitBtn");
+    const loadingRow = document.getElementById("loadingRow");
+    const errorMsg = document.getElementById("errorMsg");
+    const fileInput = document.getElementById("file");
+
+    function showError(msg) {
+      errorMsg.textContent = msg;
+      errorMsg.classList.remove("hidden");
+    }
+    function clearError() {
+      errorMsg.textContent = "";
+      errorMsg.classList.add("hidden");
+    }
+    function setLoading(isLoading) {
+      if (isLoading) {
+        submitBtn.disabled = true;
+        submitBtn.classList.add("disabled");
+        loadingRow.classList.remove("hidden");
+      } else {
+        submitBtn.disabled = false;
+        submitBtn.classList.remove("disabled");
+        loadingRow.classList.add("hidden");
+      }
+    }
+
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
+      clearError();
+
+      if (!fileInput.files || fileInput.files.length === 0) {
+        showError("Lütfen bir dosya seçin.");
+        return;
+      }
+
+      setLoading(true);
+
+      const formData = new FormData();
+      formData.append("file", fileInput.files[0]);
+
+      try {
+        const response = await fetch("/analyze", { method: "POST", body: formData });
+        const data = await response.json();
+
+        if (data.status === "INSTANT_HAM" || data.status === "QUEUED") {
+          const jobId = data.job_id;
+          if (!jobId) throw new Error("İşlem kimliği alınamadı.");
+          if (data.status === "INSTANT_HAM") {
+            window.location.href = `/result-view?id=${jobId}`;
+          } else {
+            pollResult(jobId);
+          }
+          return;
+        }
+
+        showError("Beklenmedik bir sonuç döndü.");
+        setLoading(false);
+
+      } catch (err) {
+        showError("Sunucu hatası veya bağlantı problemi.");
+        setLoading(false);
+      }
+    });
+
+    async function pollResult(jobId) {
+      const interval = setInterval(async () => {
+        try {
+          const res = await fetch(`/analyze/${jobId}`);
+          const result = await res.json();
+
+          if (result.status === "COMPLETED") {
+            clearInterval(interval);
+            window.location.href = `/result-view?id=${jobId}`;
+          }
+        } catch (_) {
+          // sessiz geç
+        }
+      }, 1200);
+    }
+  </script>
+</body>
+</html>

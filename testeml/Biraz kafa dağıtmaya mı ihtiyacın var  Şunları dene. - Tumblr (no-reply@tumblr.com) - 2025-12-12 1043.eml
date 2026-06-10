@@ -1,0 +1,1005 @@
+Delivered-To: iremnr2606@gmail.com
+Received: by 2002:a05:6a11:e004:b0:699:d94d:41d6 with SMTP id dk4csp43787pxc;
+        Fri, 12 Dec 2025 00:06:43 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IF4zJwhek0g/MRHTUVNMTyFOMEZFEo3L3XRIY0jcqgXpht7oHf83ojYNUejK+jy4U5wXhAC
+X-Received: by 2002:a05:622a:5c8c:b0:4ee:4128:beba with SMTP id d75a77b69052e-4f1d0473e46mr11961281cf.8.1765526803090;
+        Fri, 12 Dec 2025 00:06:43 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1765526803; cv=none;
+        d=google.com; s=arc-20240605;
+        b=Ctzm1NXijXpJGJVPR3XwTfsKqQKZ57poV+fFiEoThzLN0T0TYbyf4/qex0xbPiPfrC
+         xxN2AUjSBb635X/g8tsAB7zCd/d1PX5plBIPwIC14PlB/00fkIa46gswl3QwkW61HhXo
+         na/JNhvvrkB8vM5gaP3ez+FBICD6KJ/EwZvobie7NcIgxClqgRmRgMNFrW0J+RVi5mE0
+         fLwlJNqjhTgwFzbn6B4D5ZZ3IXinUZV/7TihdllE+qo94kF/LuI/f9P7WCVn2r33vYpM
+         0VhYoxC7ljAaALbjCfA5GPlJBXtQuabALFL0uJR583ALLKk64hxOdeUHFkL+RKyoWUS+
+         ps/Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe-post:feedback-id:list-unsubscribe:mime-version
+         :subject:message-id:to:from:date:dkim-signature;
+        bh=4isVLg7v+NXiVLSZEGp6Ow79zyMx6R3wA9Hkq89pRWI=;
+        fh=/83N7lusOuc5wRJDpCOgsZsOB9E35CO1XVTr3b7NEVE=;
+        b=EX2oaNuiKeMyUTeIazqoIP4SpXJT9Mw19Vt1sm3g2ZGKKDTvN15UQuCx6uZQnAQP0w
+         efPmUak2XQDczuSLNksrZFXFSHQdKUX3zJIuQvJx4hAkLyuyTkxit1ERpy77Wv4lkpYi
+         IDAAwESJ+Zs7rLfvSjN9RALYYdM+vIgDZZqvw5YTZ4pqi0qNrGZ1OWDg8+aPsZuv2cc6
+         KtPuaX4mQ4iQy6aX56bFZ0vb3/HsiwglIJvgR/1loBanoHREczGhDvms6qTsI7ljlWg2
+         kcXYggEOnUuiUZHHnAzVJ2Y6MhVtMnUZXJOq1RD07yOJRoVBBIVdLWUqReLCTfugRvx2
+         y15Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@tumblr.com header.s=tumblr2 header.b=h7X1ETuC;
+       spf=pass (google.com: domain of no-reply@tumblr.com designates 192.0.108.118 as permitted sender) smtp.mailfrom=no-reply@tumblr.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=tumblr.com
+Return-Path: <no-reply@tumblr.com>
+Received: from smtp3-4.dca.tumblr.com (smtp3-4.dca.tumblr.com. [192.0.108.118])
+        by mx.google.com with ESMTPS id d75a77b69052e-4f1bd59cbb6si54726941cf.83.2025.12.12.00.06.42
+        for <iremnr2606@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Fri, 12 Dec 2025 00:06:43 -0800 (PST)
+Received-SPF: pass (google.com: domain of no-reply@tumblr.com designates 192.0.108.118 as permitted sender) client-ip=192.0.108.118;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@tumblr.com header.s=tumblr2 header.b=h7X1ETuC;
+       spf=pass (google.com: domain of no-reply@tumblr.com designates 192.0.108.118 as permitted sender) smtp.mailfrom=no-reply@tumblr.com;
+       dmarc=pass (p=QUARANTINE sp=QUARANTINE dis=NONE) header.from=tumblr.com
+Received: from smtp-outbound.tumblr.net (unknown [192.0.103.31])
+	by smtp3.tumblr.dca.wordpress.com (Postfix) with ESMTP id 4dSMVV24dlzdcgJ
+	for <iremnr2606@gmail.com>; Fri, 12 Dec 2025 08:06:42 +0000 (UTC)
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/simple; d=tumblr.com;
+	s=tumblr2; t=1765526802; x=1765786002;
+	bh=dHtrzL1FYrLcsIm9HEjt+zTAy4q0L5S+mc9rrdl4kUs=;
+	h=Date:From:To:Message-ID:Subject:List-Unsubscribe:
+	 List-Unsubscribe-Post:X-SMTPAPI:To:From:Subject:Date:Message-Id:
+	 Reply-To:CC;
+	b=h7X1ETuCCghW/BT7X1xxDuyEX2ePEVZN71XUKgbr9QgbrDs9fhOASFX/pbCzbvOi0
+	 MXkyU3rGNg37RgHWutuviS3GnnMjUbMoYWqJ+JQTqkZhkAymxPuOTsU2hWXZxyUeth
+	 cy1bVF7z/6mltbHKyhcNrHzsSTfjyrmXXODan+DBV3cxv12uuDcOXdaJxiVTzmOqFN
+	 YIOOevRxOQLOqe+sTq0/w1i5Oh3dEcjSBnpYGkqECPWr32dRJOAjYNzne46VaD7Ojg
+	 BvmeGGn88hieGR2F7xPRxX9GH7Ai2ckq1B9SiMUXuT8TA09oNE1ssuzMMlwvDUZlgg
+	 6TW42z58JM6NA==
+Date: Fri, 12 Dec 2025 07:43:10 +0000 (UTC)
+From: Tumblr <no-reply@tumblr.com>
+To: "iremnr2606@gmail.com" <iremnr2606@gmail.com>
+Message-ID: <1127810958.713296114.1765525391322.JavaMail.nobody@push-prod-58bcf74447-9wsg6>
+Subject: =?UTF-8?Q?Biraz_kafa_da=C4=9F=C4=B1tmaya_m=C4=B1_ih?=
+ =?UTF-8?Q?tiyac=C4=B1n_var=3F_=C5=9Eunlar=C4=B1_dene.?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; 
+	boundary="----=_Part_713295961_1566038079.1765525390292"
+List-Unsubscribe: <https://www.tumblr.com/account/optout/iremnr2606%40gmail.com?type=marketing&hash=X5xebQLOPieEQZ7g9cXMHm4Epws>
+X-userId-hash: deab78cc
+X-optoutCategory: marketing
+X-userId: 266002711
+X-Priority: marketing
+Feedback-ID: u-266002711:eu-11:trending_blogs:tumblr
+X-category: trending_blogs
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-Tumblr-Priority: marketing
+X-Tumblr-Provider: 
+X-Mailer: TumblrBot
+X-SMTPAPI: {"category":"trending_blogs","unique_args":{"userId":266002711}}
+
+------=_Part_713295961_1566038079.1765525390292
+Content-Type: text/plain; charset=UTF-8
+Content-Transfer-Encoding: quoted-printable
+
+ Tumblr -=20
+
+Here's what's trending...
+ =20
+* 2025inreview - Explore the trends, moments, and fandoms that shaped Tumbl=
+r in 2025. See what sparked creativity across the platform this year. - htt=
+ps://www.tumblr.com/follow/2025inreview
+ =20
+* kianamaiart - 28 / Storyboard Artist/Director @ Disney TVA / [FAQ] - http=
+s://www.tumblr.com/follow/kianamaiart
+ =20
+* prguitarman - =F0=9F=87=B5=F0=9F=87=B7Artist. Cat lover. Creator of Nyan =
+Cat (2011) - https://www.tumblr.com/follow/prguitarman
+ =20
+* sadeolutola - Hey welcome to my little lonley corner on the internet &amp=
+;lt;3333 - https://www.tumblr.com/follow/sadeolutola
+ =20
+* tumblr - Join the conversation, find your community. One post at a time. =
+- https://www.tumblr.com/follow/tumblr
+ =20
+
+~~~~~~~~~~~~~~~~~~~~~~~~~~~
+
+Take me to Tumblr(https://www.tumblr.com/explore)
+
+Get it on Google Play(https://play.google.com/store/apps/details?id=3Dcom.t=
+umblr)
+Download on the Apple App Store(https://apps.apple.com/app/apple-store/id30=
+5343404)
+
+Tumblr(https://www.tumblr.com/)=20
+60 29th Street #343
+San Francisco, CA 94110
+
+Email settings(https://www.tumblr.com/settings/notifications)
+Unsubscribe(https://www.tumblr.com/account/optout/iremnr2606%40gmail.com?ty=
+pe=3Dmarketing&amp;hash=3DX5xebQLOPieEQZ7g9cXMHm4Epws)
+------=_Part_713295961_1566038079.1765525390292
+Content-Type: multipart/related;
+	boundary="----=_Part_713295962_1002661614.1765525390292"
+
+------=_Part_713295962_1002661614.1765525390292
+Content-Transfer-Encoding: quoted-printable
+MIME-Version: 1.0
+Content-Type: text/html; charset="utf-8"
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org=
+/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html lang=3D"en" xmlns=3D"http://www.w3.org/1999/xhtml"><head><meta conten=
+t=3D"text/html; charset=3Dutf-8" http-equiv=3D"Content-Type"/><meta content=
+=3D"width=3Ddevice-width, initial-scale=3D1.0" name=3D"viewport"/><title>Bi=
+raz kafa da=C4=9F=C4=B1tmaya m=C4=B1 ihtiyac=C4=B1n var? =C5=9Eunlar=C4=B1 =
+dene.</title><style type=3D"text/css">
+        #outlook a {
+            padding: 0;
+        }
+
+        body {
+            width: 100% !important;
+            -webkit-text-size-adjust: 100%;
+            -ms-text-size-adjust: 100%;
+            margin: 0;
+            padding: 0;
+        }
+
+        .ExternalClass {
+            width: 100%;
+        }
+
+        .ExternalClass,
+        .ExternalClass p,
+        .ExternalClass span,
+        .ExternalClass font,
+        .ExternalClass td,
+        .ExternalClass div {
+            line-height: 100%;
+        }
+
+        .container {
+            margin: 0;
+            padding: 0;
+            width: 100% !important;
+            line-height: 100% !important;
+        }
+
+        table td {
+            border-collapse: collapse;
+        }
+
+        .post-images a img {
+            display: none !important;
+        }
+
+        .description p a,
+        .description p a:visited,
+        .description p a:hover {
+            color: #ffffff !important;
+            text-decoration: underline !important;
+        }
+
+        wbr {
+            display: none;
+        }
+
+        @media only screen and (max-width: 480px) {
+            .inner {
+                width: 360px !important;
+            }
+
+            .pad-left {
+                padding-left: 15px !important;
+            }
+
+            .pad-right {
+                padding-right: 15px !important;
+            }
+
+            .logo {
+                width: 98px !important;
+            }
+
+            .header .logo {
+                padding-top: 18px !important;
+                padding-bottom: 18px !important;
+            }
+
+            .title {
+                font-size: 26px !important;
+                margin: 19px 0 26px 0 !important;
+            }
+
+            .avatar, .avatar img {
+                width: 36px !important;
+                height: 36px !important;
+            }
+
+            .name {
+                padding: 0 9px !important;
+            }
+
+            .name a {
+                width: 175px !important;
+            }
+
+            .name-text {
+                font-size: 18px !important;
+            }
+
+            .follow a, .follow a:visited, .follow a:hover {
+                font-size: 15px !important;
+                padding: 7px 11px !important;
+                max-width: 80px;
+            }
+
+            .description p {
+                font-size: 16px !important;
+                margin: 13px 0 0 0 !important;
+            }
+
+            .post-images td {
+                padding-top: 19px !important;
+            }
+
+            .post-images a {
+                display: block !important;
+                width: 109px !important;
+                height: 109px !important;
+            }
+
+            .cta .pad-left {
+                padding-top: 32px !important;
+                padding-bottom: 17px !important;
+            }
+
+            .cta table td {
+                padding: 0 30px 20px 30px !important;
+            }
+
+            .cta p {
+                font-size: 18px !important;
+                margin: 19px 0 13px 0 !important;
+            }
+
+            .cta a {
+                font-size: 16px !important;
+                padding: 7px 29px !important;
+            }
+
+            hr {
+                margin: 13px 0 16px 0 !important;
+            }
+
+            .footer .logo {
+                width: 78px !important;
+                margin: 20px 0 23px 0 !important;
+            }
+
+            .address p {
+                font-size: 12.5px !important;
+            }
+
+            .apps td {
+                padding: 0 9px 26px 9px !important;
+            }
+
+            u + .body .header .pad-left {
+                padding-left: 30px !important;
+            }
+        }
+
+        u + .body .gmail-blend-screen {
+            background: #000000;
+            mix-blend-mode: screen;
+        }
+
+        u + .body .gmail-blend-difference {
+            background: #000000;
+            mix-blend-mode: difference;
+        }
+    </style></head><body class=3D"body" style=3D"-webkit-text-size-adjust: =
+100%; -ms-text-size-adjust: 100%; margin: 0; padding: 0; width: 100% !impor=
+tant;"><!--[if (mso)|(IE)]><table role=3D"presentation" align=3D"center" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"600"><tr><td align=
+=3D"center" valign=3D"top" width=3D"600"><![endif]--><!-- Summary -->
+<!-- Header --><table bgcolor=3D"#05b8ff" border=3D"0" cellpadding=3D"0" ce=
+llspacing=3D"0" class=3D"container header" role=3D"presentation" style=3D"b=
+order-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; col=
+or: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; f=
+ont-size: 14px; mso-line-height-rule: exactly; -webkit-font-smoothing: anti=
+aliased; text-rendering: optimizeLegibility; background-color: #05b8ff; bac=
+kground-image: linear-gradient(#05b8ff, #05b8ff); margin: 0; padding: 0; wi=
+dth: 100% !important; line-height: 100% !important;" width=3D"100%"><tr><td=
+ style=3D"border-collapse: collapse;"><table align=3D"center" border=3D"0" =
+cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presentation" s=
+tyle=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace:=
+ 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans=
+-serif; font-size: 14px; mso-line-height-rule: exactly; line-height: 1.38; =
+-webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; wi=
+dth: 600px;" width=3D"600"><tr><!-- Logo --><td class=3D"pad-left pad-right=
+ logo" style=3D"border-collapse: collapse; padding-left: 20px; padding-righ=
+t: 20px; padding-top: 25px; padding-bottom: 25px;" valign=3D"top"><a href=
+=3D"https://email-redirect.tumblr.com/click?v=3D1&amp;sign=3Dae50263a7e4e24=
+6f45c4881ca6300fef7604ccf7473918a7770ee629f78f51e623c357bfa84bcba257851a7a0=
+4c8c2caf610b2cee60fd4258ff0d02e1eb606b6&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4=
+MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY=
+4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicm=
+NwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyL=
+mNvbS9saW5rX3RvL2Rhc2hib2FyZCJ9" style=3D"color: #ffffff; text-decoration: =
+none;" target=3D"_blank"><img alt=3D"Tumblr" border=3D"0" src=3D"https://as=
+sets.tumblr.com/images/logo/logo.png" style=3D"display: block; outline: non=
+e; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; wi=
+dth: 142px;" width=3D"142"/></a></td></tr></table></td></tr></table><!-- Su=
+bject --><table bgcolor=3D"#001835" border=3D"0" cellpadding=3D"0" cellspac=
+ing=3D"0" class=3D"container main" role=3D"presentation" style=3D"border-co=
+llapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #fff=
+fff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size=
+: 14px; mso-line-height-rule: exactly; -webkit-font-smoothing: antialiased;=
+ text-rendering: optimizeLegibility; background-color: #001835; background-=
+image: linear-gradient(#001835, #001835); margin: 0; padding: 0; width: 100=
+% !important; line-height: 100% !important;" width=3D"100%"><tr><td style=
+=3D"border-collapse: collapse;"><table align=3D"center" border=3D"0" cellpa=
+dding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presentation" style=
+=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-ser=
+if; font-size: 14px; mso-line-height-rule: exactly; line-height: 1.38; -web=
+kit-font-smoothing: antialiased; text-rendering: optimizeLegibility; width:=
+ 600px;" width=3D"600"><tr><td class=3D"pad-left pad-right" style=3D"border=
+-collapse: collapse; padding-left: 20px; padding-right: 20px;" valign=3D"to=
+p"><p class=3D"title" style=3D"font-size: 40px; font-weight: bold; word-wra=
+p: break-word; margin: 26px 0 38px 0;"><span class=3D"gmail-blend-screen"><=
+span class=3D"gmail-blend-difference">
+                      Here=E2=80=99s what=E2=80=99s trending...
+                  </span></span></p></td></tr></table></td></tr><!-- Top bl=
+ogs -->
+<tr><td style=3D"border-collapse: collapse;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height:=
+ 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibil=
+ity; width: 600px;" width=3D"600"><tr><!-- Avatar --><td class=3D"pad-left =
+avatar" height=3D"64" style=3D"border-collapse: collapse; padding-left: 20p=
+x; width: 64px; height: 64px;" valign=3D"center" width=3D"64"><a href=3D"ht=
+tps://email-redirect.tumblr.com/click?v=3D1&amp;sign=3Da4de7f3bffbae482fa0a=
+aa0e9bba383fe15d263d6c8f867b28029b77221ae857d2b14a694c09a114ef3a271ba32e0b3=
+8db75798cf85029167d3aa8bed6b87c69&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItMD=
+cyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIiL=
+CAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI6=
+ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS9=
+ibG9nL3ZpZXcvMjAyNWlucmV2aWV3In0=3D" style=3D"color: #ffffff; text-decorati=
+on: none;" target=3D"_blank"><img alt=3D"2025inreview" border=3D"0" height=
+=3D"64" src=3D"https://64.media.tumblr.com/24c0fcfc976d10404221f04c1ca87436=
+/6691ddbe1739c100-6f/s64x64u_c1/bf92bf77b60a65c78d9c44afd400ea016c45caff.pn=
+g" style=3D"display: block; outline: none; text-decoration: none; -ms-inter=
+polation-mode: bicubic; border: none; width: 64px; height: 64px; border-rad=
+ius: 3px;" width=3D"64"/></a></td><!-- Name --><td class=3D"name" style=3D"=
+border-collapse: collapse; padding: 0 16px;" valign=3D"center"><a class=3D"=
+ellipsis" href=3D"https://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D=
+a4de7f3bffbae482fa0aaa0e9bba383fe15d263d6c8f867b28029b77221ae857d2b14a694c0=
+9a114ef3a271ba32e0b38db75798cf85029167d3aa8bed6b87c69&amp;meta=3DeyJ1dWlkIj=
+ogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10I=
+jogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYw=
+MDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly9=
+3d3cudHVtYmxyLmNvbS9ibG9nL3ZpZXcvMjAyNWlucmV2aWV3In0=3D" style=3D"display: =
+inline-block; white-space: nowrap; overflow-wrap: normal; word-break: keep-=
+all; overflow: hidden; text-overflow: ellipsis; width: 306px; color: #fffff=
+f; font-weight: bold; text-decoration: none;" target=3D"_blank"><!--[if !ms=
+o]><!-- --><span class=3D"name-text gmail-blend-screen" style=3D"font-size:=
+ 24px;"><span class=3D"gmail-blend-difference"><!--<![endif]-->
+                      2025inreview
+                        <!--[if !mso]><!-- --></span></span><!--<![endif]--=
+></a></td><!-- Follow button --><td align=3D"right" class=3D"follow pad-rig=
+ht" style=3D"border-collapse: collapse; padding-right: 20px;" valign=3D"cen=
+ter"><!--[if mso]><v:roundrect
+                                xmlns:v=3D"urn:schemas-microsoft-com:vml"
+                                xmlns:w=3D"urn:schemas-microsoft-com:office=
+:word"
+                                href=3D'https://www.tumblr.com/blog/view/20=
+25inreview'
+                                target=3D"_blank"
+                                arcsize=3D"120%" stroke=3D"f" fillcolor=3D"=
+#05b8ff"
+                                style=3D"width: 112pt; height: 37.5pt; v-te=
+xt-anchor: middle;"><w:anchorlock/><v:textbox inset=3D"0,0,0,0"><center sty=
+le=3D"font-family: sans-serif;"><![endif]--><a class=3D"ellipsis" href=3D"h=
+ttps://email-redirect.tumblr.com/click?v=3D1&amp;sign=3Da4de7f3bffbae482fa0=
+aaa0e9bba383fe15d263d6c8f867b28029b77221ae857d2b14a694c09a114ef3a271ba32e0b=
+38db75798cf85029167d3aa8bed6b87c69&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItM=
+DcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIi=
+LCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI=
+6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS=
+9ibG9nL3ZpZXcvMjAyNWlucmV2aWV3In0=3D" style=3D"text-decoration: none; displ=
+ay: inline-block; white-space: nowrap; overflow-wrap: normal; word-break: k=
+eep-all; overflow: hidden; text-overflow: ellipsis; background-image: linea=
+r-gradient(#05b8ff, #05b8ff); color: #000000; font-size: 18px; font-weight:=
+ bold; text-align: center; padding: 12px 14px; margin-bottom: -4px; border-=
+radius: 48px; -webkit-border-radius: 48px; -moz-border-radius: 48px; backgr=
+ound-color: #05b8ff !important;" target=3D"_blank">View blog</a><!--[if mso=
+]></center></v:textbox></v:roundrect><![endif]--></td></tr></table></td></t=
+r>
+<!-- Description -->
+<tr><td style=3D"border-collapse: collapse;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height:=
+ 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibil=
+ity; width: 600px;" width=3D"600"><tr><td class=3D"pad-left pad-right descr=
+iption" style=3D"border-collapse: collapse; padding-left: 20px; padding-rig=
+ht: 20px;" valign=3D"top"><p style=3D"font-size: 18px; margin: 15px 0 0 0; =
+word-wrap: break-word;"><span class=3D"gmail-blend-screen"><span class=3D"g=
+mail-blend-difference">
+                     =20
+                        Explore the trends, moments, and fandoms that shape=
+d Tumblr in 2025. See what sparked creativity across the platform this year=
+.
+                     =20
+                    </span></span></p></td></tr></table></td></tr>
+<!-- Separator --><tr><td style=3D"border-collapse: collapse;"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner=
+" role=3D"presentation" style=3D"border-collapse: collapse; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue=
+', Helvetica, Arial, sans-serif; font-size: 14px; mso-line-height-rule: exa=
+ctly; line-height: 1.38; -webkit-font-smoothing: antialiased; text-renderin=
+g: optimizeLegibility; width: 600px;" width=3D"600"><tr><td style=3D"border=
+-collapse: collapse;" valign=3D"top"><hr style=3D"height: 1px; border: none=
+; background-color: #405368; background-image: linear-gradient(#405368, #40=
+5368); margin: 27px 0;"/></td></tr></table></td></tr>
+<tr><td style=3D"border-collapse: collapse;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height:=
+ 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibil=
+ity; width: 600px;" width=3D"600"><tr><!-- Avatar --><td class=3D"pad-left =
+avatar" height=3D"64" style=3D"border-collapse: collapse; padding-left: 20p=
+x; width: 64px; height: 64px;" valign=3D"center" width=3D"64"><a href=3D"ht=
+tps://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D7a2139624800ad90f80c=
+6ff0cbf8161447b47df3f021b876d4753ae88df69fc41d65f80b8168a1ce79fba249211e5d2=
+f7e54b3b47a03c40d7501ecc7eb4bd803&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItMD=
+cyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIiL=
+CAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI6=
+ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS9=
+ibG9nL3ZpZXcva2lhbmFtYWlhcnQifQ=3D=3D" style=3D"color: #ffffff; text-decora=
+tion: none;" target=3D"_blank"><img alt=3D"kianamaiart" border=3D"0" height=
+=3D"64" src=3D"https://64.media.tumblr.com/8a988b7816a945a9126b5a79d7001e74=
+/79f21d5ce52a315c-d5/s64x64u_c1/afffd61ffd0f1609375037d56d5edc3c4f210881.jp=
+g" style=3D"display: block; outline: none; text-decoration: none; -ms-inter=
+polation-mode: bicubic; border: none; width: 64px; height: 64px; border-rad=
+ius: 3px;" width=3D"64"/></a></td><!-- Name --><td class=3D"name" style=3D"=
+border-collapse: collapse; padding: 0 16px;" valign=3D"center"><a class=3D"=
+ellipsis" href=3D"https://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D=
+7a2139624800ad90f80c6ff0cbf8161447b47df3f021b876d4753ae88df69fc41d65f80b816=
+8a1ce79fba249211e5d2f7e54b3b47a03c40d7501ecc7eb4bd803&amp;meta=3DeyJ1dWlkIj=
+ogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10I=
+jogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYw=
+MDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly9=
+3d3cudHVtYmxyLmNvbS9ibG9nL3ZpZXcva2lhbmFtYWlhcnQifQ=3D=3D" style=3D"display=
+: inline-block; white-space: nowrap; overflow-wrap: normal; word-break: kee=
+p-all; overflow: hidden; text-overflow: ellipsis; width: 306px; color: #fff=
+fff; font-weight: bold; text-decoration: none;" target=3D"_blank"><!--[if !=
+mso]><!-- --><span class=3D"name-text gmail-blend-screen" style=3D"font-siz=
+e: 24px;"><span class=3D"gmail-blend-difference"><!--<![endif]-->
+                      kianamaiart
+                        <!--[if !mso]><!-- --></span></span><!--<![endif]--=
+></a></td><!-- Follow button --><td align=3D"right" class=3D"follow pad-rig=
+ht" style=3D"border-collapse: collapse; padding-right: 20px;" valign=3D"cen=
+ter"><!--[if mso]><v:roundrect
+                                xmlns:v=3D"urn:schemas-microsoft-com:vml"
+                                xmlns:w=3D"urn:schemas-microsoft-com:office=
+:word"
+                                href=3D'https://www.tumblr.com/blog/view/ki=
+anamaiart'
+                                target=3D"_blank"
+                                arcsize=3D"120%" stroke=3D"f" fillcolor=3D"=
+#05b8ff"
+                                style=3D"width: 112pt; height: 37.5pt; v-te=
+xt-anchor: middle;"><w:anchorlock/><v:textbox inset=3D"0,0,0,0"><center sty=
+le=3D"font-family: sans-serif;"><![endif]--><a class=3D"ellipsis" href=3D"h=
+ttps://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D7a2139624800ad90f80=
+c6ff0cbf8161447b47df3f021b876d4753ae88df69fc41d65f80b8168a1ce79fba249211e5d=
+2f7e54b3b47a03c40d7501ecc7eb4bd803&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItM=
+DcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIi=
+LCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI=
+6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS=
+9ibG9nL3ZpZXcva2lhbmFtYWlhcnQifQ=3D=3D" style=3D"text-decoration: none; dis=
+play: inline-block; white-space: nowrap; overflow-wrap: normal; word-break:=
+ keep-all; overflow: hidden; text-overflow: ellipsis; background-image: lin=
+ear-gradient(#05b8ff, #05b8ff); color: #000000; font-size: 18px; font-weigh=
+t: bold; text-align: center; padding: 12px 14px; margin-bottom: -4px; borde=
+r-radius: 48px; -webkit-border-radius: 48px; -moz-border-radius: 48px; back=
+ground-color: #05b8ff !important;" target=3D"_blank">View blog</a><!--[if m=
+so]></center></v:textbox></v:roundrect><![endif]--></td></tr></table></td><=
+/tr>
+<!-- Description -->
+<tr><td style=3D"border-collapse: collapse;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height:=
+ 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibil=
+ity; width: 600px;" width=3D"600"><tr><td class=3D"pad-left pad-right descr=
+iption" style=3D"border-collapse: collapse; padding-left: 20px; padding-rig=
+ht: 20px;" valign=3D"top"><p style=3D"font-size: 18px; margin: 15px 0 0 0; =
+word-wrap: break-word;"><span class=3D"gmail-blend-screen"><span class=3D"g=
+mail-blend-difference">
+                     =20
+                        28 / Storyboard Artist/Director @ Disney TVA / [FAQ=
+]
+                     =20
+                    </span></span></p></td></tr></table></td></tr>
+<!-- Separator --><tr><td style=3D"border-collapse: collapse;"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner=
+" role=3D"presentation" style=3D"border-collapse: collapse; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue=
+', Helvetica, Arial, sans-serif; font-size: 14px; mso-line-height-rule: exa=
+ctly; line-height: 1.38; -webkit-font-smoothing: antialiased; text-renderin=
+g: optimizeLegibility; width: 600px;" width=3D"600"><tr><td style=3D"border=
+-collapse: collapse;" valign=3D"top"><hr style=3D"height: 1px; border: none=
+; background-color: #405368; background-image: linear-gradient(#405368, #40=
+5368); margin: 27px 0;"/></td></tr></table></td></tr>
+<tr><td style=3D"border-collapse: collapse;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height:=
+ 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibil=
+ity; width: 600px;" width=3D"600"><tr><!-- Avatar --><td class=3D"pad-left =
+avatar" height=3D"64" style=3D"border-collapse: collapse; padding-left: 20p=
+x; width: 64px; height: 64px;" valign=3D"center" width=3D"64"><a href=3D"ht=
+tps://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D9fd60a832aae759985d8=
+f701c036b61dcf9f08ef2007f1c3e8d4ce29fb9d3894aeb33e3c84159d48950ec9a1aa2241e=
+ed9fd890d8688be7903cf07e3da60d829&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItMD=
+cyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIiL=
+CAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI6=
+ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS9=
+ibG9nL3ZpZXcvcHJndWl0YXJtYW4ifQ=3D=3D" style=3D"color: #ffffff; text-decora=
+tion: none;" target=3D"_blank"><img alt=3D"prguitarman" border=3D"0" height=
+=3D"64" src=3D"https://44.media.tumblr.com/f69129965d51b85d82dfaaacd9f5a4ea=
+/b87e0b556d38425d-ba/s64x64u_c1_f1/25504fa660f8553ca19a6d2f6f428a89234a33bd=
+.gif" style=3D"display: block; outline: none; text-decoration: none; -ms-in=
+terpolation-mode: bicubic; border: none; width: 64px; height: 64px; border-=
+radius: 3px;" width=3D"64"/></a></td><!-- Name --><td class=3D"name" style=
+=3D"border-collapse: collapse; padding: 0 16px;" valign=3D"center"><a class=
+=3D"ellipsis" href=3D"https://email-redirect.tumblr.com/click?v=3D1&amp;sig=
+n=3D9fd60a832aae759985d8f701c036b61dcf9f08ef2007f1c3e8d4ce29fb9d3894aeb33e3=
+c84159d48950ec9a1aa2241eed9fd890d8688be7903cf07e3da60d829&amp;meta=3DeyJ1dW=
+lkIjogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgI=
+m10IjogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIy=
+NjYwMDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM=
+6Ly93d3cudHVtYmxyLmNvbS9ibG9nL3ZpZXcvcHJndWl0YXJtYW4ifQ=3D=3D" style=3D"dis=
+play: inline-block; white-space: nowrap; overflow-wrap: normal; word-break:=
+ keep-all; overflow: hidden; text-overflow: ellipsis; width: 306px; color: =
+#ffffff; font-weight: bold; text-decoration: none;" target=3D"_blank"><!--[=
+if !mso]><!-- --><span class=3D"name-text gmail-blend-screen" style=3D"font=
+-size: 24px;"><span class=3D"gmail-blend-difference"><!--<![endif]-->
+                      prguitarman
+                        <!--[if !mso]><!-- --></span></span><!--<![endif]--=
+></a></td><!-- Follow button --><td align=3D"right" class=3D"follow pad-rig=
+ht" style=3D"border-collapse: collapse; padding-right: 20px;" valign=3D"cen=
+ter"><!--[if mso]><v:roundrect
+                                xmlns:v=3D"urn:schemas-microsoft-com:vml"
+                                xmlns:w=3D"urn:schemas-microsoft-com:office=
+:word"
+                                href=3D'https://www.tumblr.com/blog/view/pr=
+guitarman'
+                                target=3D"_blank"
+                                arcsize=3D"120%" stroke=3D"f" fillcolor=3D"=
+#05b8ff"
+                                style=3D"width: 112pt; height: 37.5pt; v-te=
+xt-anchor: middle;"><w:anchorlock/><v:textbox inset=3D"0,0,0,0"><center sty=
+le=3D"font-family: sans-serif;"><![endif]--><a class=3D"ellipsis" href=3D"h=
+ttps://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D9fd60a832aae759985d=
+8f701c036b61dcf9f08ef2007f1c3e8d4ce29fb9d3894aeb33e3c84159d48950ec9a1aa2241=
+eed9fd890d8688be7903cf07e3da60d829&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItM=
+DcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIi=
+LCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI=
+6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS=
+9ibG9nL3ZpZXcvcHJndWl0YXJtYW4ifQ=3D=3D" style=3D"text-decoration: none; dis=
+play: inline-block; white-space: nowrap; overflow-wrap: normal; word-break:=
+ keep-all; overflow: hidden; text-overflow: ellipsis; background-image: lin=
+ear-gradient(#05b8ff, #05b8ff); color: #000000; font-size: 18px; font-weigh=
+t: bold; text-align: center; padding: 12px 14px; margin-bottom: -4px; borde=
+r-radius: 48px; -webkit-border-radius: 48px; -moz-border-radius: 48px; back=
+ground-color: #05b8ff !important;" target=3D"_blank">View blog</a><!--[if m=
+so]></center></v:textbox></v:roundrect><![endif]--></td></tr></table></td><=
+/tr>
+<!-- Description -->
+<tr><td style=3D"border-collapse: collapse;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height:=
+ 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibil=
+ity; width: 600px;" width=3D"600"><tr><td class=3D"pad-left pad-right descr=
+iption" style=3D"border-collapse: collapse; padding-left: 20px; padding-rig=
+ht: 20px;" valign=3D"top"><p style=3D"font-size: 18px; margin: 15px 0 0 0; =
+word-wrap: break-word;"><span class=3D"gmail-blend-screen"><span class=3D"g=
+mail-blend-difference">
+                     =20
+                        =F0=9F=87=B5=F0=9F=87=B7Artist. Cat lover. Creator =
+of Nyan Cat (2011)
+                     =20
+                    </span></span></p></td></tr></table></td></tr>
+<!-- Separator --><tr><td style=3D"border-collapse: collapse;"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner=
+" role=3D"presentation" style=3D"border-collapse: collapse; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue=
+', Helvetica, Arial, sans-serif; font-size: 14px; mso-line-height-rule: exa=
+ctly; line-height: 1.38; -webkit-font-smoothing: antialiased; text-renderin=
+g: optimizeLegibility; width: 600px;" width=3D"600"><tr><td style=3D"border=
+-collapse: collapse;" valign=3D"top"><hr style=3D"height: 1px; border: none=
+; background-color: #405368; background-image: linear-gradient(#405368, #40=
+5368); margin: 27px 0;"/></td></tr></table></td></tr>
+<tr><td style=3D"border-collapse: collapse;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height:=
+ 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibil=
+ity; width: 600px;" width=3D"600"><tr><!-- Avatar --><td class=3D"pad-left =
+avatar" height=3D"64" style=3D"border-collapse: collapse; padding-left: 20p=
+x; width: 64px; height: 64px;" valign=3D"center" width=3D"64"><a href=3D"ht=
+tps://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D8a280a02eaa65a097bd1=
+3b7cd1510cbcf43476fa2a58c6b37a279a340c492d0edae5d47e344235f5996498f686330d3=
+0fcb21047a692d02124fd04e543ac641f&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItMD=
+cyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIiL=
+CAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI6=
+ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS9=
+ibG9nL3ZpZXcvc2FkZW9sdXRvbGEifQ=3D=3D" style=3D"color: #ffffff; text-decora=
+tion: none;" target=3D"_blank"><img alt=3D"sadeolutola" border=3D"0" height=
+=3D"64" src=3D"https://64.media.tumblr.com/04823aae6015d18ae6067cb6f6d0cf31=
+/1ebed0a333dd6eb5-f3/s64x64u_c1/b885a8a594e66cb7ef876788ac1ff3e11f8bc4f1.pn=
+g" style=3D"display: block; outline: none; text-decoration: none; -ms-inter=
+polation-mode: bicubic; border: none; width: 64px; height: 64px; border-rad=
+ius: 3px;" width=3D"64"/></a></td><!-- Name --><td class=3D"name" style=3D"=
+border-collapse: collapse; padding: 0 16px;" valign=3D"center"><a class=3D"=
+ellipsis" href=3D"https://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D=
+8a280a02eaa65a097bd13b7cd1510cbcf43476fa2a58c6b37a279a340c492d0edae5d47e344=
+235f5996498f686330d30fcb21047a692d02124fd04e543ac641f&amp;meta=3DeyJ1dWlkIj=
+ogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10I=
+jogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYw=
+MDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly9=
+3d3cudHVtYmxyLmNvbS9ibG9nL3ZpZXcvc2FkZW9sdXRvbGEifQ=3D=3D" style=3D"display=
+: inline-block; white-space: nowrap; overflow-wrap: normal; word-break: kee=
+p-all; overflow: hidden; text-overflow: ellipsis; width: 306px; color: #fff=
+fff; font-weight: bold; text-decoration: none;" target=3D"_blank"><!--[if !=
+mso]><!-- --><span class=3D"name-text gmail-blend-screen" style=3D"font-siz=
+e: 24px;"><span class=3D"gmail-blend-difference"><!--<![endif]-->
+                      sadeolutola
+                        <!--[if !mso]><!-- --></span></span><!--<![endif]--=
+></a></td><!-- Follow button --><td align=3D"right" class=3D"follow pad-rig=
+ht" style=3D"border-collapse: collapse; padding-right: 20px;" valign=3D"cen=
+ter"><!--[if mso]><v:roundrect
+                                xmlns:v=3D"urn:schemas-microsoft-com:vml"
+                                xmlns:w=3D"urn:schemas-microsoft-com:office=
+:word"
+                                href=3D'https://www.tumblr.com/blog/view/sa=
+deolutola'
+                                target=3D"_blank"
+                                arcsize=3D"120%" stroke=3D"f" fillcolor=3D"=
+#05b8ff"
+                                style=3D"width: 112pt; height: 37.5pt; v-te=
+xt-anchor: middle;"><w:anchorlock/><v:textbox inset=3D"0,0,0,0"><center sty=
+le=3D"font-family: sans-serif;"><![endif]--><a class=3D"ellipsis" href=3D"h=
+ttps://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D8a280a02eaa65a097bd=
+13b7cd1510cbcf43476fa2a58c6b37a279a340c492d0edae5d47e344235f5996498f686330d=
+30fcb21047a692d02124fd04e543ac641f&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItM=
+DcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIi=
+LCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI=
+6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS=
+9ibG9nL3ZpZXcvc2FkZW9sdXRvbGEifQ=3D=3D" style=3D"text-decoration: none; dis=
+play: inline-block; white-space: nowrap; overflow-wrap: normal; word-break:=
+ keep-all; overflow: hidden; text-overflow: ellipsis; background-image: lin=
+ear-gradient(#05b8ff, #05b8ff); color: #000000; font-size: 18px; font-weigh=
+t: bold; text-align: center; padding: 12px 14px; margin-bottom: -4px; borde=
+r-radius: 48px; -webkit-border-radius: 48px; -moz-border-radius: 48px; back=
+ground-color: #05b8ff !important;" target=3D"_blank">View blog</a><!--[if m=
+so]></center></v:textbox></v:roundrect><![endif]--></td></tr></table></td><=
+/tr>
+<!-- Description -->
+<tr><td style=3D"border-collapse: collapse;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height:=
+ 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibil=
+ity; width: 600px;" width=3D"600"><tr><td class=3D"pad-left pad-right descr=
+iption" style=3D"border-collapse: collapse; padding-left: 20px; padding-rig=
+ht: 20px;" valign=3D"top"><p style=3D"font-size: 18px; margin: 15px 0 0 0; =
+word-wrap: break-word;"><span class=3D"gmail-blend-screen"><span class=3D"g=
+mail-blend-difference">
+                     =20
+                        Hey welcome to my little lonley corner on the inter=
+net &amp;lt;3333
+                     =20
+                    </span></span></p></td></tr></table></td></tr>
+<!-- Separator --><tr><td style=3D"border-collapse: collapse;"><table align=
+=3D"center" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner=
+" role=3D"presentation" style=3D"border-collapse: collapse; mso-table-lspac=
+e: 0pt; mso-table-rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue=
+', Helvetica, Arial, sans-serif; font-size: 14px; mso-line-height-rule: exa=
+ctly; line-height: 1.38; -webkit-font-smoothing: antialiased; text-renderin=
+g: optimizeLegibility; width: 600px;" width=3D"600"><tr><td style=3D"border=
+-collapse: collapse;" valign=3D"top"><hr style=3D"height: 1px; border: none=
+; background-color: #405368; background-image: linear-gradient(#405368, #40=
+5368); margin: 27px 0;"/></td></tr></table></td></tr>
+<tr><td style=3D"border-collapse: collapse;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height:=
+ 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibil=
+ity; width: 600px;" width=3D"600"><tr><!-- Avatar --><td class=3D"pad-left =
+avatar" height=3D"64" style=3D"border-collapse: collapse; padding-left: 20p=
+x; width: 64px; height: 64px;" valign=3D"center" width=3D"64"><a href=3D"ht=
+tps://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D4e31e04e17ea63b5dee9=
+23c1ce2cab8c9712a434948704f08333a4cee1dab6eb3a211b40e3b71c575dc329a542d62f9=
+d050468cebbe2e4948756fefa66b84768&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItMD=
+cyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIiL=
+CAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI6=
+ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS9=
+ibG9nL3ZpZXcvdHVtYmxyIn0=3D" style=3D"color: #ffffff; text-decoration: none=
+;" target=3D"_blank"><img alt=3D"tumblr" border=3D"0" height=3D"64" src=3D"=
+https://64.media.tumblr.com/ce370254eeae1d286a9dd7ac516f2406/baa30ad8881b26=
+f5-2e/s64x64u_c1/165aefd56a3e937c81dd56aeb76be95c64d82e32.png" style=3D"dis=
+play: block; outline: none; text-decoration: none; -ms-interpolation-mode: =
+bicubic; border: none; width: 64px; height: 64px; border-radius: 3px;" widt=
+h=3D"64"/></a></td><!-- Name --><td class=3D"name" style=3D"border-collapse=
+: collapse; padding: 0 16px;" valign=3D"center"><a class=3D"ellipsis" href=
+=3D"https://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D4e31e04e17ea63=
+b5dee923c1ce2cab8c9712a434948704f08333a4cee1dab6eb3a211b40e3b71c575dc329a54=
+2d62f9d050468cebbe2e4948756fefa66b84768&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4=
+MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY=
+4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicm=
+NwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyL=
+mNvbS9ibG9nL3ZpZXcvdHVtYmxyIn0=3D" style=3D"display: inline-block; white-sp=
+ace: nowrap; overflow-wrap: normal; word-break: keep-all; overflow: hidden;=
+ text-overflow: ellipsis; width: 306px; color: #ffffff; font-weight: bold; =
+text-decoration: none;" target=3D"_blank"><!--[if !mso]><!-- --><span class=
+=3D"name-text gmail-blend-screen" style=3D"font-size: 24px;"><span class=3D=
+"gmail-blend-difference"><!--<![endif]-->
+                      tumblr
+                        <!--[if !mso]><!-- --></span></span><!--<![endif]--=
+></a></td><!-- Follow button --><td align=3D"right" class=3D"follow pad-rig=
+ht" style=3D"border-collapse: collapse; padding-right: 20px;" valign=3D"cen=
+ter"><!--[if mso]><v:roundrect
+                                xmlns:v=3D"urn:schemas-microsoft-com:vml"
+                                xmlns:w=3D"urn:schemas-microsoft-com:office=
+:word"
+                                href=3D'https://www.tumblr.com/blog/view/tu=
+mblr'
+                                target=3D"_blank"
+                                arcsize=3D"120%" stroke=3D"f" fillcolor=3D"=
+#05b8ff"
+                                style=3D"width: 112pt; height: 37.5pt; v-te=
+xt-anchor: middle;"><w:anchorlock/><v:textbox inset=3D"0,0,0,0"><center sty=
+le=3D"font-family: sans-serif;"><![endif]--><a class=3D"ellipsis" href=3D"h=
+ttps://email-redirect.tumblr.com/click?v=3D1&amp;sign=3D4e31e04e17ea63b5dee=
+923c1ce2cab8c9712a434948704f08333a4cee1dab6eb3a211b40e3b71c575dc329a542d62f=
+9d050468cebbe2e4948756fefa66b84768&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItM=
+DcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIi=
+LCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI=
+6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS=
+9ibG9nL3ZpZXcvdHVtYmxyIn0=3D" style=3D"text-decoration: none; display: inli=
+ne-block; white-space: nowrap; overflow-wrap: normal; word-break: keep-all;=
+ overflow: hidden; text-overflow: ellipsis; background-image: linear-gradie=
+nt(#05b8ff, #05b8ff); color: #000000; font-size: 18px; font-weight: bold; t=
+ext-align: center; padding: 12px 14px; margin-bottom: -4px; border-radius: =
+48px; -webkit-border-radius: 48px; -moz-border-radius: 48px; background-col=
+or: #05b8ff !important;" target=3D"_blank">View blog</a><!--[if mso]></cent=
+er></v:textbox></v:roundrect><![endif]--></td></tr></table></td></tr>
+<!-- Description -->
+<tr><td style=3D"border-collapse: collapse;"><table align=3D"center" border=
+=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=3D"presenta=
+tion" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-=
+rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Aria=
+l, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-height:=
+ 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibil=
+ity; width: 600px;" width=3D"600"><tr><td class=3D"pad-left pad-right descr=
+iption" style=3D"border-collapse: collapse; padding-left: 20px; padding-rig=
+ht: 20px;" valign=3D"top"><p style=3D"font-size: 18px; margin: 15px 0 0 0; =
+word-wrap: break-word;"><span class=3D"gmail-blend-screen"><span class=3D"g=
+mail-blend-difference">
+                     =20
+                        Join the conversation, find your community. One pos=
+t at a time.
+                     =20
+                    </span></span></p></td></tr></table></td></tr>
+<!-- CTA --><tr><td style=3D"border-collapse: collapse;"><table align=3D"ce=
+nter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner cta" =
+role=3D"presentation" style=3D"border-collapse: collapse; mso-table-lspace:=
+ 0pt; mso-table-rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue',=
+ Helvetica, Arial, sans-serif; font-size: 14px; mso-line-height-rule: exact=
+ly; line-height: 1.38; -webkit-font-smoothing: antialiased; text-rendering:=
+ optimizeLegibility; width: 600px;" width=3D"600"><tr><td class=3D"pad-left=
+ pad-right" style=3D"border-collapse: collapse; padding-left: 20px; padding=
+-right: 20px; padding-top: 52px; padding-bottom: 23px;"><table align=3D"cen=
+ter" bgcolor=3D"#7d5cff" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" r=
+ole=3D"presentation" style=3D"border-collapse: collapse; mso-table-lspace: =
+0pt; mso-table-rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', =
+Helvetica, Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactl=
+y; line-height: 1.38; -webkit-font-smoothing: antialiased; text-rendering: =
+optimizeLegibility; background-image: linear-gradient(#7d5cff); width: 100%=
+; background-color: #7d5cff !important;" width=3D"100%"><tr><td align=3D"ce=
+nter" style=3D"border-collapse: collapse; padding: 0 70px 33px 70px;" valig=
+n=3D"top"><p style=3D"font-size: 21px; text-align: center; margin: 24px 0 1=
+6px 0; font-weight: bold;"><span class=3D"gmail-blend-screen"><span class=
+=3D"gmail-blend-difference">
+                            Find more good stuff
+                          </span></span></p><!-- CTA button --><!--[if mso]=
+><v:roundrect
+                                            xmlns:v=3D"urn:schemas-microsof=
+t-com:vml"
+                                            xmlns:w=3D"urn:schemas-microsof=
+t-com:office:word"
+                                            arcsize=3D"120%" stroke=3D"f" f=
+illcolor=3D"#ffffff"
+                                            href=3D'https://www.tumblr.com/=
+explore'
+                                            target=3D"_blank"
+                                            style=3D"v-text-anchor: middle;=
+ width: 240pt;"><w:anchorlock/><v:textbox inset=3D"0,0,0,0"><center style=
+=3D"font-family: sans-serif;"><![endif]--><a href=3D"https://email-redirect=
+.tumblr.com/click?v=3D1&amp;sign=3De908a287801411384ad03dffbdcc6766c6b4978c=
+26d3904741f4a709aa95990a06736f921701b33d9f3fbd06a893e148c3c6eb6d7a3cef2538e=
+63cca44f5f9ed&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OG=
+RhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5ka=
+W5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdt=
+YWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS9leHBsb3JlIn0=3D" sty=
+le=3D"text-decoration: none; display: inline-block; font-size: 18px; font-w=
+eight: bold; text-align: center; color: #7d5cff; background-image: linear-g=
+radient(#ffffff, #ffffff); border-radius: 48px; -webkit-border-radius: 48px=
+; -moz-border-radius: 48px; padding: 12px 35px; background-color: #ffffff !=
+important;" target=3D"_blank">
+                                        Take me to Tumblr
+                                    </a><!--[if mso]></center></v:textbox><=
+/v:roundrect><![endif]--></td></tr></table><table align=3D"center" bgcolor=
+=3D"#FF61CE" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" role=3D"prese=
+ntation" style=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-tab=
+le-rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, A=
+rial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; line-heig=
+ht: 1.38; -webkit-font-smoothing: antialiased; text-rendering: optimizeLegi=
+bility; background-image: linear-gradient(#FF61CE); width: 100%; background=
+-color: #FF61CE !important; margin-top: 23px;" width=3D"100%"><tr><td align=
+=3D"center" style=3D"border-collapse: collapse; padding: 0 70px 33px 70px;"=
+ valign=3D"top"><p style=3D"font-size: 21px; text-align: center; margin: 24=
+px 0 16px 0; font-weight: bold;"><span class=3D"gmail-blend-screen"><span c=
+lass=3D"gmail-blend-difference">
+                            Tired of seeing ads on your dash? <br/>
+                            Want more posting perks?
+                          </span></span></p><!-- CTA button --><!--[if mso]=
+><v:roundrect
+                                            xmlns:v=3D"urn:schemas-microsof=
+t-com:vml"
+                                            xmlns:w=3D"urn:schemas-microsof=
+t-com:office:word"
+                                            arcsize=3D"120%" stroke=3D"f" f=
+illcolor=3D"#ffffff"
+                                            href=3D'https://www.tumblr.com/=
+premium?source=3Dtrending_blogs_mail'
+                                            target=3D"_blank"
+                                            style=3D"v-text-anchor: middle;=
+ width: 240pt;"><w:anchorlock/><v:textbox inset=3D"0,0,0,0"><center style=
+=3D"font-family: sans-serif;"><![endif]--><a href=3D"https://email-redirect=
+.tumblr.com/click?v=3D1&amp;sign=3D889e0a2ee90d1553cf8bb14bd16d2897532c2158=
+b15252fd73feedc65eb26df6aafe6b9b29f3302deea4b42b000038c7f0973736fe38956fd21=
+32c4951775e61&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OG=
+RhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5ka=
+W5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdt=
+YWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS9wcmVtaXVtP3NvdXJjZT1=
+0cmVuZGluZ19ibG9nc19tYWlsIn0=3D" style=3D"text-decoration: none; display: i=
+nline-block; font-size: 18px; font-weight: bold; text-align: center; color:=
+ #FF61CE; background-image: linear-gradient(#ffffff, #ffffff); border-radiu=
+s: 48px; -webkit-border-radius: 48px; -moz-border-radius: 48px; padding: 12=
+px 35px; background-color: #ffffff !important;" target=3D"_blank">
+                                        Subscribe to Tumblr Premium
+                                    </a><!--[if mso]></center></v:textbox><=
+/v:roundrect><![endif]--></td></tr></table></td></tr></table></td></tr></ta=
+ble><!-- Footer --><table bgcolor=3D"#193049" border=3D"0" cellpadding=3D"0=
+" cellspacing=3D"0" class=3D"container footer" role=3D"presentation" style=
+=3D"border-collapse: collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt=
+; color: #ffffff; font-family: 'Helvetica Neue', Helvetica, Arial, sans-ser=
+if; font-size: 14px; mso-line-height-rule: exactly; -webkit-font-smoothing:=
+ antialiased; text-rendering: optimizeLegibility; background-color: #193049=
+; background-image: linear-gradient(#193049, #193049); margin: 0; padding: =
+0; width: 100% !important; line-height: 100% !important;" width=3D"100%"><t=
+r><!-- Logo --><td style=3D"border-collapse: collapse;"><table align=3D"cen=
+ter" border=3D"0" cellpadding=3D"0" cellspacing=3D"0" class=3D"inner" role=
+=3D"presentation" style=3D"border-collapse: collapse; mso-table-lspace: 0pt=
+; mso-table-rspace: 0pt; color: #ffffff; font-family: 'Helvetica Neue', Hel=
+vetica, Arial, sans-serif; font-size: 14px; mso-line-height-rule: exactly; =
+line-height: 1.38; -webkit-font-smoothing: antialiased; text-rendering: opt=
+imizeLegibility; width: 600px;" width=3D"600"><tr><td align=3D"center" clas=
+s=3D"logo" style=3D"border-collapse: collapse; padding: 27px 0 26px 0;" val=
+ign=3D"top"><a href=3D"https://email-redirect.tumblr.com/click?v=3D1&amp;si=
+gn=3Dc91095aaf77fd7cbd1684898dbef26f71b8ceaf4fe76aecfd731a005d0c36cada918cd=
+42dc26899d43f481794d16a3321668e4cf5fca7e92141ffcaba007e553&amp;meta=3DeyJ1d=
+WlkIjogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwg=
+Im10IjogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICI=
+yNjYwMDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cH=
+M6Ly93d3cudHVtYmxyLmNvbS8ifQ=3D=3D" style=3D"color: #ffffff; text-decoratio=
+n: none;" target=3D"_blank"><img alt=3D"Tumblr" src=3D"https://assets.tumbl=
+r.com/images/logo/logo.png" style=3D"display: block; outline: none; text-de=
+coration: none; -ms-interpolation-mode: bicubic; border: none; width: 142px=
+;" width=3D"142"/></a></td></tr><!-- Apps --><tr><td style=3D"border-collap=
+se: collapse;"><table align=3D"center" border=3D"0" cellpadding=3D"0" cells=
+pacing=3D"0" class=3D"apps" role=3D"presentation" style=3D"border-collapse:=
+ collapse; mso-table-lspace: 0pt; mso-table-rspace: 0pt; color: #ffffff; fo=
+nt-family: 'Helvetica Neue', Helvetica, Arial, sans-serif; font-size: 14px;=
+ mso-line-height-rule: exactly; line-height: 1.38; -webkit-font-smoothing: =
+antialiased; text-rendering: optimizeLegibility;"><tr><td align=3D"right" s=
+tyle=3D"border-collapse: collapse; padding: 0 9px 26px 9px;" valign=3D"top"=
+ width=3D"50%"><a href=3D"https://email-redirect.tumblr.com/click?v=3D1&amp=
+;sign=3Dd89fa62fd458ab29d315221137fd965a647af53e612b4bf9685831c52c4a20dd81b=
+a4d874f3b0015d7c396e65022b1b039e9c892d3eee77458cb011d88172121&amp;meta=3Dey=
+J1dWlkIjogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzI=
+iwgIm10IjogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6=
+ICIyNjYwMDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmwiOiAiaHR=
+0cHM6Ly9wbGF5Lmdvb2dsZS5jb20vc3RvcmUvYXBwcy9kZXRhaWxzP2lkPWNvbS50dW1ibHIifQ=
+=3D=3D" style=3D"color: #ffffff; text-decoration: none;" target=3D"_blank">=
+<img alt=3D"Get it on Google Play" src=3D"https://assets.tumblr.com/images/=
+emails/get-it-on-google-play.png" style=3D"display: block; outline: none; t=
+ext-decoration: none; -ms-interpolation-mode: bicubic; border: none; width:=
+ 133px;" title=3D"Get it on Google Play" width=3D"133"/></a></td><td align=
+=3D"left" style=3D"border-collapse: collapse; padding: 0 9px 26px 9px;" val=
+ign=3D"top" width=3D"50%"><a href=3D"https://email-redirect.tumblr.com/clic=
+k?v=3D1&amp;sign=3D6bc51d334305318f15a4177d27a611285ad6553f63269b0302edb0dc=
+f88685d6a058336be7865d3782f6f9dede04cd0c9faa094d25d0e7ee22aa2adf96ba678c&am=
+p;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NW=
+JmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgI=
+nVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1=
+cmwiOiAiaHR0cHM6Ly9hcHBzLmFwcGxlLmNvbS9hcHAvYXBwbGUtc3RvcmUvaWQzMDUzNDM0MDQ=
+ifQ=3D=3D" style=3D"color: #ffffff; text-decoration: none;" target=3D"_blan=
+k"><img alt=3D"Download on the Apple App Store" src=3D"https://assets.tumbl=
+r.com/images/emails/download-on-the-app-store.png" style=3D"display: block;=
+ outline: none; text-decoration: none; -ms-interpolation-mode: bicubic; bor=
+der: none; width: 119px;" title=3D"Download on the Apple App Store" width=
+=3D"119"/></a></td></tr></table></td></tr><!-- Address --><tr><td align=3D"=
+center" class=3D"address" style=3D"border-collapse: collapse;" valign=3D"to=
+p"><p style=3D"margin: 0 0 2px 0; color: #ffffff !important; text-decoratio=
+n: none !important;"><span class=3D"gmail-blend-screen"><span class=3D"gmai=
+l-blend-difference">
+                      60 29th Street #343
+                    </span></span></p><p style=3D"margin: 0 0 2px 0; color:=
+ #ffffff !important; text-decoration: none !important;"><span class=3D"gmai=
+l-blend-screen"><span class=3D"gmail-blend-difference">
+                      San Francisco, CA 94110
+                    </span></span></p></td></tr><!-- Settings --><tr><td al=
+ign=3D"center" class=3D"links" style=3D"border-collapse: collapse;" valign=
+=3D"top"><p style=3D"margin: 10px 0 24px 0;"><span class=3D"gmail-blend-scr=
+een"><span class=3D"gmail-blend-difference"><a href=3D"https://email-redire=
+ct.tumblr.com/click?v=3D1&amp;sign=3D84e67b13076c787ad8785805c19e6273841ab8=
+a498adb97ed07d04c1663aa2fd486627adb917a953d058a4cbbf1ff03a2291593cc4b1d4700=
+d7c9aacce062bdb&amp;meta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00=
+OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5=
+kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QG=
+dtYWlsLmNvbSIsICJ1cmwiOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS9zZXR0aW5ncy9ub3RpZ=
+mljYXRpb25zIn0=3D" style=3D"color: #ffffff; text-decoration: underline;" ta=
+rget=3D"_blank">
+                        Email settings</a> |
+                      <a href=3D"https://email-redirect.tumblr.com/click?v=
+=3D1&amp;sign=3D22ed4ae26642689d7c8d2f1b0e64bd1ab0427086ccf49da2fe1dc44fdc4=
+a44f776254676d38efeb4b4aa78a0e2e53c3048cc0ddde38924f599dbada86c9c6b7a&amp;m=
+eta=3DeyJ1dWlkIjogIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmN=
+TBiOGQzIiwgIm10IjogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVz=
+ZXJpZCI6ICIyNjYwMDI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSIsICJ1cmw=
+iOiAiaHR0cHM6Ly93d3cudHVtYmxyLmNvbS9hY2NvdW50L29wdG91dC9pcmVtbnIyNjA2JTQwZ2=
+1haWwuY29tP3R5cGU9bWFya2V0aW5nJmhhc2g9WDV4ZWJRTE9QaWVFUVo3ZzljWE1IbTRFcHdzI=
+n0=3D" style=3D"color: #ffffff; text-decoration: underline;" target=3D"_bla=
+nk">
+                        Unsubscribe</a></span></span></p></td></tr></table>=
+</td></tr></table><!--[if (mso)|(IE)]></td></tr></table><![endif]--><img he=
+ight=3D"1" src=3D"https://email-redirect.tumblr.com/open?v=3D1&amp;sign=3D2=
+9d8b360d97878b85e172db6620788d383e20e6009767a4ba0d43472828b5258088f42e6dc68=
+b4bec3ce053c34fcdcb4083cd6a4f09267c2d7c46a13878a759f&amp;meta=3DeyJ1dWlkIjo=
+gIjE3NjU1MjY4MDItMDcyMjAzYjEtMTMxMC00OGRhLTgwMDctOTE2NWJmNTBiOGQzIiwgIm10Ij=
+ogIjE3NjU1MjY4MDIiLCAiY2F0IjogInRyZW5kaW5nX2Jsb2dzIiwgInVzZXJpZCI6ICIyNjYwM=
+DI3MTEiLCAicmNwdCI6ICJpcmVtbnIyNjA2QGdtYWlsLmNvbSJ9" width=3D"1"/><br/></bo=
+dy></html>
+------=_Part_713295962_1002661614.1765525390292--
+
+------=_Part_713295961_1566038079.1765525390292--

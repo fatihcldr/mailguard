@@ -1,0 +1,684 @@
+Delivered-To: fatihmehmetcildir@gmail.com
+Received: by 2002:a17:907:3c8d:b0:b80:411f:8f7c with SMTP id gl13csp2950742ejc;
+        Sun, 11 Jan 2026 14:38:14 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEKpL2Yj6DxfTYyY4eEtUIKL+pF8zBZDsjwTHF9E8DhBzMQWR501C2392t5xMgehuEwAzqW
+X-Received: by 2002:ad4:5949:0:b0:88a:43bf:b279 with SMTP id 6a1803df08f44-8908427569amr237464366d6.33.1768171094594;
+        Sun, 11 Jan 2026 14:38:14 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1768171094; cv=none;
+        d=google.com; s=arc-20240605;
+        b=ivzyjy/5oYOoAIZgHPXbQiRydnn5JIB1kgndxlosUDKUh96rDLjwkRj3q1oyFjvYsd
+         52ZO3rSNySYwpB8WGKG3PrCrbhl2ob3HWt3Nyr7pMZnB9eGzhxsbxwGnX9WC6PMYGiu/
+         dfpGALQen8edAzKMDsSxDJ4k50bUrTUeK8VL8v52wq8D8bknIIS5eQCuyDQploRa9MxQ
+         u6K08Z3eevQw1N287Kyv+SK4gPocpgZHZ4MLlE56K8bc1hbtybGKm9G9j+CAMiTl1Jv3
+         ZWZ2VtZr27gTRAUA7HhkQ/5Bo74EgDA1auhQ42wjAnFPO3T8ilDsQuCCu493kD4B4Ajn
+         STzw==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=feedback-id:message-id:reply-to:mime-version:list-unsubscribe-post
+         :list-unsubscribe:date:subject:to:from:dkim-signature:dkim-signature;
+        bh=ifZj0k40cNbiHxUB1BUqxA7ZzcoJxilQ1s+yCrT2Zok=;
+        fh=49yLTv3F7pFOpBHJp/0uwQa9hrc7+Ppb1EXi4f5JaiY=;
+        b=jiNpITTGe4ggtigk8lalOwq3LGLBAAA0fn6aJnTZbMX3dtdkvysvS46ELZJuGIkleh
+         iJYD1sMNUR1g4jxGATi9b4DcWQjNhP8npxl8EvKmtE3bFeNVzuKnWnMdhuVP23Xtqf5B
+         6oVnL9PVfT44d2nA/QSXEjBbfb1twylcMgMjILwNzz4OpwWDEg/ZKHWzE7EwJzBOgGq1
+         UiUscFuFUmQKFwys8Az1jMIdLUvumWG78PMheN9xlXtEvUoPptFydC7UWXIxXY1sghK2
+         BAtAuu2eYRIz/rBipkv10dPlG8vtUHlLkEjYH3lLrSw+D4ADpvPuKCj7Wb0ZqpAVQIo8
+         2x3Q==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@email.fcbarcelona.com header.s=200608 header.b=xE3olgPf;
+       dkim=pass header.i=@s6.y.mc.salesforce.com header.s=fbldkim6 header.b="0M/WUjSQ";
+       spf=pass (google.com: domain of bounce-61_html-326590732-1249000-6229058-28109@bounce.email.fcbarcelona.com designates 198.245.83.195 as permitted sender) smtp.mailfrom=bounce-61_HTML-326590732-1249000-6229058-28109@bounce.email.fcbarcelona.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=fcbarcelona.com
+Return-Path: <bounce-61_HTML-326590732-1249000-6229058-28109@bounce.email.fcbarcelona.com>
+Received: from mta.email.fcbarcelona.com (mta.email.fcbarcelona.com. [198.245.83.195])
+        by mx.google.com with ESMTPS id 6a1803df08f44-8907726802csi170437266d6.613.2026.01.11.14.38.14
+        for <fatihmehmetcildir@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Sun, 11 Jan 2026 14:38:14 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounce-61_html-326590732-1249000-6229058-28109@bounce.email.fcbarcelona.com designates 198.245.83.195 as permitted sender) client-ip=198.245.83.195;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@email.fcbarcelona.com header.s=200608 header.b=xE3olgPf;
+       dkim=pass header.i=@s6.y.mc.salesforce.com header.s=fbldkim6 header.b="0M/WUjSQ";
+       spf=pass (google.com: domain of bounce-61_html-326590732-1249000-6229058-28109@bounce.email.fcbarcelona.com designates 198.245.83.195 as permitted sender) smtp.mailfrom=bounce-61_HTML-326590732-1249000-6229058-28109@bounce.email.fcbarcelona.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=fcbarcelona.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=200608; d=email.fcbarcelona.com;
+ h=From:To:Subject:Date:List-Unsubscribe:List-Unsubscribe-Post:MIME-Version:
+ Reply-To:Message-ID:Content-Type; i=newsletter@email.fcbarcelona.com;
+ bh=ifZj0k40cNbiHxUB1BUqxA7ZzcoJxilQ1s+yCrT2Zok=;
+ b=xE3olgPfKeeIRBNMIyUqtybaiBU2kxmKiAbtuxoFBVgjSzJEbD1OHupnOSa+QZeUK1VSb3h1aUY4
+   eMGUHpbaq6uSem3PY7cux4J1paTuhyVQkqfH+RdCtltx9rZP6C8bU/Z2jfv9Xx6HC16vc1hj1t9o
+   oEW46LeSBZ+XZeiKQNE=
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; s=fbldkim6; d=s6.y.mc.salesforce.com;
+ h=From:To:Subject:Date:List-Unsubscribe:MIME-Version:Reply-To:Message-ID:
+ Content-Type;
+ bh=ifZj0k40cNbiHxUB1BUqxA7ZzcoJxilQ1s+yCrT2Zok=;
+ b=0M/WUjSQs6rXYJGbUITMilC+VApNVw5r5xxHFVkcMp1yQ+28VhVEk2Cc7rvR3WeuVpy8qhYGWjkv
+   3QKq/WsFYcbIO8oitA2QEQgTxWSOp502vR3SpQspL3w+/XHJK+YqFwn//NtFP41j4SzH2LMMDcuL
+   7QJ0w866qVqAnPJyNY+JeJlotUuoQeQ1QgwAayBqmDDFAqTPisC4tMq0DUTB+tow/4D67tWed4w3
+   270thfZcgW1FbcG2HeHYp4dS3u7W2Bm5OGb8CcJfszX1fkPBYFD0yKx74zTQRALsLmQ2lYDgLCpY
+   VFgnWsvoa83tQ7pbmCVSVN8bRoE3mda2zZqcmA==
+Received: by mta.email.fcbarcelona.com id hcgj5c2fmd45 for <fatihmehmetcildir@gmail.com>; Sun, 11 Jan 2026 21:40:26 +0000 (envelope-from <bounce-61_HTML-326590732-1249000-6229058-28109@bounce.email.fcbarcelona.com>)
+From: "FC Barcelona" <newsletter@email.fcbarcelona.com>
+To: <fatihmehmetcildir@gmail.com>
+Subject: =?UTF-8?B?8J+UtfCflLQgU3VwZXJjaGFtcGlvbnMgMjAyNiEg8J+Phg==?=
+Date: Sun, 11 Jan 2026 15:40:26 -0600
+List-Unsubscribe: <%%=RedirectTo(CONCAT(CloudPagesURL(377), SUBSTRING('?jwt=eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJtaWQiOiI2MjI5MDU4IiwicyI6IjMyNjU5MDczMiIsImxpZCI6IjYxIiwiaiI6IjEyNDkwMDAiLCJqYiI6IjI4MTA5IiwiZCI6IjYwMjQ4In0.H--M7xocwvwjpmcrlWWhMQl-eDZqYBbI7R7Eum_qkRA>, <mailto:leave-fd8412711a3c402029-fe2a177273610d7d721772-fe9f1572716d047d75-fe8f1272776d04787d-fefb167874640d@leave.email.fcbarcelona.com>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+MIME-Version: 1.0
+Reply-To: "No-Reply FC Barcelona" <reply-fe9f1572716d047d75-61_HTML-326590732-6229058-28109@email.fcbarcelona.com>
+X-SFMC-Stack: 6
+x-job: 6229058_1249000
+Message-ID: <2c45dc8b-9b15-465f-88e5-df6a3690b724@ind1s06mta1293.xt.local>
+Feedback-ID: 6229058:1249000:198.245.83.195:sfmktgcld
+Content-Type: multipart/alternative;
+	boundary="tlAPinUtzp9n=_?:"
+
+This is a multi-part message in MIME format.
+
+--tlAPinUtzp9n=_?:
+Content-Type: text/plain;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+
+ 
+https://view.email.fcbarcelona.com/?qs=0c4428597016b3343582ff16af70344e25eee89e4dbc5c83f1b629350b684dc735b892ace92028993e47ec6cd23fa6a6772844e7da11c6ccced00f6171d36abdab858d469c30450437d0ca9e24e3d992 
+
+
+https://click.email.fcbarcelona.com/?qs=e32d7028e63929046e17c4ce3d07d9d8ab66b373ef70627cdcfc422ed067d6a0338677afbcfccfad0f12b4b1e2777aa358bcda70843b55d5 
+
+
+https://click.email.fcbarcelona.com/?qs=e32d7028e6392904314d9993d7d9a3044afaab207fe2248d396657bb894c2da2b653e6c71e0dbfbe09610f65e4f66f821b19b2edbe7b4e44 
+
+
+https://click.email.fcbarcelona.com/?qs=e32d7028e63929040310e9d9b800e87367e1d64385dac21760470550fd36cd2cc18b4ca2f46e988e7214897030be91f2aa0dff6a34270404 
+
+
+
+
+
+
+
+
+https://click.email.fcbarcelona.com/?qs=e32d7028e6392904dbed31bb86023695cf7cc8b702a385beb13210a3fc02337d765fa5374fac0c8387b315b8e8178931cdbd073a2382d27d 
+
+
+https://click.email.fcbarcelona.com/?qs=e32d7028e6392904551875ea97a0276ec9e47b72f0959065401bc83bd605590795ac1c15c900f2fda783c0f1478aea16d1e3ba5f4808471d 
+
+
+https://click.email.fcbarcelona.com/?qs=e32d7028e639290428b4d565bd0f0a26d55d4b27ea0af41d02bc24d29e91a5a975d4be48272c638c554f16960c89e1c80c72665fab4c1ec6 
+
+
+
+
+https://click.email.fcbarcelona.com/?qs=e32d7028e63929043bc456fe5c0907b3784d1b1d5de204ceace396518059213b8e475abfefc96785e4a1b7edfa6543d5557496448269480e 
+
+
+
+
+ 
+
+
+
+--tlAPinUtzp9n=_?:
+Content-Type: text/html;
+	charset="utf-8"
+Content-Transfer-Encoding: 8bit
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+
+<head>
+    <style data-id="imagecarouselblock" type="text/css">
+    @media screen and (-webkit-min-device-pixel-ratio:0) {
+        body {
+            -webkit-animation: bugfix infinite 1s
+        }
+     
+        @-webkit-keyframes bugfix {
+            from,
+            to {
+                padding: 0
+            }
+        }
+        #MessageViewBody .mc-carousel-fallback,
+        body.MsgBody .mc-carousel-fallback {
+            display: block
+        }
+        #MessageViewBody .mc-carousel,
+        body.MsgBody .mc-carousel {
+            display: none!important
+        }
+        .mc-carousel {
+            display: block!important;
+            max-height: none!important;
+            position: relative
+        }
+        .mc-carousel-fallback {
+            display: none
+        }
+        .mc-carousel span {
+            display: block;
+            overflow: hidden;
+            position: absolute;
+            top: 0;
+            left: 0;
+            opacity: 1;
+            width: 100%
+        }
+        .mc-carousel span:nth-child(1) {
+            position: relative
+        }
+        .mc-carousel-frames img {
+            display: block!important;
+            width: 100%!important
+        }
+        .mc-carousel .mc-carousel-radio:checked~.mc-carousel-container,
+        .mc-carousel .mc-carousel-radio:checked~.mc-carousel-container * {
+            -webkit-animation: none!important
+        }
+        .mc-carousel .mc-carousel-radio:checked~.mc-carousel-container .mc-carousel-frames {
+            position: relative;
+            left: 0;
+            top: 0;
+            width: 500%!important;
+            transition: left 1s
+        }
+        .mc-carousel .mc-carousel-radio:checked~.mc-carousel-container .mc-carousel-frames span {
+            width: 20%
+        }
+        .mc-carousel .mc-carousel-radio:checked~.mc-carousel-container .mc-carousel-frames span:nth-child(5) {
+            position: absolute;
+            top: 0;
+            left: 80%
+        }
+        .mc-carousel .mc-carousel-radio:checked~.mc-carousel-container .mc-carousel-frames span:nth-child(4) {
+            position: absolute;
+            top: 0;
+            left: 60%
+        }
+        .mc-carousel .mc-carousel-radio:checked~.mc-carousel-container .mc-carousel-frames span:nth-child(3) {
+            position: absolute;
+            top: 0;
+            left: 40%
+        }
+        .mc-carousel .mc-carousel-radio:checked~.mc-carousel-container .mc-carousel-frames span:nth-child(2) {
+            position: absolute;
+            top: 0;
+            left: 20%
+        }
+        .mc-carousel .mc-carousel-check-support:checked~.mc-carousel-container .mc-carousel-nav-1 {
+            display: block
+        }
+        .mc-carousel-nav {
+            z-index: 100;
+            display: none;
+            width: 10%;
+            height: 100%;
+            position: absolute;
+            background-color: transparent;
+            top: 0;
+            cursor: pointer
+        }
+        .mc-carousel-nav i {
+            border: solid gray;
+            border-width: 0 3px 3px 0;
+            display: inline-block;
+            padding: 10px;
+            margin: 20px
+        }
+        .mc-carousel .mc-carousel-radio-1:checked~.mc-carousel-container .mc-carousel-controls .mc-carousel-nav-1,
+        .mc-carousel .mc-carousel-radio-2:checked~.mc-carousel-container .mc-carousel-controls .mc-carousel-nav-2,
+        .mc-carousel .mc-carousel-radio-3:checked~.mc-carousel-container .mc-carousel-controls .mc-carousel-nav-3,
+        .mc-carousel .mc-carousel-radio-4:checked~.mc-carousel-container .mc-carousel-controls .mc-carousel-nav-4,
+        .mc-carousel .mc-carousel-radio-5:checked~.mc-carousel-container .mc-carousel-controls .mc-carousel-nav-5 {
+            display: block
+        }
+        .mc-carousel-nav-left {
+            left: 0
+        }
+        .mc-carousel-nav-left i {
+            transform: rotate(135deg);
+            -webkit-transform: rotate(135deg)
+        }
+        .mc-carousel-nav-right {
+            right: 0
+        }
+        .mc-carousel-nav-right i {
+            transform: rotate(-45deg);
+            -webkit-transform: rotate(-45deg)
+        }
+        .mc-carousel .mc-carousel-radio-5:checked~.mc-carousel-container .mc-carousel-frames {
+            left: -400%
+        }
+        .mc-carousel .mc-carousel-radio-4:checked~.mc-carousel-container .mc-carousel-frames {
+            left: -300%
+        }
+        .mc-carousel .mc-carousel-radio-3:checked~.mc-carousel-container .mc-carousel-frames {
+            left: -200%
+        }
+        .mc-carousel .mc-carousel-radio-2:checked~.mc-carousel-container .mc-carousel-frames {
+            left: -100%
+        }
+        .mc-carousel .mc-carousel-radio-1:checked~.mc-carousel-container .mc-carousel-frames {
+            left: 0
+        }
+        .mc-carousel-5 span {
+            -webkit-animation: mc-carousel-slide-anim-5 25s linear infinite
+        }
+        .mc-carousel-5 span:nth-child(5) {
+            -webkit-animation-delay: -6s
+        }
+        .mc-carousel-5 span:nth-child(4) {
+            -webkit-animation-delay: -11s
+        }
+        .mc-carousel-5 span:nth-child(3) {
+            -webkit-animation-delay: -16s
+        }
+        .mc-carousel-5 span:nth-child(2) {
+            -webkit-animation-delay: -21s
+        }
+        .mc-carousel-5 span:nth-child(1) {
+            -webkit-animation-delay: -26s
+        }
+        @-webkit-keyframes mc-carousel-slide-anim-5 {
+            0% {
+                margin-left: 100%
+            }
+            20%,
+            5% {
+                margin-left: 0
+            }
+            100%,
+            25% {
+                margin-left: -100%
+            }
+        }
+        .mc-carousel-4 span {
+            -webkit-animation: mc-carousel-slide-anim-4 20s linear infinite
+        }
+        .mc-carousel-4 span:nth-child(4) {
+            -webkit-animation-delay: -6s
+        }
+        .mc-carousel-4 span:nth-child(3) {
+            -webkit-animation-delay: -11s
+        }
+        .mc-carousel-4 span:nth-child(2) {
+            -webkit-animation-delay: -16s
+        }
+        .mc-carousel-4 span:nth-child(1) {
+            -webkit-animation-delay: -21s
+        }
+        @-webkit-keyframes mc-carousel-slide-anim-4 {
+            0% {
+                margin-left: 100%
+            }
+            25%,
+            5% {
+                margin-left: 0
+            }
+            100%,
+            30% {
+                margin-left: -100%
+            }
+        }
+        .mc-carousel-3 span {
+            -webkit-animation: mc-carousel-slide-anim-3 15s linear infinite
+        }
+        .mc-carousel-3 span:nth-child(3) {
+            -webkit-animation-delay: -6s
+        }
+        .mc-carousel-3 span:nth-child(2) {
+            -webkit-animation-delay: -11s
+        }
+        .mc-carousel-3 span:nth-child(1) {
+            -webkit-animation-delay: -16s
+        }
+        @-webkit-keyframes mc-carousel-slide-anim-3 {
+            0% {
+                margin-left: 100%
+            }
+            33.33333333%,
+            5% {
+                margin-left: 0
+            }
+            100%,
+            38.33333333% {
+                margin-left: -100%
+            }
+        }
+        .mc-carousel-2 span {
+            -webkit-animation: mc-carousel-slide-anim-2 10s linear infinite
+        }
+        .mc-carousel-2 span:nth-child(2) {
+            -webkit-animation-delay: -6s
+        }
+        .mc-carousel-2 span:nth-child(1) {
+            -webkit-animation-delay: -11s
+        }
+        @-webkit-keyframes mc-carousel-slide-anim-2 {
+            0% {
+                margin-left: 100%
+            }
+            5%,
+            50% {
+                margin-left: 0
+            }
+            100%,
+            55% {
+                margin-left: -100%
+            }
+        }
+    }
+
+    @media screen and (max-width:480px) {
+        .mc-carousel {
+            width: 100%!important
+        }
+    }
+
+    .slot-styling {
+        border-bottom: 0px !important
+    }
+    </style>
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=0">
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <style type="text/css">
+    ReadMsgBody {
+        width: 100%;
+    }
+
+    .ExternalClass {
+        width: 100%;
+    }
+
+    .ExternalClass,
+    .ExternalClass p,
+    .ExternalClass span,
+    .ExternalClass font,
+    .ExternalClass td,
+    .ExternalClass div {
+        line-height: 100%;
+    }
+
+    body {
+        -webkit-text-size-adjust: 100%;
+        -ms-text-size-adjust: 100%;
+         margin: 0 !important;
+         background-color:#F8F9F9;
+    }
+
+    p {
+        margin: 1em 0;
+    }
+
+    table td {
+        border-collapse: collapse;
+    }
+
+    img {
+        outline: 0;
+    }
+
+    a img {
+        border: none;
+    }
+
+    p {
+        margin: 1em 0;
+    }
+
+    @-ms-viewport {
+        width: device-width;
+    }
+    </style>
+    <style type="text/css">
+    @media only screen and (max-width: 480px) {
+        .container {
+            width: 100% !important;
+        }
+        .footer {
+            width: auto !important;
+            margin-left: 0;
+        }
+        .content-padding {
+            padding: 4px !important;
+        }
+        .mobile-hidden {
+            display: none !important;
+        }
+        .logo {
+            display: block !important;
+            padding: 0 !important;
+        }
+        img {
+            max-width: 100% !important;
+            height: auto !important;
+            max-height: auto !important;
+        }
+        .header img {
+            max-width: 100% !important;
+            height: auto !important;
+            max-height: auto !important;
+        }
+        .photo img {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+        }
+        .drop {
+            display: block !important;
+            width: 100% !important;
+            float: left;
+            clear: both;
+        }
+        .footerlogo {
+            display: block !important;
+            width: 100% !important;
+            padding-top: 15px;
+            float: left;
+            clear: both;
+            
+
+        }
+        .nav4,
+        .nav5,
+        .nav6 {
+            display: none !important;
+        }
+        .tableBlock {
+            width: 100% !important;
+        }
+        .responsive-td {
+            width: 100% !important;
+            display: block !important;
+            padding: 0 !important;
+        }
+        .fluid,
+        .fluid-centered {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        .fluid-centered {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        /* MOBILE GLOBAL STYLES - DO NOT CHANGE */
+        body {
+            padding: 0px !important;
+            font-size: 16px !important;
+            line-height: 150% !important;
+        }
+        h1 {
+            font-size: 22px !important;
+            line-height: normal !important;
+        }
+        h2 {
+            font-size: 20px !important;
+            line-height: normal !important;
+        }
+        h3 {
+            font-size: 18px !important;
+            line-height: normal !important;
+        }
+        .buttonstyles {
+            font-family: arial, helvetica, sans-serif !important;
+            font-size: 16px !important;
+            color: #000001 !important;
+            padding: 10px !important;
+        }
+        /* END OF MOBILE GLOBAL STYLES - DO NOT CHANGE */
+    }
+
+    @media only screen and (max-width: 640px) {
+        .container {
+            width: 100% !important;
+        }
+        .mobile-hidden {
+            display: none !important;
+        }
+        .logo {
+            display: block !important;
+            padding: 0 !important;
+        }
+        .photo img {
+            width: 100% !important;
+            height: auto !important;
+        }
+        .nav5,
+        .nav6 {
+            display: none !important;
+        }
+        .fluid,
+        .fluid-centered {
+            width: 100% !important;
+            max-width: 100% !important;
+            height: auto !important;
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+        .fluid-centered {
+            margin-left: auto !important;
+            margin-right: auto !important;
+        }
+    }
+    </style>
+    <!--[if mso]>       <style type="text/css">           /* Begin Outlook Fix */               body, table, td {                  font-family : Arial, Helvetica, sans-serif;                  line-height : 1.5;                  font-size : 16px;                  color : #666666;                  border-collapse: collapse;                 }  tr { font-size:0px; line-height:0px; border-collapse: collapse; }           /* End Outlook Font Fix */       </style>     <![endif]-->
+    <!--[if gt mso 15]>      <style type="text/css" media="all">      /* Outlook 2016 Height Fix */      table, tr, td {border-collapse: collapse;}      tr { font-size:0px; line-height:0px; border-collapse: collapse; }      </style>      <![endif]-->
+</head>
+
+<body bgcolor="#FFFFFF" text="#666666" style="margin: 0px; -webkit-text-size-adjust:none; padding-top : 0px; padding-right : 0px; padding-bottom : 0px; padding-left : 0px;background-color:#FFFFFF!important; font-family : Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif; line-height : 1.5; font-size : 16px; color : #666666;">
+    <div style="font-size:0; line-height:0;"></div>
+   <table width="100%" border="0" margin-left="5" cellspacing="0" cellpadding="0" bgcolor="#000028">
+        <td align="center">
+            <table cellspacing="0" cellpadding="0" border="0" width="640" class="container" align="center">
+                <tr>
+                    <td>
+                        <table style="border-width : 0px 0px 0px; border-image : initial;background-color : #FFFFFF; border : 0px solid #FFFFFF!important;font-size : 16px; font-family : Calibri, Candara, Segoe, 'Segoe UI', Optima, Arial, sans-serif; line-height : 1.5; color : #FFFFFF; " class="tb_properties border_style" cellspacing="0" cellpadding="0" bgcolor="#FFFFFF" width="100%">
+                            <tr>
+                                <td align="center" valign="top">
+                                    <table align="left" border="0" cellpadding="0" cellspacing="0" width="100%">
+                                        <tr>
+                                            <td class="content_padding" style="border:0px;padding-top : 0px; padding-right : 0px; padding-bottom : 0px; padding-left : 0px;">
+                                                <table border="0" cellpadding="0" cellspacing="0" width="100%">
+                                                    <tr>
+                                                        <td align="left" class="header" valign="top">
+                                                            <table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #181733; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://view.email.fcbarcelona.com/?qs=0c4428597016b3343582ff16af70344e25eee89e4dbc5c83f1b629350b684dc735b892ace92028993e47ec6cd23fa6a6772844e7da11c6ccced00f6171d36abd4c2b61bb99b8ec18d24a379a39d30057" title="Web version"   data-linkto="other"><img data-assetid="220261" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/VERSIO_WEB_ENG.jpg" alt="Web version" width="640" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr></table>
+<table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #181733; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><img data-assetid="220142" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/HEADER_25-26_FCBARCELONA.jpg" alt="" width="640" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FFFFFF; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td>
+<table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 100%;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FFFFFF; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><img data-assetid="230452" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/11012026_TITULO_ENG.jpg" alt="Superchampions" width="640" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FFFFFF; min-width: 100%; " class="stylingblock-content-wrapper"><tr>
+<td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.email.fcbarcelona.com/?qs=e32d7028e6392904a0357525daf126f04591ef875a5f525f36e32e49bf5775e4d0950adcd9875e7517b9f7f4f702ecbe3f280b05b64cb1ae" title="Superchampions"   data-linkto="https://"><img data-assetid="230506" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/11012026_CAMPIONS_OK_ENG.jpg" alt="Superchampions" width="640" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr>
+</table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FFFFFF; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.email.fcbarcelona.com/?qs=e32d7028e63929042ec4eb289bb1cdcec043af9c1b3b8361e920871186d9b0dbe1c838b27e3a13a8be963dc9a8af076c31df6bd8a8a96ec8" title="VictoryTeeSuperCopa"   data-linkto="https://"><img data-assetid="230503" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/11012026_BLM_ENG.jpg" alt="VictoryTeeSuperCopa" width="640" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr>
+</table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FFFFFF; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.email.fcbarcelona.com/?qs=e32d7028e6392904dbe155980d8c8b0c87038566de0bd779fdd2e7f57d354691bf1d5d4ee57e08dd998f99f481e0313b8b3cfe4ad6d527c8" title="Barça - Madrid"   data-linkto="https://"><img data-assetid="230457" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/11012026_BANNER_VIP_ENG.jpg" alt="Barça - Madrid" width="640" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr></table></td></tr></table></td>
+</tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 100%;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center">
+<img data-assetid="207950" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/TRAMA_BLANCA.jpg" alt="FC Barcelona" width="640" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 100%;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr>
+<td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><img data-assetid="220180" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/LOGO_FCBARCELONA_25-26_BLACK.jpg" alt="FC Barcelona" width="640" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></td></tr></table></td></tr></table></td></tr></table></td></tr></table></td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FFFFFF; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr>
+<td valign="top" style="width: 33%; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: #FFFFFF; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.email.fcbarcelona.com/?qs=e32d7028e63929042c42aa8ef04176faa5db02136a45040d76838f3cc55fa49533c80f2cf0c74b5c10bbdd74dc889b1ba7933b711e4fb9b4" title="Nike"   data-linkto="https://"><img data-assetid="220285" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/LOGO_NIKE_25-26_BLACK.jpg" alt="Nike" height="70" width="129" style="display: block; padding: 0px; text-align: center; height: 70px; width: 129px; border: 0px;"></a></td></tr></table></td></tr></table></td>
+<td valign="top" style="width: 33%; padding-left: 0px; padding-right: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding-bottom: 10px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.email.fcbarcelona.com/?qs=e32d7028e6392904d75b0d78e87e8be016df3e1dc05433e29b9e12c34090aae8725b9b5382f845ce16135df56bb8a26188b6bbce9ea3e0d8" title="Spotify"   data-linkto="http://"><img data-assetid="220286" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/LOGO_SPOTIFY_25-26_BLACK.jpg" alt="Spotify" height="70" width="129" style="display: block; padding: 0px; text-align: center; height: 70px; width: 129px; border: 0px;"></a></td></tr></table></td></tr></table></td>
+<td valign="top" style="width: 33%; padding-left: 0px;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding-bottom: 10px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><a href="https://click.email.fcbarcelona.com/?qs=e32d7028e63929043e512afd70d00de4f611227de75c2edfd747cea9d832079c72894d04626a00443c82a596a8c842336a80cc651c116b8e" title="Ambilight"   data-linkto="https://"><img data-assetid="220284" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/LOGO_AMBILIGHT_25-26_BLACK.jpg" alt="Ambilight" height="70" width="129" style="display: block; padding: 0px; text-align: center; height: 70px; width: 129px; border: 0px;"></a></td></tr></table></td></tr></table></td></tr></table></td></tr></table>
+</td></tr></table><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="min-width: 100%; " class="stylingblock-content-wrapper"><tr><td class="stylingblock-content-wrapper camarker-inner"><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td><table cellspacing="0" cellpadding="0" role="presentation" style="width: 100%;"><tr><td valign="top" class="responsive-td" style="width: 100%;"><table cellpadding="0" cellspacing="0" width="100%" role="presentation" style="background-color: transparent; min-width: 100%; " class="stylingblock-content-wrapper"><tr><td style="padding: 0px; " class="stylingblock-content-wrapper camarker-inner"><table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center">
+<a href="https://click.email.fcbarcelona.com/?qs=e32d7028e639290426e0d3d1a66fc9ebc9d4f34fa222eb94f09bc8f269e72ac6dca9ed13e7c785c73d6ae3f97cf760e4ab098cfe3c8e8cc5" title="Preferences | Unsubscribe"   data-linkto="other"><img data-assetid="220225" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/PREFERENCIAS_25-26_BLACK_ENG.jpg" alt="Preferences | Unsubscribe" width="640" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></a></td></tr></table></td></tr>
+</table></td></tr></table></td></tr></table></td></tr></table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" class="" valign="top">
+                                                            <table cellpadding="0" cellspacing="0" width="100%" class="slot-styling" style="border-width: 0px 0px; border-style: none; border-color: transparent; min-width: 100%; margin: 0px;">
+                                                                <tr>
+                                                                    <td class="slot-styling camarker-inner" width="100%" style="padding: 0px 0px;">
+                                                                        <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; margin: 0px; border-width: 0px 0px; border-style: none; border-color: #FFFFFF; background-color: #FFFFFF;" class="stylingblock-content-wrapper">
+                                                                            <tr>
+                                                                                <td style="padding: 0px 0px;" class="stylingblock-content-wrapper camarker-inner">
+                                                                                    <table cellspacing="0" cellpadding="0" style="width: 100%;">
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table cellspacing="0" cellpadding="0" style="width: 100%;">
+                                                                                                    <tr>
+                                                                                                        <td valign="top" class="responsive-td" style="width: 100%;">
+                                                                                                            <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper">
+                                                                                                                <tr>
+                                                                                                                    <td class="stylingblock-content-wrapper camarker-inner">
+                                                       
+                                                                                                                    </td>
+                                                                                                                </tr>
+                                                                                                            </table>
+                                                                                                        
+                                                                        <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%; margin: 0px;border-style:none;background-color:#FFFFFF;" class="stylingblock-content-wrapper">
+                                                                            <tr>
+                                                                                <td style="padding: 0px 0px;border:0px solid transparent" class="stylingblock-content-wrapper camarker-inner">
+                                                                                    <table cellspacing="0" cellpadding="0" style="width: 100%;padding:20px 20px;border:0px solid transparent">
+                                                                                        <tr>
+                                                                                            <td>
+                                                                                                <table cellspacing="0" cellpadding="0" style="width: 100%;">
+                                                                                                    
+                                                                                                            </table>
+                                                                                                        </td>
+                                                                                                    </tr>
+                                                                                                </table>
+                                                                                            </td>
+                                                                                        </tr>
+                                                                                    </table>
+                                                                                </td>
+                                                                            </tr>
+                                                                        </table>
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                    <tr>
+                                                        <td align="left" class="" valign="top" style="overflow:hidden;">
+                                                            <table cellpadding="0" cellspacing="0" width="100%" class="slot-styling" style="min-width: 100%; margin: 0px;background-image: background-repeat:no-repeat;background-position:center bottom;border:0px solid #FFFFFF;" align="center" style="background-position:center" >
+                                                                <tr>
+                                                                    <td class="slot-styling camarker-inner" width="100%" style="padding: 0px 0px 0px 0px;border:0px solid #FFFFFF">
+                                                                        <table cellpadding="0" cellspacing="0" width="100%" style="min-width: 100%;" class="stylingblock-content-wrapper">
+                                                                            
+                                                                        </table>
+
+                                                                    </td>
+                                                                </tr>
+                                                            </table>
+                                                        </td>
+                                                    </tr>
+                                                </table>
+               <table width="100%" cellspacing="0" cellpadding="0" role="presentation"><tr><td align="center"><img data-assetid="197705" src="https://image.email.fcbarcelona.com/lib/fe8f1272776d04787d/m/1/FOOTER_LINEA_BLAU.jpg" alt="" width="640" style="display: block; padding: 0px; text-align: center; height: auto; width: 100%; border: 0px;"></td></tr></table>                             </td>
+                                        </tr>
+                                    </table>
+                                </td>
+                            </tr>
+                        </table>
+                    </td>
+              
+    <img src="https://click.email.fcbarcelona.com/open.aspx?ffcb10-fe9f1572716d047d75-fe1c1c73766d027a751279-fe8f1272776d04787d-ff981271-fe2a177273610d7d721772-fefb167874640d&d=60248&bmt=0" width="1" height="1" alt="">
+        <img src="https://beacon.krxd.net/1x1_usermatch.gif?partner=M73cQmcW_sfmc_6229058_sha256&partner_uid=dd4380086a3289c5111b9ffc771aa5c6a277670b7ffd29bc64997339afd48045" width=0 height=0 style="display:none" /> 
+<img src="https://beacon.krxd.net/1x1_usermatch.gif?partner=M73cQmcW_sfmc_6229058_subid&partner_uid=326590732" width=0 height=0 style="display:none" /> 
+<img src="https://beacon.krxd.net/1x1_ad_impression.gif?confid=u022x9pvi&advertiserid=6229058&campaignid=11012026_Campions_Supercopa_ENG" width=0 height=0 style="display:none;" />
+  <!---->
+  </table>  </body>
+
+</html>
+
+--tlAPinUtzp9n=_?:--
+

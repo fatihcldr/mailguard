@@ -1,0 +1,383 @@
+Delivered-To: iremnr2606@gmail.com
+Received: by 2002:a05:6a10:67ca:b0:699:d94d:41d6 with SMTP id r10csp812766pxu;
+        Thu, 11 Dec 2025 07:52:19 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEfvZiTT0k26SqUfj+5L1OkLzZmrfhJmz2kiLpLUTi07d6nV3NVFXGIm6DGm1jg4lGehuEp
+X-Received: by 2002:a05:622a:5a93:b0:4f1:83e3:c058 with SMTP id d75a77b69052e-4f1b19d4b6fmr89686981cf.30.1765468338980;
+        Thu, 11 Dec 2025 07:52:18 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1765468338; cv=none;
+        d=google.com; s=arc-20240605;
+        b=fuF2vUoKKMxYsrp6aiqwQjOcEZwUtmkEcuq7EsTqMTPw6bhfw20XNFQuYf7ce73eXP
+         pV4mZPu25q5FQQkevmwSnJYznfmJ4XBL3hGp82mmb9y43KCkkzcdFeo+gKjebQMtV6V8
+         3Z7AMQ2UVhAnbwWEIxoTzl1UY9nN2PJ6+Vy2y1qiYtMRAXcJS/7aaJWhCfKJ3kbno5Mm
+         acbeZuK7ocgIvwEkq36WeAf5e/A73t/VqV8SNr5wSoJoDLBom33TLa9rQZwH5wOL5BbS
+         b1phdLIf4V5VJt4fK+ycJlEHu3eVZ3i8k9ATmAobd70aSffQvS/DZWpF4jGS+kqITHXL
+         daIA==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:list-unsubscribe-post:list-unsubscribe:feedback-id:subject
+         :message-id:mime-version:from:date:dkim-signature:dkim-signature;
+        bh=kBiXx087zJhD2bbyLc2G5/ayJwVzD4h34+0x0jeiRnA=;
+        fh=z43PlvtvL2tjKoqDZpeZDzHO0fV5pW/rtc+FWrJPf1Y=;
+        b=ArMvX3w5ffJ9XwP0q4gtsHoaptuVCUOP+6OAgF80O6lusjo9ar6DjrWfFxVHTpcuAp
+         LtcyCawbgAXRa5XI9QmjvTtJUu0rNX6wOafumOz7Mcc/QxCKhe9b+DtGijR9bL3m1nmR
+         9BF+RMpvD4kx289CzQHLPav/7OwNBTPvvAu+V8lpAlv5zWz4AbgN88w4tD7Sj2eID6nd
+         BtjwBPYwXeMZ8vfxmNGBnWbiLKmnIvTpwlZ6BLatX64pX96qecWekQ/dEcgpL2hBTTxs
+         jXTmk7oCSaOopTzuxL7bOJ70BsoHCwy2vjgl6oGX/fJUqYi11zS9nZnumGAz44SeKp9w
+         JnLA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@spotify.com header.s=s1 header.b=iPdQVLL4;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=ObcptEpu;
+       spf=pass (google.com: domain of bounces+54769-98d7-iremnr2606=gmail.com@em.spotify.com designates 167.89.57.163 as permitted sender) smtp.mailfrom="bounces+54769-98d7-iremnr2606=gmail.com@em.spotify.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=spotify.com
+Return-Path: <bounces+54769-98d7-iremnr2606=gmail.com@em.spotify.com>
+Received: from o21.em.spotify.com (o21.em.spotify.com. [167.89.57.163])
+        by mx.google.com with ESMTPS id d75a77b69052e-4f1bd6f2b1esi31920451cf.211.2025.12.11.07.52.18
+        for <iremnr2606@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Thu, 11 Dec 2025 07:52:18 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+54769-98d7-iremnr2606=gmail.com@em.spotify.com designates 167.89.57.163 as permitted sender) client-ip=167.89.57.163;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@spotify.com header.s=s1 header.b=iPdQVLL4;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=ObcptEpu;
+       spf=pass (google.com: domain of bounces+54769-98d7-iremnr2606=gmail.com@em.spotify.com designates 167.89.57.163 as permitted sender) smtp.mailfrom="bounces+54769-98d7-iremnr2606=gmail.com@em.spotify.com";
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=spotify.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=spotify.com;
+	h=content-type:date:from:mime-version:subject:feedback-id:
+	list-unsubscribe:list-unsubscribe-post:to:cc:content-type:date:feedback-id:from:
+	subject:to;
+	s=s1; bh=kBiXx087zJhD2bbyLc2G5/ayJwVzD4h34+0x0jeiRnA=;
+	b=iPdQVLL4tD3kbUeX5QiAij3Ac5WazvBX/XAB0IPt4w8gWGDUTfvYjs7pUcjlgUvDFgKr
+	eiv5qtw/420mQ0y0HFVcMlTZxN1LTxUNeCallQXK68ami711YvfOaTjFIXVlJv1PJ1pJh0
+	Ttnnjw6zWy/C2jlsDU8jpIS/2yI7s1oCEtTOx8hpjOiTmT+V+bJbjnWadsmmKQwK2YYywp
+	YeAXtdmcW4WaCDFGaJR1r+1UXyH78N/S3UPiOOxx3P8fis3KQOKJFmnU2ghO3qMMzSeZE/
+	bIfzJDXROow77U0kv2FY3mn4AkyIJTFwTvFBaUEU0T8/AmIiyJgRhnbJPO2ZiG7Q==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:date:from:mime-version:subject:feedback-id:
+	list-unsubscribe:list-unsubscribe-post:to:cc:content-type:date:feedback-id:from:
+	subject:to;
+	s=smtpapi; bh=kBiXx087zJhD2bbyLc2G5/ayJwVzD4h34+0x0jeiRnA=;
+	b=ObcptEpu3wiRe+dBw5/mv4DYOyxwmeh5urYfSm8aebowj4IWBYjHCozqsOBVTWFSwEGR
+	L90soC9+nvzYJgEtsLRQ/3Y7CWEHt+0Q58vCzIkX3wSKbOEa2LH/rbYMdjEG271+Nz+AJM
+	a+COWMIMBWFyGce1lp6NaKVT0PRx3SjOQ=
+Received: by recvd-759dc5847c-gkwph with SMTP id recvd-759dc5847c-gkwph-1-693AE8B1-9
+	2025-12-11 15:52:17.080055928 +0000 UTC m=+8613354.723018090
+Received: from NTQ3Njk (unknown)
+	by geopod-ismtpd-7 (SG) with HTTP
+	id 4qAZfvVkT-m8wBKrJjj-iA
+	Thu, 11 Dec 2025 15:52:17.041 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=92ee87b7566400a3e4e4338c4bf316d21b605444afcce2baf695fef90646
+Date: Thu, 11 Dec 2025 15:52:17 +0000 (UTC)
+From: Spotify <no-reply@spotify.com>
+Mime-Version: 1.0
+Message-ID: <4qAZfvVkT-m8wBKrJjj-iA@geopod-ismtpd-7>
+Subject: 2 =?UTF-8?B?a2nFn2kgacOnaW4gMSBQcmVtaXVtIHBsYW7EsS4=?=
+Feedback-ID: 183525
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2Fwww=2Espotify=2Ecom=2Fapi=2Fnotifs-preferences=2Fv4=2Funsubscribe?=
+ =?us-ascii?Q?=2Fmail-user-agent=3Ftoken=3DJcXBDYAgDAXQVVyA?=
+ =?us-ascii?Q?BKsWGYfST0KixYAe3N6D7%2FJqx2md2PNk7a7ld?=
+ =?us-ascii?Q?eP6b6WgD5dMnTymB8YELFnBDNlJKYSkyORZfY6C?=
+ =?us-ascii?Q?dVMJghh5%2FgA%3D=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EZD5aH33R6V7weoiTHIdZyDuP+A6pZLQL0nRW+xTj31Msb5xf5uAbZIKpG?=
+ =?us-ascii?Q?ToelTWVR8rVonvMrj0NERWIakIdZCObwJSxV6r+?=
+ =?us-ascii?Q?Ah+=2FshnOI0pZjsK9L7+88s4OfXaoVY=2Fx3d1x7fr?=
+ =?us-ascii?Q?MMqMakJKhtTXLryNZ=2FhHN0y0K1ae3rweJc+oiI0?=
+ =?us-ascii?Q?Y4GtACMO1ghXdUmD3640U9blrRnI2E6KiiiptE8?=
+ =?us-ascii?Q?QC2qnz+sRw7Ephm1qT+TkY=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BqTMxWlNC9wzgsPF=2F0Yy5pMtubaMT4Fmp4pM4?=
+ =?us-ascii?Q?asbxQxHULAz4CJ2YKgcJIyXnIPiaHj9a6t5ZFC6?=
+ =?us-ascii?Q?6Mwb44SSwoPOQ5V0SeSndEZGvVv=2FWigZDuZa27o?=
+ =?us-ascii?Q?R01Q3rcj8glIvAtOYXsPovE8W8fdQnLS2GXnqm7?=
+ =?us-ascii?Q?zbNh2HIwanBJ1Eo2XeO0l=2FI9p9gFRS8Stk9Cavj?=
+ =?us-ascii?Q?TT00Y3UusTR7iM9D0G7L6doiM03RjmA3KF=2FdApk?=
+ =?us-ascii?Q?S0KSSl0Gm9TMgbGAJx+p0epaO92k=2FyQq83FNC+s?=
+ =?us-ascii?Q?x02f9bPVpzo+m3y8b+sLQYjQGVAeXhCbzR6z3ow?=
+ =?us-ascii?Q?9gHf8IVYXrRSaT2dwwOO0Gpm24I2b3hfzuH1Oqc?=
+ =?us-ascii?Q?HR=2FCxk+nH6yZ8PiqCWRzt2XiMGNsZzwT6hsA2cm?=
+ =?us-ascii?Q?S6sKgnTW2=2FoVQi2asuXgzGR+jaRlIZ6UqZZ+t=2Fv?=
+ =?us-ascii?Q?Feb25E2d0h+LF+cyeZ=2Fv6Mw=3D=3D?=
+To: iremnr2606@gmail.com
+X-Entity-ID: u001.fajWXQMUTuQmJ7EuMgN2yg==
+
+--92ee87b7566400a3e4e4338c4bf316d21b605444afcce2baf695fef90646
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+Spotify https://spotify.com/promo/duofamilydecember2025
+2 ki=C5=9Filik Premium deneyimi. 3 aya kadar 99,00 TL/ay kar=C5=9F=C4=B1l=
+=C4=B1=C4=9F=C4=B1nda ayn=C4=B1 fiyatla.
+
+
+Sevdi=C4=9Fin Premium deneyimini ikiye katlad=C4=B1=C4=9F=C4=B1n=C4=B1 d=C3=
+=BC=C5=9F=C3=BCn: 1 payla=C5=9F=C4=B1ml=C4=B1 planda 2 ayr=C4=B1 hesap ve i=
+kiniz i=C3=A7in ayr=C4=B1 ayr=C4=B1 =C3=A7alma listeleri. (=C4=B0stersen =
+=C3=A7alma listelerini payla=C5=9Fabilirsin.) =C4=B0=C5=9Fte Duo deneyimi!
+
+
+
+Daha da iyi bir haberimiz var. Duo'yu 3 aya kadar 99,00 TL/ay kar=C5=9F=C4=
+=B1l=C4=B1=C4=9F=C4=B1nda kullanabilirsin.
+
+
+Premium Duo'yu edin ( https://spotify.com/promo/duofamilydecember2025 )
+
+
+Bireysel =C3=BCyeli=C4=9Fin i=C3=A7in =C3=B6dedi=C4=9Fin ayl=C4=B1k fiyatla=
+ 3 aya kadar Premium Duo kullan. Deneme s=C3=BCresi fatura tarihine g=C3=B6=
+re hesaplan=C4=B1r. Deneme bittikten sonra ayda 135,00 TL. Ayn=C4=B1 adrest=
+e ya=C5=9Fayan 2 ki=C5=9Fi i=C3=A7in. H=C3=BCk=C3=BCm ve ko=C5=9Fullar ge=
+=C3=A7erlidir. Teklif devredilemez ve 31 Aral=C4=B1k 2025 tarihinde sona er=
+er.
+
+
+-------------
+
+Spotify'=C4=B1 edin:
+  * iPhone (https://itunes.apple.com/app/spotify-music/id324684580)
+  * iPad (https://itunes.apple.com/app/spotify-music/id324684580)
+  * Android (https://play.google.com/store/apps/details?id=3Dcom.spotify.mu=
+sic)
+  * Di=C4=9Fer (https://www.spotify.com/download/)
+
+Bu mesaj iremnr2606@gmail.com adresine g=C3=B6nderildi.=20
+Gelecekte Spotify'dan bu e-postalar=C4=B1 almak istemiyorsan
+profilini d=C3=BCzenleyebilirsin
+(https://www.spotify.com/account/notifications)
+veya
+=C3=BCyelikten =C3=A7=C4=B1kabilirsin
+(https://www.spotify.com/account/unsubscribe?t=3DJcXBDYAgDAXQVVyABKsWGYfST0=
+KixYAe3N6D7%2FJqx2md2PNk7a7ldeP6b6WgD5dMnTymB8YELFnBDNlJKYSkyORZfY6CdVMJghh=
+5%2FgA%3D&a=3Dunsubscribe)
+
+
+  * Kullan=C4=B1m =C5=9Eartlar=C4=B1 https://www.spotify.com/legal/end-user=
+-agreement/
+  * Gizlilik Politikas=C4=B1 https://www.spotify.com/legal/privacy-policy/
+  * Bizimle =C4=B0leti=C5=9Fime Ge=C3=A7 https://www.spotify.com/about-us/c=
+ontact/
+
+
+Spotify AB, Regeringsgatan 19, 111 53, Stockholm, Sweden
+
+--92ee87b7566400a3e4e4338c4bf316d21b605444afcce2baf695fef90646
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html><html xmlns=3D"http://www.w3.org/1999/xhtml" style=3D"margin=
+:0;padding:0"><head><meta charset=3D"utf-8"><meta name=3D"viewport" content=
+=3D"width=3Ddevice-width, initial-scale=3D1"><title>2 ki=C5=9Fi i=C3=A7in 1=
+ Premium plan=C4=B1.</title><style type=3D"text/css">@media only screen and=
+ (min-device-width: 481px) {div[id=3D"main"] {width: 480px !important;}}</s=
+tyle><style type=3D"text/css">
+  @font-face {
+    font-family: SpotifyMixUI;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://encore.scdn.co/fonts/SpotifyMixUI-Bold-4264b799009b1d=
+b5c491778b1bc8e5b7.woff2')
+      format('woff2');
+  }
+  @font-face {
+    font-family: SpotifyMixUI;
+    font-weight: 400;
+    font-display: swap;
+    src: url('https://encore.scdn.co/fonts/SpotifyMixUI-Regular-cc3b1de388e=
+fa4cbca6c75cebc24585e.woff2')
+      format('woff2');
+  }
+  @font-face {
+    font-family: SpotifyMixUITitle;
+    font-weight: 800;
+    font-display: swap;
+    src: url('https://encore.scdn.co/fonts/SpotifyMixUITitle-Extrabold-ba6c=
+73cd7f82c81e49cf2204017803ed.woff2')
+      format('woff2');
+  }
+  @font-face {
+    font-family: SpotifyMixUITitle;
+    font-weight: 700;
+    font-display: swap;
+    src: url('https://encore.scdn.co/fonts/SpotifyMixUITitle-Bold-37290f1de=
+77f297fcc26d71e9afcf43f.woff2')
+      format('woff2');
+  }
+  @font-face {
+    font-family: SpotifyMixUITitleVariable;
+    font-weight: 100 1000; /* keep if you want variable weights */
+    font-stretch: 50 150;
+    font-display: swap;
+    src: url('https://encore.scdn.co/fonts/SpotifyMixUITitleVariable-8769cc=
+fde3379b7ebcadd9529b49d0cc.woff2')
+      format('woff2');
+  }
+</style><style>
+            * {
+              border: none;
+              padding: 0;
+              margin: 0;
+            }
+
+            table {
+              border-collapse: collapse;
+            }
+          </style><!--[if mso]><style>body, table, tr, td, h1, h2, h3, h4, =
+h5, h6, center p, a, span, table.MsoNormalTable {font-family: "Helvetica", =
+"Arial", sans-serif !important}</style><![endif]--></head><body topmargin=
+=3D"0" leftmargin=3D"0" rightmargin=3D"0" bottommargin=3D"0" marginheight=
+=3D"0" marginwidth=3D"0" style=3D"-webkit-font-smoothing:antialiased;width:=
+100% !important;-webkit-text-size-adjust:none;margin:0;padding:0;font-famil=
+y:SpotifyMixUI,&quot;Helvetica&quot;,&quot;Arial&quot;, sans-serif"><div st=
+yle=3D"display:none;visibility:hidden"></div><!--TEST-FORM--><span style=3D=
+"display:none;font-size:1px">Premium Duo ile 1 plan alt=C4=B1nda 2 Premium =
+hesab=C4=B1 edinirsin.</span>
+<!--[if (mso) | (IE)]><table cellpadding=3D"0" cellspacing=3D"0" border=3D"=
+0" valign=3D"top" width=3D"480" align=3D"center"><tr><td valign=3D"top" ali=
+gn=3D"left" style=3D" word-break:normal; border-collapse:collapse; font-fam=
+ily:'Circular', Helvetica, Arial, sans-serif; font-size:12px; line-height:1=
+8px; color:#555555;"><![endif]--><table style=3D"max-width:480px;width:100%=
+;border:0;background-color:#ffffff;margin:0 auto;word-break:break-word" cel=
+lpadding=3D"0" cellspacing=3D"0" dir=3D"auto"><tbody><tr><td><div id=3D"mai=
+n"><table class=3D"hero-image-root" style=3D"background-color:#ffffff;width=
+:100%"><tbody><tr><td style=3D"padding-top:0px;padding-bottom:0px"><table s=
+tyle=3D"width:100%"><tbody><tr><td style=3D"width:100%"><span><a href=3D"ht=
+tps://spotify.com/promo/duofamilydecember2025" clicktracking=3D"on" univers=
+al=3D"true" style=3D"text-decoration:none;color:#1ed760">
+<!--[if mso]><img alt=3D"Spotify" style=3D"width: 100%; display: block" wid=
+th=3D"100%" src=3Dhttps://message-editor.scdn.co/50444803-d40b-49b1-861b-87=
+f79d81f063" /><![endif]-->
+<!--[if mso]><div style=3D"mso-hide: all"><![endif]--><div style=3D"padding=
+-right:0px;padding-left:0px;height:inherit;overflow:inherit"><img alt=3D"Sp=
+otify" class=3D"hero-image-image" style=3D"display:block;max-width:100%;bor=
+der-radius:0px;width:100%;height:inherit;margin-bottom:-1px" src=3D"https:/=
+/message-editor.scdn.co/50444803-d40b-49b1-861b-87f79d81f063"></div>
+<!--[if mso]></div><![endif]--></a></span></td></tr></tbody></table></td></=
+tr></tbody></table><table style=3D"width:100%;background-color:#ffffff"><tb=
+ody><tr><td style=3D"padding:8px 16px 8px 16px"><div style=3D"background-co=
+lor:#ffffff;color:#000000;font-family:spotifymixuititle,&quot;helvetica&quo=
+t;,&quot;arial&quot;, sans-serif;font-size:36px;margin:0;text-align:center"=
+><b>2 ki=C5=9Filik Premium deneyimi. 3 aya kadar 99,00 TL/ay kar=C5=9F=C4=
+=B1l=C4=B1=C4=9F=C4=B1nda ayn=C4=B1 fiyatla.<b></b></b></div></td></tr></tb=
+ody></table><table style=3D"width:100%;background-color:#ffffff"><tbody><tr=
+><td style=3D"padding:8px 16px 16px 16px"><div style=3D"background-color:#f=
+fffff;color:#000000;font-size:16px;margin:0;text-align:center">Sevdi=C4=9Fi=
+n Premium deneyimini ikiye katlad=C4=B1=C4=9F=C4=B1n=C4=B1 d=C3=BC=C5=9F=C3=
+=BCn: 1 payla=C5=9F=C4=B1ml=C4=B1 planda 2 ayr=C4=B1 hesap ve ikiniz i=C3=
+=A7in ayr=C4=B1 ayr=C4=B1 =C3=A7alma listeleri. (=C4=B0stersen =C3=A7alma l=
+istelerini payla=C5=9Fabilirsin.) =C4=B0=C5=9Fte Duo deneyimi!
+<br /><br />
+Daha da iyi bir haberimiz var. Duo'yu 3 aya kadar 99,00 TL/ay kar=C5=9F=C4=
+=B1l=C4=B1=C4=9F=C4=B1nda kullanabilirsin.</div></td></tr></tbody></table><=
+table class=3D"call-to-action-root" style=3D"width:100%;background-color:#f=
+fffff;text-align:center"><tbody><tr><td style=3D"padding:8px 16px 16px 16px=
+"><table style=3D"width:100%"><tbody><tr><td class=3D"font" style=3D"font-w=
+eight:700;line-height:1.1em;letter-spacing:0.15px;font-size:14px;text-decor=
+ation:none;text-align:center;text-transform:uppercase"><div style=3D"text-a=
+lign:center;border:none;margin:0;padding:0;line-height:0">
+<!--[if mso]><div style=3D"line-height:1em;"><v:roundrect xmlns:v=3D"urn:sc=
+hemas-microsoft-com:vml" xmlns:w=3D"urn:schemas-microsoft-com:office:word" =
+href=3D"https://spotify.com/promo/duofamilydecember2025" style=3D"v-text-an=
+chor: middle; width: 240px; max-width: 240px; height: 48px; text-decoration=
+: none; color: '#ffffff'; font-family: 'Helvetica', 'Arial', sans-serif; fo=
+nt-size: 13px; font-weight: bold; line-height: 48px" arcsize=3D"50%" fillco=
+lor=3D"#000000" strokecolor=3D"#000000"><w:anchorlock /><center style=3D"co=
+lor: #ffffff; font-family: 'Helvetica', 'Arial', sans-serif; font-size: 13p=
+x; font-weight: bold; line-height: 16px; text-transform:uppercase">Premium =
+Duo'yu edin</center></v:roundrect></div><![endif]-->
+<!--[if mso]><div style=3D"mso-hide: all"><![endif]--><a href=3D"https://sp=
+otify.com/promo/duofamilydecember2025" clicktracking=3D"on" universal=3D"tr=
+ue" class=3D"call-to-action-button" style=3D"text-decoration:none;color:#ff=
+ffff;margin-left:auto;margin-right:auto;max-width:240px;background-color:#0=
+00000;border-radius:24px;display:block"><table class=3D"call-to-action-cont=
+ainer" style=3D"mso-hide:all;width:100%;max-width:240px;min-height:48px"><t=
+body><tr><td class=3D"call-to-action-inner-padding" style=3D"width:24px"></=
+td><td style=3D"font-weight:700;line-height:1.1em;letter-spacing:0.15px;fon=
+t-size:14px;text-decoration:none;text-align:center;text-transform:uppercase=
+;color:#ffffff" class=3D"font call-to-action-cell">Premium Duo'yu edin</td>=
+<td class=3D"call-to-action-inner-padding" style=3D"width:24px"></td></tr><=
+/tbody></table></a>
+<!--[if mso]></div><![endif]--></div></td></tr></tbody></table></td></tr></=
+tbody></table><table style=3D"width:100%;background-color:#ffffff"><tbody><=
+tr><td style=3D"padding:8px 16px 16px 16px"><div style=3D"background-color:=
+#ffffff;color:#000000;font-size:12px;margin:0;text-align:center">Bireysel =
+=C3=BCyeli=C4=9Fin i=C3=A7in =C3=B6dedi=C4=9Fin ayl=C4=B1k fiyatla 3 aya ka=
+dar Premium Duo kullan. Deneme s=C3=BCresi fatura tarihine g=C3=B6re hesapl=
+an=C4=B1r. Deneme bittikten sonra ayda 135,00 TL. Ayn=C4=B1 adreste ya=C5=
+=9Fayan 2 ki=C5=9Fi i=C3=A7in. H=C3=BCk=C3=BCm ve ko=C5=9Fullar ge=C3=A7erl=
+idir. Teklif devredilemez ve 31 Aral=C4=B1k 2025 tarihinde sona erer.</div>=
+</td></tr></tbody></table><table style=3D"background-color:#f7f7f7;width:10=
+0%" class=3D"footer-root" dir=3D"auto"><tbody><tr style=3D"height:25px"><td=
+ colspan=3D"3" style=3D"height:25px;padding:6.25px"></td></tr><tr><td style=
+=3D"width:6.25%"></td><td><img alt=3D"Spotify Logo" height=3D"23" style=3D"=
+display:block;max-width:100%;height:23px" src=3D"https://message-editor.scd=
+n.co/newsletter/images/Spotify_Full_Logo_RGB_Grey.png"></td><td style=3D"wi=
+dth:6.25%"></td></tr><tr style=3D"height:25px"><td colspan=3D"3" style=3D"h=
+eight:25px;padding:6.25px"></td></tr><tr><td style=3D"width:6.25%"></td><td=
+><hr style=3D"height:1px;background-color:#d1d5d9;border:none;margin:0px;pa=
+dding:0px"></td><td style=3D"width:6.25%"></td></tr><tr style=3D"height:12p=
+x"><td colspan=3D"3" style=3D"height:12px;padding:3px"></td></tr><tr><td st=
+yle=3D"width:6.25%"></td><td class=3D"font" style=3D"font-weight:400;line-h=
+eight:1.65em;letter-spacing:0.15px;font-size:11px;text-decoration:none;colo=
+r:#88898c">Spotify'=C4=B1 edin: &nbsp;<a class=3D"footer-separated-text" st=
+yle=3D"text-decoration:none;color:#6d6d6d;display:inline-block;font-weight:=
+700" href=3D"https://itunes.apple.com/app/spotify-music/id324684580">iPhone=
+</a><span style=3D"width:1px;border-left:solid 1px #c3c3c3;border-right:sol=
+id 1px transparent;margin:0 7px;padding:4px 0">&nbsp;</span><a class=3D"foo=
+ter-separated-text" style=3D"text-decoration:none;color:#6d6d6d;display:inl=
+ine-block;font-weight:700" href=3D"https://itunes.apple.com/app/spotify-mus=
+ic/id324684580">iPad</a><span style=3D"width:1px;border-left:solid 1px #c3c=
+3c3;border-right:solid 1px transparent;margin:0 7px;padding:4px 0">&nbsp;</=
+span><a class=3D"footer-separated-text" style=3D"text-decoration:none;color=
+:#6d6d6d;display:inline-block;font-weight:700" href=3D"https://play.google.=
+com/store/apps/details?id=3Dcom.spotify.music">Android</a><span style=3D"wi=
+dth:1px;border-left:solid 1px #c3c3c3;border-right:solid 1px transparent;ma=
+rgin:0 7px;padding:4px 0">&nbsp;</span><a class=3D"footer-separated-text" s=
+tyle=3D"text-decoration:none;color:#6d6d6d;display:inline-block;font-weight=
+:700" href=3D"https://www.spotify.com/download/">Di=C4=9Fer</a></td><td sty=
+le=3D"width:6.25%"></td></tr><tr style=3D"height:12px"><td colspan=3D"3" st=
+yle=3D"height:12px;padding:3px"></td></tr><tr><td style=3D"width:6.25%"></t=
+d><td><hr style=3D"height:1px;background-color:#d1d5d9;border:none;margin:0=
+px;padding:0px"></td><td style=3D"width:6.25%"></td></tr><tr style=3D"heigh=
+t:25px"><td colspan=3D"3" style=3D"height:25px;padding:6.25px"></td></tr><t=
+r><td style=3D"width:6.25%"></td><td class=3D"font" style=3D"font-weight:40=
+0;line-height:1.65em;letter-spacing:0.15px;font-size:11px;text-decoration:n=
+one;color:#88898c"><span>Bu mesaj iremnr2606@gmail.com adresine g=C3=B6nder=
+ildi. </span> Gelecekte Spotify'dan bu e-postalar=C4=B1 almak istemiyorsan =
+<a class=3D"footer-link" href=3D"https://www.spotify.com/account/notificati=
+ons" style=3D"text-decoration:none;color:rgb(109, 109, 109);border:none;mar=
+gin:0px;padding:0px;font-weight:bold">profilini d=C3=BCzenleyebilirsin</a> =
+veya <a class=3D"footer-link" href=3D"https://www.spotify.com/account/unsub=
+scribe?t=3DJcXBDYAgDAXQVVyABKsWGYfST0KixYAe3N6D7%2FJqx2md2PNk7a7ldeP6b6WgD5=
+dMnTymB8YELFnBDNlJKYSkyORZfY6CdVMJghh5%2FgA%3D&a=3Dunsubscribe" style=3D"te=
+xt-decoration:none;color:rgb(109, 109, 109);border:none;margin:0px;padding:=
+0px;font-weight:bold">=C3=BCyelikten =C3=A7=C4=B1kabilirsin.</a></td><td st=
+yle=3D"width:6.25%"></td></tr><tr style=3D"height:33px"><td colspan=3D"3" s=
+tyle=3D"height:33px;padding:8.25px"></td></tr><tr><td style=3D"width:6.25%"=
+></td><td class=3D"font font-small" style=3D"font-weight:400;line-height:1.=
+65em;letter-spacing:0.15px;font-size:11px;text-decoration:none;color:#88898=
+c"><a class=3D"footer-separated-text" style=3D"text-decoration:none;color:#=
+6d6d6d;display:inline-block;font-weight:700" href=3D"https://www.spotify.co=
+m/legal/end-user-agreement/">Kullan=C4=B1m =C5=9Eartlar=C4=B1</a><span styl=
+e=3D"width:1px;border-left:solid 1px #c3c3c3;border-right:solid 1px transpa=
+rent;margin:0 7px;padding:4px 0">&nbsp;</span><a class=3D"footer-separated-=
+text" style=3D"text-decoration:none;color:#6d6d6d;display:inline-block;font=
+-weight:700" href=3D"https://www.spotify.com/legal/privacy-policy/">Gizlili=
+k Politikas=C4=B1</a><span style=3D"width:1px;border-left:solid 1px #c3c3c3=
+;border-right:solid 1px transparent;margin:0 7px;padding:4px 0">&nbsp;</spa=
+n><a class=3D"footer-separated-text" style=3D"text-decoration:none;color:#6=
+d6d6d;display:inline-block;font-weight:700" href=3D"https://www.spotify.com=
+/about-us/contact/">Bizimle =C4=B0leti=C5=9Fime Ge=C3=A7</a></td><td style=
+=3D"width:6.25%"></td></tr><tr style=3D"height:12px"><td colspan=3D"3" styl=
+e=3D"height:12px;padding:3px"></td></tr><tr><td style=3D"width:6.25%"></td>=
+<td class=3D"font font-small" style=3D"font-weight:400;line-height:1.65em;l=
+etter-spacing:0.15px;font-size:11px;text-decoration:none;color:#88898c">Spo=
+tify AB, Regeringsgatan 19, 111 53, Stockholm, Sweden</td><td style=3D"widt=
+h:6.25%"></td></tr><tr style=3D"height:25px"><td colspan=3D"3" style=3D"hei=
+ght:25px;padding:6.25px"></td></tr></tbody></table></div></td></tr></tbody>=
+</table>
+<!--[if (mso) | (IE)]></td></tr></table><![endif]--></body></html>
+--92ee87b7566400a3e4e4338c4bf316d21b605444afcce2baf695fef90646--

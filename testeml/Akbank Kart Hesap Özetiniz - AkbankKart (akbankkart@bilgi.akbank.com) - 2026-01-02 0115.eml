@@ -1,0 +1,254 @@
+Delivered-To: iremnr2606@gmail.com
+Received: by 2002:a05:6a11:8589:b0:699:d94d:41d6 with SMTP id ci9csp1835097pxc;
+        Thu, 1 Jan 2026 14:49:06 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHRWcN0xODTPimRezUY2QJa+lZkh+vd86UEhslagmDq0dRDAW7dmwx2qGTbhXoijRvBObEQ
+X-Received: by 2002:a05:600c:45cf:b0:477:582e:7a81 with SMTP id 5b1f17b1804b1-47d1954986fmr452496305e9.4.1767307745964;
+        Thu, 01 Jan 2026 14:49:05 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1767307745; cv=none;
+        d=google.com; s=arc-20240605;
+        b=MxvP67IMHcuKIgzeGI2pdQrL6FaByvYciqElLXj1Mx2iSK50tt8voUBZOrrkTFxGBj
+         m3X+7h72ezSWRFrHE0t6nTLTQSq8l4q2tBd3foSImfRM3o8KV+qhsyMgNBzf+XXK6FIb
+         yq+uBrK8qtDpYj6PKkfZsyf5btBlSUh+sS0oSJye53q4X8U7TwGDWgKkg7dvDiaWCPzd
+         76Lc4PUeEa9Yg2TTW180n+a0rqv9I9LMkZplddAQV21PjjJsrZDL1orlX6vPR86ZKYL5
+         uWpznGfcTbAlU+7sPpMglAsZbm16zm1BYpxMBs+2fPfUiCwx/bxO0Ee7wSPpCQDiTa8H
+         kcrg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:subject:message-id:to:from:date:dkim-signature;
+        bh=c78VIMxIJRUfyVfMFANVdgNtYe6kLuig1vXC7FjJoNk=;
+        fh=8IdkS1vJKvtHGi8z21gmSmFU3SVq2kW7KWomubHauPU=;
+        b=Wlyw7yeGS1QILbkLj2up1NKq61wIBWbvrNFsq4rv2APxoMIH0IS9oHSvak27rxXHr0
+         sBcLJAeS/Hzpgne8edB0hWVoCNkmPKhA2aB07iFjsWp3SE9bI1H5QavOvZBgGmrKD5oj
+         w1t0YhYHO9WhzzxrBHaJNuyrH92aKtCu/ncnlhmGhxBWHoI7NsKobfnP2ix00Vard+rA
+         53FONHOm7MXefv6e35r4t+/d41qbMNAiCAaefKvS95w4mAQmiJxQNanewlvZn6YRaoNA
+         fgmrQKmLW8X7Tc0mlTXKiRirzuCJxbejz0YV43G8y1GfWOzejUvv6+7F7civXcdQ/EOm
+         P9yQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@bilgi.akbank.com header.s=akbank header.b=xHuCe+TD;
+       spf=pass (google.com: domain of akbankkart@bilgi.akbank.com designates 217.169.195.109 as permitted sender) smtp.mailfrom=akbankkart@bilgi.akbank.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=bilgi.akbank.com
+Return-Path: <akbankkart@bilgi.akbank.com>
+Received: from MGTEXC10.akbank.com (mgtexc10.akbank.com. [217.169.195.109])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-4325ba846b7si50404249f8f.209.2026.01.01.14.49.05
+        for <iremnr2606@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Thu, 01 Jan 2026 14:49:05 -0800 (PST)
+Received-SPF: pass (google.com: domain of akbankkart@bilgi.akbank.com designates 217.169.195.109 as permitted sender) client-ip=217.169.195.109;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bilgi.akbank.com header.s=akbank header.b=xHuCe+TD;
+       spf=pass (google.com: domain of akbankkart@bilgi.akbank.com designates 217.169.195.109 as permitted sender) smtp.mailfrom=akbankkart@bilgi.akbank.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=bilgi.akbank.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; q=dns/txt;
+ d=bilgi.akbank.com; s=akbank;
+ h=mime-version:date:message-id:subject:from:to:content-type;
+ bh=c78VIMxIJRUfyVfMFANVdgNtYe6kLuig1vXC7FjJoNk=;
+ b=xHuCe+TDEoSebfWfZyV+8E+ogzk+e1S8jH9YONPEb9grSG7kbbZQtFaTo5w1U0BYo61E
+ hYDTSn7aNguRky5Se+cHzyHuubDDevxXvC5DKU9zFX1Aj7t3gcJSVYweY7Lti34GnyXSNl
+ uwyg0cnYdWB2xRdIVy9/yus7K1HHMa1cw=
+Date: Fri, 2 Jan 2026 01:15:09 +0300
+From: AkbankKart <akbankkart@bilgi.akbank.com>
+To: IREMNR2606@GMAIL.COM
+Message-ID: <1741338796.13149805.1767305709134.JavaMail.jboss@bsa-mgts-emailsender-prod-batch-6f47cdbdb4-kb5j5>
+Subject: =?utf-8?B?QWtiYW5rIEthcnQgSGVzYXAgw5Z6ZXRpbml6?=
+MIME-Version: 1.0
+Content-Type: multipart/mixed; boundary="----=_Part_13149804_2021742019.1767305709134"
+X-EMID: 6d020066-b0af-45dc-ba7c-b7bca89713e3
+X-CLIENT-DATA: REF:2601014623415950
+X-CAMP-ID: 4765
+X-VMTA: vmta-mgts-prod
+X-LAWFUL: N
+Return-Path: akbankkart@bilgi.akbank.com
+
+------=_Part_13149804_2021742019.1767305709134
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<html>
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3Dutf-8">
+<title>AKBANK</title>
+</head>
+<body bgcolor=3D"#ffffff" leftmargin=3D"0" topmargin=3D"0" marginwidth=3D"0=
+" marginheight=3D"0">
+<table id=3D"Table_02" width=3D"600" align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0">
+<tbody>
+<tr>
+<td style=3D" text-align:center; color:#363636; font-size:12px; font-family=
+:Arial,Regular;background-color:#FFFFFF; padding:10px 0;">
+<div align=3D"center"><font style=3D"padding:0px; margin:0px; color:#363636=
+; font-size:12px;background-color:#FFFFFF;">Bu mail'i g=C3=B6r=C3=BCnt=C3=
+=BCleyemiyorsan=C4=B1z l=C3=BCtfen
+<a href=3D"http://www.akbank.com/emails/202107/elektronik-gonderiler/index.=
+html" target=3D"_blank" style=3D"color:#616161; text-decoration:none;">
+<strong></a><a href=3D"https://haberci.akbank.com/elci.opsweb/ViewMgts.aspx=
+?kid=3DNmLqTPkb0OjmsBuFHcceouxgznllBh66NUF7kvrWNHq4mjhpbvsrCg3Bcz5LGMzIsOCB=
+0dYj4T6tZWnfKud&#43;iA1nM4YWvoHqXF5D/fQloxrwbI49FMEPFgUxb8H2jsPYm2Ct7KKSByG=
+f4axnSDoG&#43;rjCVD1aYhaOAyRhwMH&#43;McerrUo/5emHOdznEzYQaA6TtI2WBcvC46T&#4=
+3;PcxDGu2jl6IkIG8Z30FwMAEU&#43;rTIVHPrA3HgsVLLU3xyvJsEgT/xZUPdhFeLTIn0yEbgB=
+OyPVoFe&#43;oDjDPj65xi79dQkMI&#43;56bUx6csSBl4fjHYNO/i&#43;1yDol563lzIJv7Eb=
+M8FY7hhoBf/6agwaY40sIUxFuRM=3D" style=3D"color:#FF0000"><b>t=C4=B1klay=C4=
+=B1n=C4=B1z
+</b></a>.</strong></font></div>
+</td>
+</tr>
+<tr>
+</tr>
+</tbody>
+</table>
+<table id=3D"Table_01" width=3D"600" align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" style=3D"padding:0; background-color:#FFFFFF;">
+<tbody>
+<tr>
+<td valign=3D"bottom"><img src=3D"https://www.akbank.com/emails/kurumsal-ba=
+nt/header/header-600.jpg" alt=3D"" width=3D"600" height=3D"105" border=3D"0=
+" usemap=3D"#Map"></td>
+</tr>
+<tr>
+<td style=3D"font-size:14px; padding:0 20px 8px 30px; width:600px; font-fam=
+ily:Arial,Regular;text-align:justify; background-color:#FFFFFF;border-right=
+:1px #ebebf0 solid;border-left:1px #ebebf0 solid; line-height:20px;" valign=
+=3D"top">
+<strong>De=C4=9Ferli Akbankl=C4=B1,</strong><br>
+<br>
+=C4=B0=C3=A7eri=C4=9Finde hassas veri ve s=C4=B1r niteli=C4=9Finde bilgi bu=
+lunan g=C3=B6nderilerini e-posta yerine daha g=C3=BCvenli olan dijital kana=
+llar=C4=B1m=C4=B1z =C3=BCzerinden g=C3=B6r=C3=BCnt=C3=BClemen i=C3=A7in de=
+=C4=9Fi=C5=9Fiklikler yapt=C4=B1k.
+<br>
+<br>
+E-posta kanal=C4=B1 ile iletti=C4=9Fimiz <span style=3D"text-align:left; di=
+splay:inline-block; word-break:break-all;">
+Akbank Kart ekstre</span> g=C3=B6nderimine dijital kanallar=C4=B1m=C4=B1z =
+=C3=BCzerinden ula=C5=9Fmak i=C3=A7in Akbank Mobil'de sa=C4=9F =C3=BCstte y=
+er alan h=C4=B1zl=C4=B1 men=C3=BC alt=C4=B1ndaki Mesajlar=C4=B1m men=C3=BCs=
+=C3=BCnden ya da Akbank =C4=B0nternet'te en =C3=BCstteki Mesajlar=C4=B1m ik=
+onundan g=C3=B6r=C3=BCnt=C3=BCleyebilirsin.
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:12px; font-style:italic; padding:0 20px 10px 30px; w=
+idth:600px; font-family:Arial,Regular;text-align:justify; background-color:=
+#FFFFFF;border-right:1px #ebebf0 solid;border-left:1px #ebebf0 solid; line-=
+height:20px;" valign=3D"top">
+* Akbank =C4=B0nternet Kurumsal kullan=C4=B1c=C4=B1lar=C4=B1 hesap =C3=B6ze=
+ti g=C3=B6nderimlerine yaln=C4=B1zca Akbank Mobil uygulamas=C4=B1 =C3=BCzer=
+inden eri=C5=9Febilir.
+</td>
+</tr>
+<tr>
+<td style=3D"padding-left:30px; border-right:1px #ebebf0 solid;border-left:=
+1px #ebebf0 solid;">
+<table align=3D"left" width=3D"180">
+<tbody>
+<tr>
+<td style=3D"font-family:Arial, Helvetica, sans-serif;background:#e00700; w=
+idth:180px; height:28px; text-align:center; font-size:14px;">
+<a href=3D"https://www.akbank.com/SitePages/DynamicLink.aspx?urlid=3Dakbank=
+DirektMobilUygulamaIndir" target=3D"_blank" style=3D"text-decoration:none; =
+color:#ffffff; line-height:28px; text-align:center;display:block;">Akbank M=
+obil =C4=B0ndir</a></td>
+</tr>
+</tbody>
+</table>
+</td>
+</tr>
+<tr>
+<td style=3D"font-size:11px; padding:8px 20px 0 30px; width:600px; font-fam=
+ily:Arial,Regular;text-align:justify; background-color:#FFFFFF;border-right=
+:1px #ebebf0 solid;border-left:1px #ebebf0 solid; line-height:20px;" valign=
+=3D"top">
+E-posta ileti=C5=9Fimlerinde yurt d=C4=B1=C5=9F=C4=B1 servis sa=C4=9Flay=C4=
+=B1c=C4=B1lar=C4=B1n=C4=B1n da kullan=C4=B1lmas=C4=B1 nedeniyle hassas ve s=
+=C4=B1r niteli=C4=9Finde bilgilerin yer ald=C4=B1=C4=9F=C4=B1 finansal bilg=
+ilerin yurt d=C4=B1=C5=9F=C4=B1na =C3=A7=C4=B1kmas=C4=B1 bilgilerin g=C3=BC=
+venli=C4=9Fi a=C3=A7=C4=B1s=C4=B1ndan risk te=C5=9Fkil ediyor. Bu sebeple g=
+=C3=B6nderimlerini e-posta
+ yerine daha g=C3=BCvenli olan dijital kanal=C4=B1m=C4=B1z =C3=BCzerinden a=
+l=C4=B1yorsun. <br>
+G=C3=B6nderimlerini e-posta adresi =C3=BCzerinden almak istemen halinde, ka=
+nal tercihlerini Akbank Mobil'den &quot;G=C3=BCvenlik Ayarlar=C4=B1&quot; ,=
+ Akbank =C4=B0nternet'ten &quot;Ki=C5=9Fisel Ayarlar&quot; men=C3=BCs=C3=BC=
+ alt=C4=B1ndan de=C4=9Fi=C5=9Ftirebilirsin. Ayn=C4=B1 alandan e-posta adres=
+inin sana ait oldu=C4=9Funu teyit edebilir,
+ kay=C4=B1tl=C4=B1 e-posta bilgilerini de g=C3=BCncelleyebilirsin. E-posta =
+bilgilerine ait i=C5=9Flemler i=C3=A7in dilersen de 444 25 25 M=C3=BC=C5=9F=
+teri =C4=B0leti=C5=9Fim Merkezini arayabilir veya sana en yak=C4=B1n Akbank=
+ =C5=9Eubesini ziyaret edebilirsin.
+<br>
+<br>
+<span style=3D"font-size:14px;"><strong>Sayg=C4=B1lar=C4=B1m=C4=B1zla,<br>
+Akbank</strong></span> </td>
+</tr>
+<tr>
+<td><img src=3D"https://www.akbank.com/emails/kurumsal-bant/images/sizin-ic=
+in-600.jpg" width=3D"600" height=3D"91" alt=3D""></td>
+</tr>
+<tr>
+<td><img src=3D"https://www.akbank.com/emails/kurumsal-bant/footer/footer-6=
+00.jpg" alt=3D"" width=3D"600" height=3D"87" border=3D"0" usemap=3D"#Map2">=
+</td>
+</tr>
+</tbody>
+</table>
+<table id=3D"Table_03" width=3D"600" align=3D"center" border=3D"0" cellpadd=
+ing=3D"0" cellspacing=3D"0" style=3D"padding-bottom:10px;background-color:#=
+FFFFFF;">
+<tbody>
+<tr>
+<td style=3D" text-align:center; color:#363636; font-size:12px; font-family=
+:Arial;background-color:#FFFFFF;">
+<br>
+<div align=3D"center"><font style=3D"font-family:Arial,Regular;padding:0px;=
+ margin:0px; color:#363636; font-size:12px;">L=C3=BCtfen size gelen e-maill=
+eri Spam(Junk) mail olarak i=C5=9Faretlemeyiniz.</font></div>
+</td>
+</tr>
+</tbody>
+</table>
+<map name=3D"Map"><area shape=3D"rect" coords=3D"424,15,581,56" href=3D"htt=
+ps://www.akbank.com/tr-tr/sayfalar/default.aspx" target=3D"_blank" alt=3D""=
+><img src=3D"https://haberci.akbank.com/elci.opsweb/LoadMgts.aspx?kid=3DNmL=
+qTPkb0OjmsBuFHcceouxgznllBh66NUF7kvrWNHq4mjhpbvsrCg3Bcz5LGMzIsOCB0dYj4T6tZW=
+nfKud&#43;iA1nM4YWvoHqXF5D/fQloxrwbI49FMEPFgUxb8H2jsPYm2Ct7KKSByGf4axnSDoG&=
+#43;rjCVD1aYhaOAyRhwMH&#43;McerrUo/5emHOdznEzYQaA6TtI2WBcvC46T&#43;PcxDGu2j=
+l6IkIG8Z30FwMAEU&#43;rTIVHPrA3HgsVLLU3xyvJsEgT/xZUPdhFeLTIn0yEbgBOyPVoFe&#4=
+3;oDjDPj65xi79dQkMI&#43;56bUx6csSBl4fjHYNO/i&#43;1yDol563lzIJv7EbM8FY7hhoBf=
+/6agwaY40sIUxFuRM=3D">
+</map><map name=3D"Map2"><area shape=3D"rect" coords=3D"26,14,128,55" href=
+=3D"http://www.akbank.com/bize-ulasin.aspx" target=3D"_blank" alt=3D""><are=
+a shape=3D"rect" coords=3D"472,22,494,44" href=3D"http://www.facebook.com/A=
+kbank" target=3D"_blank" alt=3D""><area shape=3D"rect" coords=3D"493,21,512=
+,45" href=3D"https://www.instagram.com/akbank/" target=3D"_blank" alt=3D"">=
+<area shape=3D"rect" coords=3D"514,22,534,44" href=3D"http://twitter.com/ak=
+bank" target=3D"_blank" alt=3D""><area shape=3D"rect" coords=3D"536,23,552,=
+44" href=3D"http://www.youtube.com/akbank" target=3D"_blank"><area shape=3D=
+"rect" coords=3D"554,23,575,43" href=3D"https://www.linkedin.com/company/ak=
+bank/" target=3D"_blank" alt=3D""><img src=3D"https://haberci.akbank.com/el=
+ci.opsweb/LoadMgts.aspx?kid=3DNmLqTPkb0OjmsBuFHcceouxgznllBh66NUF7kvrWNHq4m=
+jhpbvsrCg3Bcz5LGMzIsOCB0dYj4T6tZWnfKud&#43;iA1nM4YWvoHqXF5D/fQloxrwbI49FMEP=
+FgUxb8H2jsPYm2Ct7KKSByGf4axnSDoG&#43;rjCVD1aYhaOAyRhwMH&#43;McerrUo/5emHOdz=
+nEzYQaA6TtI2WBcvC46T&#43;PcxDGu2jl6IkIG8Z30FwMAEU&#43;rTIVHPrA3HgsVLLU3xyvJ=
+sEgT/xZUPdhFeLTIn0yEbgBOyPVoFe&#43;oDjDPj65xi79dQkMI&#43;56bUx6csSBl4fjHYNO=
+/i&#43;1yDol563lzIJv7EbM8FY7hhoBf/6agwaY40sIUxFuRM=3D">
+</map>
+<table width=3D"542" align=3D"center">
+<tbody>
+<tr>
+<td colspan=3D"3" style=3D"font-family:Arial; text-align:center;  color:#36=
+3636; font-size:12px;">
+<div align=3D"center"><font style=3D"font-family:Arial;  color:#363636; fon=
+t-size:12px;">Akbank T.A.=C5=9E. Genel M=C3=BCd=C3=BCrl=C3=BCk: Sabanc=C4=
+=B1 Center 4.Levent 34330 =C4=B0stanbul
+<br>
+Mersis No: 0015 0015 2640 0497 www.akbank.com </font></div>
+</td>
+</tr>
+</tbody>
+</table>
+</body>
+</html>
+
+------=_Part_13149804_2021742019.1767305709134--
+
+

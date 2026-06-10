@@ -1,0 +1,114 @@
+Delivered-To: iremnr2606@gmail.com
+Received: by 2002:a05:6a11:8589:b0:699:d94d:41d6 with SMTP id ci9csp5097755pxc;
+        Sat, 27 Dec 2025 01:50:09 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IHrA7S2Evsfon4S4Xe6rSNwI6CKxGE7zo6kNM/zfT3SmzHMBB4u6NAzgfjNxLQLk7QtmfLu
+X-Received: by 2002:a05:600c:a30f:b0:47d:52ef:c572 with SMTP id 5b1f17b1804b1-47d52efc7bdmr2941635e9.1.1766829009600;
+        Sat, 27 Dec 2025 01:50:09 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1766829009; cv=none;
+        d=google.com; s=arc-20240605;
+        b=C+GKIV9Ju88jrIZac6yU8o4u7zXSfipZFouhR+jpgS/TKNKw6z/JVJ2IfO5D2DcF76
+         x/ilsffRZr3h5kF+ITvzxYG325D8+Hl1Jqd3BlnuX0WupBbGOyh+zMShCtLjFIqeeyBG
+         BbUpyje4wB3aQOcaVxecQH8c4f3qvUQu4Q8y1ELT5+PyZ6kjKRlpwZs9VXH9cuiag69r
+         rdxafVyN3FCpP40QGCELh82ibF6MAEbDB4j+bExVUBxo+c/lExBudv6EchWJe4RcJ63i
+         uyEPokrPlZCC6MpcHW0h4VQkxfuzHwcuPteUn2G3R+iNHc8Ivfxq7a6K4N6jaTFut8x8
+         jvxg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=message-id:content-transfer-encoding:subject:date:to:dkim-filter
+         :from:dkim-signature:dkim-filter;
+        bh=wlFf1dMFgtyU1xWKRlzMDfhdNjQwiz5HGxbHn3824z4=;
+        fh=z43PlvtvL2tjKoqDZpeZDzHO0fV5pW/rtc+FWrJPf1Y=;
+        b=kWYxlMtgjyUIw8M5xDd4m6sNMua02BG6de5aVg3B9bKAZZGQXzAThMXfnC/cdoCZGj
+         p6pJ2u5iDVeo/sTUxjQyHu0rZ1w4F2pEemzb8JkDpZZf2Ji/gmsiraL0N+t3JlAsMh1j
+         XrxYOnGNx7wyDJjucsDSAGP/ThOzfjqAi25QHzuIJNi+pQgemKLfTZiwNEHzbgyioNpL
+         JyLFpUaCC2WH9yfpfp+P//U7iVjTZS8cYU6lwrLnC+/PBWAPc1tcofy0fTEjki6epDeL
+         WrfYeKCOYCM2E7Qp1LKfS66crc0z2noUtw2NoL2vODorv4Pq17FwixXe49erA1HtLT4d
+         si7A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@cimer.gov.tr header.s=default header.b="ikHdu7/0";
+       spf=pass (google.com: domain of cimer_bilgi@cimer.gov.tr designates 94.55.123.84 as permitted sender) smtp.mailfrom=cimer_bilgi@cimer.gov.tr;
+       dmarc=pass (p=REJECT sp=NONE dis=NONE) header.from=cimer.gov.tr
+Return-Path: <cimer_bilgi@cimer.gov.tr>
+Received: from gw.cimer.gov.tr (gw.cimer.gov.tr. [94.55.123.84])
+        by mx.google.com with ESMTPS id ffacd0b85a97d-4324eafdb0asi35051965f8f.562.2025.12.27.01.50.09
+        for <iremnr2606@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Sat, 27 Dec 2025 01:50:09 -0800 (PST)
+Received-SPF: pass (google.com: domain of cimer_bilgi@cimer.gov.tr designates 94.55.123.84 as permitted sender) client-ip=94.55.123.84;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@cimer.gov.tr header.s=default header.b="ikHdu7/0";
+       spf=pass (google.com: domain of cimer_bilgi@cimer.gov.tr designates 94.55.123.84 as permitted sender) smtp.mailfrom=cimer_bilgi@cimer.gov.tr;
+       dmarc=pass (p=REJECT sp=NONE dis=NONE) header.from=cimer.gov.tr
+DKIM-Filter: OpenDKIM Filter v2.11.0 gw.cimer.gov.tr BF15F2027962
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=cimer.gov.tr;
+	s=default; t=1766829007;
+	bh=wlFf1dMFgtyU1xWKRlzMDfhdNjQwiz5HGxbHn3824z4=;
+	h=From:To:Date:Subject:From;
+	b=ikHdu7/0MXNqbN9yDmrJLsoTMWByG6RJCptcGr1hOUxrsIIGBMKaSC8/oO3nI1xgE
+	 6JvlJqSpH89201Uno43wbDeoj2PpG8txHUypI/oIKJgritI8OtqJEQcuV4PGaT6Z0b
+	 ETGq74PbmFmiTX1sMN52XisKffcXzsgikvX/gXzU=
+From: cimer_bilgi@cimer.gov.tr
+DKIM-Filter: OpenDKIM Filter v2.11.0 gw.cimer.gov.tr 9CE1D20D5873
+To: iremnr2606@gmail.com
+Date: 27 Dec 2025 12:50:07 +0300
+Subject: =?utf-8?B?Q8SwTUVSIEJhxZ92dXJ1c3U=?=
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: base64
+Message-Id: <20251227095007.BF15F2027962@gw.cimer.gov.tr>
+
+DQoNCjxodG1sPg0KPGhlYWQ+DQo8L2hlYWQ+DQo8Ym9keSBzdHlsZT0iYmFja2dyb3Vu
+ZC1jb2xvcjojZjZmNmY2OyI+DQogICAgPHRhYmxlIGNlbGxwYWRkaW5nPSIwIiBjZWxs
+c3BhY2luZz0iMCIgYm9yZGVyPSIwIiB3aWR0aD0iNjAwIiBhbGlnbj0iY2VudGVyIj4N
+CiAgICAgICAgPHRyPg0KICAgICAgICAgICAgPHRkIGhlaWdodD0iNzUiPg0KICAgICAg
+ICAgICAgICAgICZuYnNwOw0KICAgICAgICAgICAgPC90ZD4NCiAgICAgICAgPC90cj4N
+CiAgICA8L3RhYmxlPg0KCTx0YWJsZSBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9
+IjAiIGJvcmRlcj0iMCIgd2lkdGg9IjYwMCIgYWxpZ249ImNlbnRlciIgYmdjb2xvcj0i
+I0ZGRiI+DQoJCTx0cj4NCgkJCTx0ZCBiZ2NvbG9yPSIjM2VhMmU2IiBoZWlnaHQ9IjUi
+PjwvdGQ+DQoJCTwvdHI+DQoJCTx0ciBhbGlnbj0iY2VudGVyIj4NCgkJCTx0ZCBoZWln
+aHQ9IjEyMCI+DQoJCQkJPGltZyBzcmM9Imh0dHBzOi8vd3d3LmNpbWVyLmdvdi50ci9p
+bWFnZXMvY2ltZXItbG9nby5wbmciIGhlaWdodD0iNzAiIGFsdD0iIiAvPg0KCQkJPC90
+ZD4NCgkJPC90cj4NCgkJPHRyPg0KCQkJPHRkIGFsaWduPSJjZW50ZXIiIHN0eWxlPSJm
+b250LXNpemU6MTZweDsgbGluZS1oZWlnaHQ6MTQwJTsgY29sb3I6IzAzM2M2MCI+DQoJ
+CQkJPGI+DQoJCQkJCVNhecSxbiA8c3BhbiBzdHlsZT0iZm9udC1zaXplOjIwcHg7Ij4m
+I3gxMzA7UkVNTlVSIEZBVE1BICYjeEM3O0lMRElSPC9zcGFuPiw8YnIgLz48YnIgLz4N
+CgkJCQkJVC5DLiBDdW1odXJiYcWfa2FubMSxxJ/EsSDEsGxldGnFn2ltIE1lcmtlemni
+gJluZSAoQ8SwTUVSKSB5YXBtxLHFnyBvbGR1xJ91bnV6PGJyIC8+DQoJCQkJCWJhxZ92
+dXJ1bnV6IDI3LjEyLjIwMjUgdGFyaWhpbmRlIGFsxLFubcSxxZ90xLFyLjxiciAvPg0K
+CQkJCQlCYcWfdnVydW51enUgPHNwYW4gc3R5bGU9ImNvbG9yOiM5YmE4YjA7IHRleHQt
+ZGVjb3JhdGlvbjp1bmRlcmxpbmU7Ij4yNTA1NDQxMTMzPC9zcGFuPiBzYXnEsXPEsSBp
+bGUgdGFraXAgZWRlYmlsaXJzaW5pei4NCgkJCQk8L2I+DQoJCQk8L3RkPg0KCQk8L3Ry
+Pg0KCQk8dHI+DQoJCQk8dGQgaGVpZ2h0PSI1MCI+PC90ZD4NCgkJPC90cj4NCgkJPHRy
+Pg0KCQkJPHRkPg0KCQkJCTx0YWJsZSBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9
+IjAiIGJvcmRlcj0iMCIgd2lkdGg9IjYwMCI+DQoJCQkJCTx0cj4NCgkJCQkJCTx0ZCB3
+aWR0aD0iMjAwIj48L3RkPg0KCQkJCQkJPHRkIHdpZHRoPSIyMDAiIGJnY29sb3I9IiM1
+MmM4OTgiIGFsaWduPSJjZW50ZXIiIGhlaWdodD0iNDAiIHN0eWxlPSJsaW5lLWhlaWdo
+dDo0MHB4Ij4NCgkJCQkJCQk8YSBocmVmPSJodHRwczovL3d3dy5jaW1lci5nb3YudHIv
+P2lzbGVtPWJhc3Z1cnVzb3JndWxhIiBzdHlsZT0id2lkdGg6MTAwJTsgaGVpZ2h0OjEw
+MCU7IGRpc3BsYXk6YmxvY2s7IHRleHQtZGVjb3JhdGlvbjpub25lOyBjb2xvcjogd2hp
+dGU7Ij4NCgkJCQkJCQkJPGI+Q8SwTUVSJ0UgR8SwUsSwxZ48L2I+DQoJCQkJCQkJPC9h
+Pg0KCQkJCQkJPC90ZD4NCgkJCQkJCTx0ZCB3aWR0aD0iMjAwIj48L3RkPg0KCQkJCQk8
+L3RyPg0KCQkJCTwvdGFibGU+DQoJCQk8L3RkPg0KCQk8L3RyPg0KCQk8dHI+DQoJCQk8
+dGQgaGVpZ2h0PSI1MCI+PC90ZD4NCgkJPC90cj4NCgkJPHRyPg0KCQkJPHRkIGFsaWdu
+PSJjZW50ZXIiIHN0eWxlPSJmb250LXNpemU6MTZweDsgbGluZS1oZWlnaHQ6MTQwJTsg
+Y29sb3I6IzAzM2M2MDsiPg0KCQkJCTxhIHN0eWxlPSJjb2xvcjogYmxhY2s7Zm9udC1z
+aXplOjE1cHg7IiBocmVmPSJodHRwczovL2NpbWVyLmdvdi50ci9IZXNhcC9FcG9zdGFI
+YXRhbGk/YmltPUNmREo4Q0xkX3UtM3Z0bEVtY2hqX2JXQndCY3lwc3Nqc19pRGxiT0hy
+SGZ6cGNhSVpxZUt0LVVaWC04RlgzWGhVbWlZTmxNS1pzN1UxZ0U3RmJXSnFRLVdkYU5j
+TVdZNjFBcEV2cGhYbmdtQVo4Q2lmMDdjcTFTdU1mb19sYTJ2enF4cjFBa0xsOXp3SHJs
+cWZ3RE5sbWhqbHBjYkp1N2NiRGEzRU5LM29VY0FjYUowNXRmandTMWkxY2JueWQ3b1d2
+alhKUSI+RS1Qb3N0YSBhZHJlc2kgc2l6ZSBhaXQgZGXEn2lsc2UgYnVyYXlhIHTEsWts
+YXnEsW7EsXouPC9hPg0KCQkJPC90ZD4NCgkJPC90cj4NCg0KCQk8dHI+DQoJCQk8dGQg
+aGVpZ2h0PSI1MCI+PC90ZD4NCgkJPC90cj4NCgkJPHRyPg0KCQkJPHRkIGJnY29sb3I9
+IiNlMGU0ZTciIGhlaWdodD0iMSI+PC90ZD4NCgkJPC90cj4NCgkJPHRyPg0KCQkJPHRk
+IGhlaWdodD0iMjUiPjwvdGQ+DQoJCTwvdHI+DQoJCTx0cj4NCgkJCTx0ZCBhbGlnbj0i
+Y2VudGVyIiBzdHlsZT0iY29sb3I6I2MxYzZjOSI+DQoJCQkJQnUgZS1wb3N0YSBvdG9t
+YXRpayBvbHXFn3R1cnVsbXXFn3R1ciwgbMO8dGZlbiBjZXZhcCB2ZXJtZXlpbml6Ljxi
+ciAvPg0KCQkJCUPEsE1FUiBpbGUgaWxnaWxpIGhlciB0w7xybMO8IHNvcnVudXogacOn
+aW4gMTUw4oCZeWkgYXJheWFiaWxpcnNpbml6Lg0KCQkJPC90ZD4NCgkJPC90cj4NCgkJ
+PHRyPg0KCQkJPHRkIGhlaWdodD0iMjUiPjwvdGQ+DQoJCTwvdHI+DQoJPC90YWJsZT4N
+Cg0KICAgIDx0YWJsZSBjZWxscGFkZGluZz0iMCIgY2VsbHNwYWNpbmc9IjAiIGJvcmRl
+cj0iMCIgd2lkdGg9IjYwMCIgYWxpZ249ImNlbnRlciI+DQogICAgICAgIDx0cj4NCiAg
+ICAgICAgICAgIDx0ZCBoZWlnaHQ9IjE1MCI+DQogICAgICAgICAgICAgICAgJm5ic3A7
+DQogICAgICAgICAgICA8L3RkPg0KICAgICAgICA8L3RyPg0KICAgIDwvdGFibGU+DQo8
+L2JvZHk+DQo8L2h0bWw+
+

@@ -1,0 +1,854 @@
+Delivered-To: iremnr2606@gmail.com
+Received: by 2002:a05:6a11:c908:b0:699:d94d:41d6 with SMTP id jb8csp3629702pxc;
+        Mon, 12 Jan 2026 23:10:47 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IE9AQHT6md1k1kDsH43ajhGs3JtCqU45ZVTm/TfsPFVzcP7eSpAhLUt+wi24/c0pxHOEaAO
+X-Received: by 2002:a17:906:eeca:b0:b83:24a1:5e17 with SMTP id a640c23a62f3a-b8444fabd61mr1943273866b.44.1768288247180;
+        Mon, 12 Jan 2026 23:10:47 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1768288247; cv=none;
+        d=google.com; s=arc-20240605;
+        b=HL0uhri3QarDNmLOHvLWNZZwZA7nN4PUZny+JfPbOaOWcx/2DyUfWhgFe/wsZVsSm9
+         lpFHBBh68RVkP8qixv9/E4Beg5NN5n/2fihWFn6BIVSofHmi4XH1ZI9LThr2f+ZIO36m
+         UsaCKGLFOvZNa7vnM5pPXJP4UeEIAHofGR3PBCZoL/ihAYv8B6K3nElDqGjQ7S0Q1FjN
+         KYTAPl+UAXXr7GDUQS6PTUgZaTUY5Rc4aIzHpy0Cabv3kK7Cjt4VTvSgP0nZTAVmYXp5
+         O6iaCaxO4ZYHXc7JvFJwgU1A+mMIot/zqSCTMK88LQzVoT+W3JriaJonBO3kKqTaCtFy
+         69JQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe-post:list-unsubscribe:to:from:subject:message-id
+         :date:mime-version:dkim-signature;
+        bh=hLRTI24PtLNopXnyijPEOvjTPN91T5PsO3MLZ63OaWE=;
+        fh=z43PlvtvL2tjKoqDZpeZDzHO0fV5pW/rtc+FWrJPf1Y=;
+        b=hCoYXabskZT5JKfX2aOe7HHLjzt9u/diYG70ucyB78Eem6rycPWumNxW2/BR4VpHW+
+         DdO0a+hR3//dIJIka9PN9Yj0tQVeTAq8uJ8Mn+xW7zQRc0bck+WCaeqjSVpDPxXrbmc5
+         XVBOAPH516naIxSxZwsF/hVEQsSfICDAsE0jza1xqb+R+CtpSRMWntQ53oASXe0cz1RT
+         yqS9pfeOkADGREwQ481GLh9D8QiPZlBT1k6ddv5pXfGE+6GFJl2ix62yKMez8M4ND9y2
+         Q90MYzaeeDpg+vzv7Z7xFf6VX5SFseyLf5XMp5Beg8Np7enKgw6X2tXxTO3/bnb45cv0
+         VbMA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@e.iyzico.com header.s=deniyzi header.b=eiCtSjBY;
+       spf=pass (google.com: domain of duyuru@e.iyzico.com designates 193.142.35.19 as permitted sender) smtp.mailfrom=duyuru@e.iyzico.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=e.iyzico.com
+Return-Path: <duyuru@e.iyzico.com>
+Received: from static-mail-275-9.e.iyzico.com (static-mail-275-9.e.iyzico.com. [193.142.35.19])
+        by mx.google.com with ESMTPS id 4fb4d7f45d1cf-6507b8c15b4si21171738a12.18.2026.01.12.23.10.46
+        for <iremnr2606@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Mon, 12 Jan 2026 23:10:47 -0800 (PST)
+Received-SPF: pass (google.com: domain of duyuru@e.iyzico.com designates 193.142.35.19 as permitted sender) client-ip=193.142.35.19;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@e.iyzico.com header.s=deniyzi header.b=eiCtSjBY;
+       spf=pass (google.com: domain of duyuru@e.iyzico.com designates 193.142.35.19 as permitted sender) smtp.mailfrom=duyuru@e.iyzico.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=e.iyzico.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; q=dns/txt;
+ d=e.iyzico.com; s=deniyzi;
+ h=mime-version:date:message-id:subject:from:to:content-type:list-unsubscribe:list-unsubscribe-post:x-csa-complaints;
+ bh=hLRTI24PtLNopXnyijPEOvjTPN91T5PsO3MLZ63OaWE=;
+ b=eiCtSjBYCX28RTuQ5JsIkTe71ZAbg1VN/6h3V1BQi7Ex7wRKpggO85x9D1k4Y1omD9qc
+ B+zc931ZUYGnnW654d040/0gZmNhDEqrNfa7gacOdtDvjVsfHNKDSVAbKzzD6/DiiHlDkX
+ 3e6dpLLefgANkbj/bB13bcWtb7VoKTm96Xs5NFowrdd6l1wJ6nLoTFmgV+pWOK1yOtYVFP
+ LJ8B/bDl4S5aQGysn8wmEfd5pWO58c2qVwKhu7JfQNTFi0Lbyz5KYwxgpwld0GeYyKiZbf
+ Zfk0F059qqaBIewt6RafgaJutCmMAw4VWXRW7XlSEh1QXP8BDg1sr0E5M3YA0xaw==
+MIME-Version: 1.0
+Date: Tue, 13 Jan 2026 07:10:21 +0000
+Message-ID: <257DBE42AB524BD0940819CA1AF2E8FC@e.iyzico.com>
+Content-Type: multipart/alternative; boundary="------------040002050209050506050906"
+X-Priority: 3 (Normal)
+Subject: =?utf-8?B?aXl6aWNvIFV5Z3VsYW1hc8SxbmRhIEthbXBhbnlhbGFyIFNlbmkgQmVrbGl5b3Ih?=
+From: iyzico <duyuru@e.iyzico.com>
+X-VirtualMTA: iyzico-bulk
+To: iremnr2606@gmail.com
+X-UID: rw4el_p_l_Ls3Wy_s_l_hb7cuAxETMw2_p_l_gnRI3fiobqvmsyXfFxfqCTYQNULvQ8EskTHUnGmG_s_l_XnFvN_s_l_GKGL94n74A_p_l_cK4_p_l_ziDGKFiT_p_l_8OqXnXUzlobZo9g3z6cDRDnKq9pFIjCaRJv_p_l_oZaP4XoDV5vabuwC_p_l_Q_e_q__e_q_
+List-Unsubscribe: <https://lb.iyzico.com/p/be/lu/rw4el_p_l_Ls3Wy_s_l_hb7cuAxETMw2_p_l_gnRI3fiobqvmsyXfFxfqCTYQNULvQ8EskTHUnGmG_s_l_XnFvN_s_l_GKGL94n74A_p_l_cK4_p_l_ziDGKFiT_p_l_8OqXnXUzlobZo9g3z6cDRDnKq9pFIjCaRJv_p_l_oZaP4XoDV5vabuwC_p_l_Q_e_q__e_q_>
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-CSA-Complaints: csa-complaints@eco.de
+
+--------------040002050209050506050906
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8; format=flowed
+
+iyzico uygulamas=C4=B1ndan diledi=C4=9Fin kampanyaya kat=C4=B1l, al=C4=B1=
+=C5=9Fveri=C5=9Fini iyzico ile
+=C3=96de, kazand=C4=B1=C4=9F=C4=B1n indirim tutar=C4=B1n an=C4=B1nda bakiye=
+ne y=C3=BCklensin!
+                     =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                    =20
+                =20
+
+iyzico Uygulamas=C4=B1nda
+Kampanyalar Seni Bekliyor!
+
+---------------------------------------------------------------------------=
+-----
+
+iyzico uygulamas=C4=B1ndan diledi=C4=9Fin kampanyaya kat=C4=B1l, al=C4=B1=
+=C5=9Fveri=C5=9Fini iyzico ile
+=C3=96de, kazand=C4=B1=C4=9F=C4=B1n indirim tutar=C4=B1n an=C4=B1nda bakiye=
+ne y=C3=BCklensin!
+
+Uygulamay=C4=B1 Ke=C5=9Ffet
+<http://lb.iyzico.com/p/be/cl/a2005755-ab0f-402f-984f-dd972a8f7b73/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/2d5403a0-1eaf-43f4-8341-96932246ad1f/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/3301387d-d797-40f7-8de7-0058bd432566/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+
+    =20
+
+</tr2 >
+<http://lb.iyzico.com/p/be/cl/b61b5648-7534-4ef5-95c2-ad5886f57a81/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/175e2e49-423f-4603-b4bf-9a74390b5039/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/b635c309-4b83-448b-968c-494ce64355f0/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/64307435-916a-4493-a4de-f53f590937f5/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/e2a73700-b14b-4efd-b561-f14e14696156/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/f790aaca-31f4-4375-a381-84880eb356da/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/ed8827f1-ad0b-48d0-bc6c-e5599325e63e/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+
+=20
+
+=20
+
+=20
+
+=20
+
+=20
+
+=20
+
+---------------------------------------------------------------------------=
+-----
+
+=20
+
+=20
+
+iyzico ile =C3=96de'yebilece=C4=9Fin Markalar
+<http://lb.iyzico.com/p/be/cl/eac6dfa2-5f05-45c1-8542-82bfe73aa49b/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/92237a82-45bc-4396-a459-d0d1a3c8a7ae/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+
+=20
+
+Bu e-posta,iyzico.com
+<http://lb.iyzico.com/p/be/cl/1fd36970-665c-450f-8430-c8490b58896d/pNaiAjfQ=
+aax82p
+AOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5W=
+A2qnfE
+6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg=
+82LNCz
+A1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_>'airemnr26=
+06@gma
+il.com
+<iremnr2606@gmail.com> adresi ile kay=C4=B1t oldu=C4=9Funuz i=C3=A7in otoma=
+tik olarak
+g=C3=B6nderilmi=C5=9Ftir ve cevaplanamamaktad=C4=B1r.
+
+=20
+
+=20
+
+Sorular=C4=B1n=C4=B1z i=C3=A7in
+Yard=C4=B1m Merkezi
+<http://lb.iyzico.com/p/be/cl/ca78b908-77bf-4ec8-914e-608010d9d822/pNaiAjfQ=
+aax82p
+AOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5W=
+A2qnfE
+6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg=
+82LNCz
+A1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_> sayfam=C4=
+=B1z=C4=B1
+ziyaret edebilir veya
+=C4=B0leti=C5=9Fim Formu
+<http://lb.iyzico.com/p/be/cl/e3f5b343-9ce8-47d5-b083-b70a8bdd98c2/pNaiAjfQ=
+aax82p
+AOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5W=
+A2qnfE
+6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg=
+82LNCz
+A1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_> =C3=BCzer=
+inden
+bize ula=C5=9Fabilirsiniz.
+
+=20
+
+=20
+
+iyzi =C3=96deme ve Elektronik Para Hizmetleri A.=C5=9E.
+=C4=B0nci =C3=87=C4=B1kmaz=C4=B1 Sokak No: 3 Kat: 3 D: 10 Altunizade =C3=9C=
+sk=C3=BCdar =C4=B0stanbul.
+Mersis No: 0483034315700019
+
+=20
+
+www.iyzico.com
+<http://lb.iyzico.com/p/be/cl/812803bb-04e2-45fd-bc77-c51dae71b168/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/c89d3b8a-aef3-4675-b1cc-25704756a6c0/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/f9bfcb5b-6952-4214-a144-8618bb4b8c71/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/8764df3e-c90a-465c-bf2c-bbf9b344d84c/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/40ab1a4d-72be-4c37-81f3-410c42a68f78/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/6d528238-8c25-43b0-9723-8bb137818689/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/6d891ad5-eef0-476d-8d3f-54615bfe314b/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+<http://lb.iyzico.com/p/be/cl/1a83b8ac-c431-453a-955d-7257118b2bbc/pNaiAjfQ=
+aax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1=
+stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVC=
+Rmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_=
+q__e_q_>
+
+=20
+
+=20
+
+Duyurular=C4=B1m=C4=B1z=C4=B1 almak istemiyorsan=C4=B1z l=C3=BCtfent=C4=B1k=
+lay=C4=B1n=C4=B1z.
+<http://lb.iyzico.com/p/be/us/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxks=
+pNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51Kz=
+DRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upX=
+khvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_>
+
+
+--------------040002050209050506050906
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<!DOCTYPE html>=0A=0A=0A=0A<html lang=3D"en">=0A=0A<head>=0A=0A<meta http-e=
+quiv=3D"Content-Type" content=3D"text/html charset=3DUTF-8">=0A=0A<meta nam=
+e=3D"viewport" content=3D"width=3Ddevice-width, initial-scale=3D1.0">=0A=0A=
+<meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge">=0A=0A<style typ=
+e=3D"text/css">=0A=0Abody, table, td, a {=0A=0A-webkit-text-size-adjust: 10=
+0%;=0A=0A-ms-text-size-adjust: 100%;=0A=0A}=0A=0Atable, td {=0A=0Amso-table=
+-lspace: 0pt;=0A=0Amso-table-rspace: 0pt;=0A=0A}=0A=0Aimg {=0A=0A-ms-interp=
+olation-mode: bicubic;=0A=0A}=0A=0Aimg {=0A=0Aborder: 0;=0A=0Aheight: auto;=
+=0A=0Aline-height: 100%;=0A=0Aoutline: none;=0A=0Atext-decoration: none;=0A=
+=0A}=0A=0Atable {=0A=0Aborder-collapse: collapse !important;=0A=0A}=0A=0Abo=
+dy {=0A=0Aheight: 100% !important;=0A=0Amargin: 0 !important;=0A=0Apadding:=
+ 0 !important;=0A=0Awidth: 100% !important;=0A=0A}=0A=0Aa[x-apple-data-dete=
+ctors] {=0A=0Acolor: inherit !important;=0A=0Atext-decoration: none !import=
+ant;=0A=0Afont-size: inherit !important;=0A=0Afont-family: inherit !importa=
+nt;=0A=0Afont-weight: inherit !important;=0A=0Aline-height: inherit !import=
+ant;=0A=0A}=0A=0A@media screen and (max-width: 525px) {=0A=0A.logo img {=0A=
+=0Amargin: 0 auto !important;=0A=0A}=0A=0A.mobile-hide {=0A=0Adisplay: none=
+ !important;=0A=0A}=0A=0A.img-max {=0A=0Amax-width: 100% !important;=0A=0Aw=
+idth: 100% !important;=0A=0Aheight: auto !important;=0A=0A}=0A=0A.responsiv=
+e-table {=0A=0Awidth: 100% !important;=0A=0A}=0A=0A.padding {=0A=0Apadding:=
+ 6px 5% 0px 5% !important;=0A=0A}=0A=0A.paddingBanner {=0A=0Apadding: 6px 5=
+% 6px 5% !important;=0A=0A}=0A=0A.padding-meta {=0A=0Apadding: 30px 5% 0px =
+5% !important;=0A=0Atext-align: center;=0A=0A}=0A=0A.no-padding {=0A=0Apadd=
+ing: 0 !important;=0A=0A}=0A=0A.mobile-button-container {=0A=0Amargin: 0 au=
+to;=0A=0Awidth: 100% !important;=0A=0A}=0A=0A.mobile-button {=0A=0Apadding:=
+ 15px !important;=0A=0Aborder: 0 !important;=0A=0Afont-size: 16px !importan=
+t;=0A=0Adisplay: block !important;=0A=0A}=0A=0A}=0A=0Adiv[style*=3D"margin:=
+ 16px 0;"] {=0A=0Amargin: 0 !important;=0A=0A}=0A=0A</style>=0A=0A<style ty=
+pe=3D"text/css">body{width:100%;margin:0px;padding:0;-webkit-font-smoothing=
+:antialiased} table{border-collapse:collapse html{width:100%} div,p,a,li,td=
+{-webkit-text-size-adjust:none} </style></head>=0A=0A=0A=0A<body style=3D"m=
+argin: 0 !important; padding: 0 !important;">
+<div style=3D"display:none; max-height:0px; overflow: hidden;">iyzico uygul=
+amas=C4=B1ndan diledi=C4=9Fin kampanyaya kat=C4=B1l, al=C4=B1=C5=9Fveri=C5=
+=9Fini iyzico ile =C3=96de, kazand=C4=B1=C4=9F=C4=B1n indirim tutar=C4=B1n =
+an=C4=B1nda bakiyene y=C3=BCklensin!</div><div style=3D"display: none; max-=
+height: 0px; overflow: hidden;">&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&=
+zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwn=
+j;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&=
+nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbsp;&zwnj;&nbs=
+p;&zwnj;</div>
+=0A<img src=3D"http://lb.iyzico.com/p/be/op/pNaiAjfQaax82pAOJOuuOOD2cdEmIfX=
+DJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJ=
+omUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0E=
+ALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_.gif" style=3D"d=
+isplay: none; visibility: hidden;" border=3D"0" alt=3D"">=0A<!-- HEADER -->=
+=0A<table role=3D"presentation" border=3D"0" width=3D"600" cellspacing=3D"0=
+" cellpadding=3D"0" align=3D"center">=0A<tbody>=0A<tr>=0A<td align=3D"cente=
+r" bgcolor=3D"#1c63fa"><!-- [if (gte mso 9)|(IE)]>=0A=0A=0A=0A<table role=
+=3D"presentation" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"500">=0A=0A=0A=0A<tr>=0A=0A=0A=0A<td align=3D"center" val=
+ign=3D"top" width=3D"500">=0A=0A=0A=0A<![endif]-->=0A<table class=3D"wrappe=
+r" style=3D"max-width: 500px;" role=3D"presentation" border=3D"0" width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td class=3D"=
+logo" style=3D"padding: 5px 0px 5px 0px;" align=3D"center" valign=3D"top"><=
+img style=3D"display: block; font-family: Helvetica, Arial, sans-serif; col=
+or: #ffffff; font-size: 16px;" src=3D"https://mailings.iyzico.com/assets/im=
+ages/white-logo.png" alt=3D"Logo" width=3D"97" height=3D"42" border=3D"0"><=
+/td>=0A</tr>=0A</tbody>=0A</table>=0A<!-- [if (gte mso 9)|(IE)]>=0A=0A=0A=
+=0A</td>=0A=0A=0A=0A</tr>=0A=0A=0A=0A</table>=0A=0A=0A=0A<![endif]--></td>=
+=0A</tr>=0A<tr>=0A<td class=3D"section-padding" style=3D"padding: 20px 0px =
+0px 0px;" align=3D"center" bgcolor=3D"#ffffff"><!-- [if (gte mso 9)|(IE)]>=
+=0A=0A=0A=0A<table role=3D"presentation" align=3D"center" border=3D"0" cell=
+spacing=3D"0" cellpadding=3D"0" width=3D"500">=0A=0A=0A=0A<tr>=0A=0A=0A=0A<=
+td align=3D"center" valign=3D"top" width=3D"600">=0A=0A=0A=0A<![endif]-->=
+=0A<table class=3D"responsive-table" style=3D"max-width: 600px;" role=3D"pr=
+esentation" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+>=0A<tbody>=0A<tr>=0A<td><!-- HERO IMAGE -->=0A<table role=3D"presentation"=
+ border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=
+=0A<tr>=0A<td><!-- COPY -->=0A<table role=3D"presentation" border=3D"0" wid=
+th=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td cla=
+ss=3D"padding" style=3D"font-size: 36px; font-family: Helvetica, Arial, san=
+s-serif; color: #333333; font-weight: 100;" align=3D"center"><span style=3D=
+"font-weight: bold;">iyzico Uygulamas=C4=B1nda</span><br>Kampanyalar Seni B=
+ekliyor!</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A<tr>=0A<td><!=
+-- COPY -->=0A<table role=3D"presentation" border=3D"0" width=3D"100%" cell=
+spacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td><hr></td>=0A</tr>=
+=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A<tr>=0A<td><!-- COPY -->=0A<table =
+style=3D"height: 50px; width: 100%;" role=3D"presentation" border=3D"0" wid=
+th=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr style=3D"h=
+eight: 50px;">=0A<td style=3D"padding: 20px 0px; font-size: 16px; line-heig=
+ht: 25px; font-family: Helvetica, Arial, sans-serif; color: #000000; height=
+: 50px;" align=3D"center"><strong>iyzico uygulamas=C4=B1ndan diledi=C4=9Fin=
+ kampanyaya kat=C4=B1l, al=C4=B1=C5=9Fveri=C5=9Fini iyzico ile &Ouml;de, ka=
+zand=C4=B1=C4=9F=C4=B1n indirim tutar=C4=B1n an=C4=B1nda bakiyene y&uuml;kl=
+ensin!</strong></td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A<tr>=
+=0A<td style=3D"padding: 0px 0px 32px 0px;">=0A<table border=3D"0" width=3D=
+"280" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">=0A<tbody>=0A<tr=
+>=0A<td style=3D"background-color: #1e64ff; border-radius: 25px; text-align=
+: center; font-weight: bold; padding: 15px; font-size: 16px; font-family: A=
+rial; font-style: normal; color: #ffffff; text-decoration: none; border: 0p=
+x none #000000;" align=3D"center"><a style=3D"font-size: 16px; font-family:=
+ Arial; font-style: normal; text-align: center; color: #ffffff; text-decora=
+tion: none; font-weight: bold;" href=3D"http://lb.iyzico.com/p/be/cl/a20057=
+55-ab0f-402f-984f-dd972a8f7b73/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxk=
+spNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51K=
+zDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3up=
+XkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" target=3D"_blank" rel=3D"no=
+opener" delinkid=3D"a2005755-ab0f-402f-984f-dd972a8f7b73">Uygulamay=C4=B1 K=
+e=C5=9Ffet</a></td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A<tr>=0A=
+<td style=3D"padding: 0px 0px 32px 0px;">=0A<table border=3D"0" width=3D"60=
+0" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">=0A<tbody>=0A<tr>=
+=0A<td style=3D"text-align: center;" align=3D"center"><a href=3D"http://lb.=
+iyzico.com/p/be/cl/2d5403a0-1eaf-43f4-8341-96932246ad1f/pNaiAjfQaax82pAOJOu=
+uOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnf=
+E6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVch=
+g82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" ta=
+rget=3D"_blank" rel=3D"noopener" delinkid=3D"2d5403a0-1eaf-43f4-8341-969322=
+46ad1f"> <img src=3D"https://mailings.iyzico.com/assets/images/bulten_banne=
+r_090126.png" width=3D"600"> </a></td>=0A</tr>=0A</tbody>=0A</table>=0A</td=
+>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A<!-=
+- [if (gte mso 9)|(IE)]>=0A=0A=0A=0A</td>=0A=0A=0A=0A</tr>=0A=0A=0A=0A</tab=
+le>=0A=0A=0A=0A<![endif]--></td>=0A</tr>=0A<!--- buradan -->=0A<tr>=0A<td c=
+lass=3D"section-padding" style=3D"padding: 0px 0px 0px 0px;" align=3D"cente=
+r" bgcolor=3D"#ffffff"><!-- [if (gte mso 9)|(IE)]>=0A=0A=0A=0A<table role=
+=3D"presentation" align=3D"center" border=3D"0" cellspacing=3D"0" cellpaddi=
+ng=3D"0" width=3D"500">=0A=0A=0A=0A<tr>=0A=0A=0A=0A<td align=3D"center" val=
+ign=3D"top" width=3D"500">=0A=0A=0A=0A<![endif]-->=0A<table class=3D"respon=
+sive-table" style=3D"max-width: 600px;" role=3D"presentation" border=3D"0" =
+width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td =
+align=3D"center" valign=3D"top" width=3D"100%" height=3D"100%"><!-- [if (gt=
+e mso 9)|(IE)]>=0A=0A=0A=0A<table role=3D"presentation" align=3D"center" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"500">=0A=0A=0A=0A<t=
+r>=0A=0A=0A=0A<td align=3D"center" valign=3D"top" width=3D"500">=0A=0A=0A=
+=0A<![endif]-->=0A<table style=3D"max-width: 600px;" role=3D"presentation" =
+border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" align=3D"ce=
+nter">=0A<tbody>=0A<tr>=0A<td class=3D"padding" style=3D"font-size: 0;" ali=
+gn=3D"center" valign=3D"top"><!-- [if (gte mso 9)|(IE)]>=0A=0A=0A=0A<table =
+role=3D"presentation" align=3D"center" border=3D"0" cellspacing=3D"0" cellp=
+adding=3D"0" width=3D"500">=0A=0A=0A=0A<tr>=0A=0A=0A=0A<td align=3D"left" v=
+align=3D"top" width=3D"290">=0A=0A=0A=0A<![endif]-->=0A<div class=3D"wrappe=
+r" style=3D"display: inline-block; min-width: 290px; vertical-align: top; w=
+idth: 100%; padding-bottom: 12px;">=0A<table class=3D"wrapper" role=3D"pres=
+entation" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" a=
+lign=3D"left">=0A<tbody>=0A<tr>=0A<td align=3D"center" valign=3D"top">=0A<t=
+able role=3D"presentation" border=3D"0" width=3D"100%" cellspacing=3D"0" ce=
+llpadding=3D"0">=0A<tbody>=0A<tr>=0A<td align=3D"center">=0A<table style=3D=
+"max-width: 291px;" role=3D"presentation" border=3D"0" width=3D"100%" cells=
+pacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td align=3D"center"><a =
+href=3D"http://lb.iyzico.com/p/be/cl/3301387d-d797-40f7-8de7-0058bd432566/p=
+NaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_=
+s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_=
+s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1=
+rvBg_e_q__e_q_" target=3D"_blank" rel=3D"noopener" delinkid=3D"3301387d-d79=
+7-40f7-8de7-0058bd432566"><img class=3D"img-max" style=3D"width: 291px;" sr=
+c=3D"https://mailings.iyzico.com/assets/images/bulten_090126_1.png" alt=3D"=
+Kaft" width=3D"291" border=3D"0"></a></td>=0A</tr>=0A</tbody>=0A</table>=0A=
+</td>=0A<td>=0A<table>=0A<tbody>=0A<tr>=0A<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp=
+;</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A<td align=3D"center">&lt;/tr=
+2 &gt;=0A<table style=3D"max-width: 291px;" role=3D"presentation" border=3D=
+"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A=
+<td align=3D"center"><a href=3D"http://lb.iyzico.com/p/be/cl/b61b5648-7534-=
+4ef5-95c2-ad5886f57a81/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3=
+wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF9=
+71179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgz=
+aLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" target=3D"_blank" rel=3D"noopener" =
+delinkid=3D"b61b5648-7534-4ef5-95c2-ad5886f57a81"><img class=3D"img-max" st=
+yle=3D"width: 291px;" src=3D"https://mailings.iyzico.com/assets/images/bult=
+en_090126_2.png" alt=3D"E=C4=9Fitim Kitap" width=3D"291" border=3D"0"></a><=
+/td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A=
+</td>=0A</tr>=0A<tr style=3D"display: block;">=0A<td class=3D"hide" style=
+=3D"font-size: 24px; line-height: 24px; display: block;" align=3D"center" h=
+eight=3D"24">&nbsp;</td>=0A</tr>=0A<!-- [if !mso]><!-->=0A<tr class=3D"only=
+mobile" style=3D"max-height: 0; overflow: hidden; display: none;">=0A<td cl=
+ass=3D"onlymobile" style=3D"max-height: 0; overflow: hidden; display: none;=
+">=0A<div class=3D"onlymobile" style=3D"max-height: 0; overflow: hidden; di=
+splay: none;">=0A<table class=3D"hundred" border=3D"0" cellspacing=3D"0" ce=
+llpadding=3D"0" align=3D"center">=0A<tbody>=0A<tr>=0A<td class=3D"onlymobil=
+e" style=3D"display: none; font-size: 24px; line-height: 24px;" align=3D"ce=
+nter" height=3D"24">&nbsp;</td>=0A</tr>=0A</tbody>=0A</table>=0A</div>=0A</=
+td>=0A</tr>=0A<!--<![endif]-->=0A<tr>=0A<td align=3D"center" valign=3D"top"=
+>=0A<table role=3D"presentation" border=3D"0" width=3D"100%" cellspacing=3D=
+"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td align=3D"center">=0A<table st=
+yle=3D"max-width: 291px;" role=3D"presentation" border=3D"0" width=3D"100%"=
+ cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td align=3D"cente=
+r"><a href=3D"http://lb.iyzico.com/p/be/cl/175e2e49-423f-4603-b4bf-9a74390b=
+5039/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455=
+Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1V=
+m2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pL=
+elvTS1rvBg_e_q__e_q_" target=3D"_blank" rel=3D"noopener" delinkid=3D"175e2e=
+49-423f-4603-b4bf-9a74390b5039"><img class=3D"img-max" style=3D"width: 291p=
+x;" src=3D"https://mailings.iyzico.com/assets/images/bulten_090126_3.png" a=
+lt=3D"Oriflame" width=3D"291" border=3D"0"></a></td>=0A</tr>=0A</tbody>=0A<=
+/table>=0A</td>=0A<td>=0A<table>=0A<tbody>=0A<tr>=0A<td>&nbsp;&nbsp;&nbsp;&=
+nbsp;&nbsp;</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A<td align=3D"cente=
+r">=0A<table style=3D"max-width: 291px;" role=3D"presentation" border=3D"0"=
+ width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td=
+ align=3D"center"><a href=3D"http://lb.iyzico.com/p/be/cl/b635c309-4b83-448=
+b-968c-494ce64355f0/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs=
+_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF9711=
+79bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLd=
+AYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" target=3D"_blank" rel=3D"noopener" del=
+inkid=3D"b635c309-4b83-448b-968c-494ce64355f0"><img class=3D"img-max" style=
+=3D"width: 291px;" src=3D"https://mailings.iyzico.com/assets/images/bulten_=
+090126_4.png" alt=3D"Tima=C5=9F" width=3D"291" border=3D"0"></a></td>=0A</t=
+r>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</=
+tr>=0A<tr style=3D"display: block;">=0A<td class=3D"hide" style=3D"font-siz=
+e: 24px; line-height: 24px; display: block;" align=3D"center" height=3D"24"=
+>&nbsp;</td>=0A</tr>=0A<!-- [if !mso]><!-->=0A<tr class=3D"onlymobile" styl=
+e=3D"max-height: 0; overflow: hidden; display: none;">=0A<td class=3D"onlym=
+obile" style=3D"max-height: 0; overflow: hidden; display: none;">=0A<div cl=
+ass=3D"onlymobile" style=3D"max-height: 0; overflow: hidden; display: none;=
+">=0A<table class=3D"hundred" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" align=3D"center">=0A<tbody>=0A<tr>=0A<td class=3D"onlymobile" style=3D"=
+display: none; font-size: 24px; line-height: 24px;" align=3D"center" height=
+=3D"24">&nbsp;</td>=0A</tr>=0A</tbody>=0A</table>=0A</div>=0A</td>=0A</tr>=
+=0A<!--<![endif]-->=0A<tr>=0A<td align=3D"center" valign=3D"top">=0A<table =
+role=3D"presentation" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0">=0A<tbody>=0A<tr>=0A<td align=3D"center">=0A<table style=3D"max-=
+width: 291px;" role=3D"presentation" border=3D"0" width=3D"100%" cellspacin=
+g=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td align=3D"center"><a href=
+=3D"http://lb.iyzico.com/p/be/cl/64307435-916a-4493-a4de-f53f590937f5/pNaiA=
+jfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_=
+tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_=
+SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg=
+_e_q__e_q_" target=3D"_blank" rel=3D"noopener" delinkid=3D"64307435-916a-44=
+93-a4de-f53f590937f5"><img class=3D"img-max" style=3D"width: 291px;" src=3D=
+"https://mailings.iyzico.com/assets/images/bulten_090126_5.png" alt=3D"Kita=
+psepeti" width=3D"291" border=3D"0"></a></td>=0A</tr>=0A</tbody>=0A</table>=
+=0A</td>=0A<td>=0A<table>=0A<tbody>=0A<tr>=0A<td>&nbsp;&nbsp;&nbsp;&nbsp;&n=
+bsp;</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A<td align=3D"center">=0A<=
+table style=3D"max-width: 291px;" role=3D"presentation" border=3D"0" width=
+=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td align=
+=3D"center"><a href=3D"http://lb.iyzico.com/p/be/cl/e2a73700-b14b-4efd-b561=
+-f14e14696156/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2=
+kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBv=
+JvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd=
+2SFp6f0pLelvTS1rvBg_e_q__e_q_" target=3D"_blank" rel=3D"noopener" delinkid=
+=3D"e2a73700-b14b-4efd-b561-f14e14696156"><img class=3D"img-max" style=3D"w=
+idth: 291px;" src=3D"https://mailings.iyzico.com/assets/images/bulten_09012=
+6_6.png" alt=3D"Pendirhan" width=3D"291" border=3D"0"></a></td>=0A</tr>=0A<=
+/tbody>=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A=
+<tr style=3D"display: block;">=0A<td class=3D"hide" style=3D"font-size: 24p=
+x; line-height: 24px; display: block;" align=3D"center" height=3D"24">&nbsp=
+;</td>=0A</tr>=0A<tr>=0A<td align=3D"center" valign=3D"top">=0A<table role=
+=3D"presentation" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=
+=3D"0">=0A<tbody>=0A<tr>=0A<td align=3D"center">=0A<table style=3D"max-widt=
+h: 291px;" role=3D"presentation" border=3D"0" width=3D"100%" cellspacing=3D=
+"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td align=3D"center"><a href=3D"h=
+ttp://lb.iyzico.com/p/be/cl/f790aaca-31f4-4375-a381-84880eb356da/pNaiAjfQaa=
+x82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1st=
+UW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRm=
+ey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q_=
+_e_q_" target=3D"_blank" rel=3D"noopener" delinkid=3D"f790aaca-31f4-4375-a3=
+81-84880eb356da"><img class=3D"img-max" style=3D"width: 291px;" src=3D"http=
+s://mailings.iyzico.com/assets/images/bulten_090126_7.png" alt=3D"Tonny Bla=
+ck" width=3D"291" border=3D"0"></a></td>=0A</tr>=0A</tbody>=0A</table>=0A</=
+td>=0A<td>=0A<table>=0A<tbody>=0A<tr>=0A<td>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;<=
+/td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A<td align=3D"center">=0A<table=
+ style=3D"max-width: 291px;" role=3D"presentation" border=3D"0" width=3D"10=
+0%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td align=3D"ce=
+nter"><a href=3D"http://lb.iyzico.com/p/be/cl/ed8827f1-ad0b-48d0-bc6c-e5599=
+325e63e/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em=
+455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74K=
+X1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f=
+0pLelvTS1rvBg_e_q__e_q_" target=3D"_blank" rel=3D"noopener" delinkid=3D"ed8=
+827f1-ad0b-48d0-bc6c-e5599325e63e"><img class=3D"img-max" style=3D"width: 2=
+91px;" src=3D"https://mailings.iyzico.com/assets/images/bulten_090126_8.png=
+" alt=3D"Bg Store" width=3D"291" border=3D"0"></a></td>=0A</tr>=0A</tbody>=
+=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A<tr sty=
+le=3D"display: block;">=0A<td class=3D"hide" style=3D"font-size: 24px; line=
+-height: 24px; display: block;" align=3D"center" height=3D"24">&nbsp;</td>=
+=0A</tr>=0A<!-- [if !mso]><!-->=0A<tr class=3D"onlymobile" style=3D"max-hei=
+ght: 0; overflow: hidden; display: none;">=0A<td class=3D"onlymobile" style=
+=3D"max-height: 0; overflow: hidden; display: none;">=0A<div class=3D"onlym=
+obile" style=3D"max-height: 0; overflow: hidden; display: none;">=0A<table =
+class=3D"hundred" border=3D"0" cellspacing=3D"0" cellpadding=3D"0" align=3D=
+"center">=0A<tbody>=0A<tr>=0A<td class=3D"onlymobile" style=3D"display: non=
+e; font-size: 24px; line-height: 24px;" align=3D"center" height=3D"24">&nbs=
+p;</td>=0A</tr>=0A</tbody>=0A</table>=0A</div>=0A</td>=0A</tr>=0A<!--<![end=
+if]-->=0A<tr style=3D"display: block;">=0A<td class=3D"hide" style=3D"font-=
+size: 24px; line-height: 24px; display: block;" align=3D"center" height=3D"=
+24">&nbsp;</td>=0A</tr>=0A<!-- [if !mso]><!-->=0A<tr class=3D"onlymobile" s=
+tyle=3D"max-height: 0; overflow: hidden; display: none;">=0A<td class=3D"on=
+lymobile" style=3D"max-height: 0; overflow: hidden; display: none;">=0A<div=
+ class=3D"onlymobile" style=3D"max-height: 0; overflow: hidden; display: no=
+ne;">=0A<table class=3D"hundred" border=3D"0" cellspacing=3D"0" cellpadding=
+=3D"0" align=3D"center">=0A<tbody>=0A<tr>=0A<td class=3D"onlymobile" style=
+=3D"display: none; font-size: 24px; line-height: 24px;" align=3D"center" he=
+ight=3D"24">&nbsp;</td>=0A</tr>=0A</tbody>=0A</table>=0A</div>=0A</td>=0A</=
+tr>=0A<!--<![endif]-->=0A<tr style=3D"display: block;">=0A<td class=3D"hide=
+" style=3D"font-size: 24px; line-height: 24px; display: block;" align=3D"ce=
+nter" height=3D"24">&nbsp;</td>=0A</tr>=0A<!-- [if !mso]><!-->=0A<tr class=
+=3D"onlymobile" style=3D"max-height: 0; overflow: hidden; display: none;">=
+=0A<td class=3D"onlymobile" style=3D"max-height: 0; overflow: hidden; displ=
+ay: none;">=0A<div class=3D"onlymobile" style=3D"max-height: 0; overflow: h=
+idden; display: none;">=0A<table class=3D"hundred" border=3D"0" cellspacing=
+=3D"0" cellpadding=3D"0" align=3D"center">=0A<tbody>=0A<tr>=0A<td class=3D"=
+onlymobile" style=3D"display: none; font-size: 24px; line-height: 24px;" al=
+ign=3D"center" height=3D"24">&nbsp;</td>=0A</tr>=0A</tbody>=0A</table>=0A</=
+div>=0A</td>=0A</tr>=0A<!--<![endif]-->=0A<tr>=0A<td><!-- COPY -->=0A<table=
+ role=3D"presentation" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpa=
+dding=3D"0">=0A<tbody>=0A<tr>=0A<td><hr></td>=0A</tr>=0A</tbody>=0A</table>=
+=0A</td>=0A</tr>=0A<tr style=3D"display: block;">=0A<td class=3D"hide" styl=
+e=3D"font-size: 24px; line-height: 24px; display: block;" align=3D"center" =
+height=3D"24">&nbsp;</td>=0A</tr>=0A<!-- [if !mso]><!-->=0A<tr class=3D"onl=
+ymobile" style=3D"max-height: 0; overflow: hidden; display: none;">=0A<td c=
+lass=3D"onlymobile" style=3D"max-height: 0; overflow: hidden; display: none=
+;">=0A<div class=3D"onlymobile" style=3D"max-height: 0; overflow: hidden; d=
+isplay: none;">=0A<table class=3D"hundred" border=3D"0" cellspacing=3D"0" c=
+ellpadding=3D"0" align=3D"center">=0A<tbody>=0A<tr>=0A<td class=3D"onlymobi=
+le" style=3D"display: none; font-size: 24px; line-height: 24px;" align=3D"c=
+enter" height=3D"24">&nbsp;</td>=0A</tr>=0A</tbody>=0A</table>=0A</div>=0A<=
+/td>=0A</tr>=0A<!--<![endif]--></tbody>=0A</table>=0A</div>=0A<!-- [if (gte=
+ mso 9)|(IE)]>=0A=0A=0A=0A</td>=0A=0A=0A=0A<td width=3D"20" style=3D"font-s=
+ize: 1px;">&nbsp;</td>=0A=0A=0A=0A<td align=3D"right" valign=3D"top" width=
+=3D"290">=0A=0A=0A=0A<![endif]--> <!-- [if (gte mso 9)|(IE)]>=0A=0A=0A=0A</=
+td>=0A=0A=0A=0A</tr>=0A=0A=0A=0A</table>=0A=0A=0A=0A<![endif]--></td>=0A</t=
+r>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A<!-- [if (=
+gte mso 9)|(IE)]>=0A=0A=0A=0A</td>=0A=0A=0A=0A</tr>=0A=0A=0A=0A</table>=0A=
+=0A=0A=0A<![endif]--></td>=0A</tr>=0A<tr>=0A<td class=3D"section-padding" a=
+lign=3D"center" bgcolor=3D"#ffffff"><!-- [if (gte mso 9)|(IE)]>=0A=0A=0A=0A=
+<table role=3D"presentation" align=3D"center" border=3D"0" cellspacing=3D"0=
+" cellpadding=3D"0" width=3D"500">=0A=0A=0A=0A<tr>=0A=0A=0A=0A<td align=3D"=
+center" valign=3D"top" width=3D"600">=0A=0A=0A=0A<![endif]-->=0A<table clas=
+s=3D"responsive-table" style=3D"max-width: 600px;" role=3D"presentation" bo=
+rder=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A=
+<tr>=0A<td><!-- HERO IMAGE -->=0A<table role=3D"presentation" border=3D"0" =
+width=3D"100%" cellspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td>=
+<!-- COPY -->=0A<table role=3D"presentation" border=3D"0" width=3D"100%" ce=
+llspacing=3D"0" cellpadding=3D"0">=0A<tbody>=0A<tr>=0A<td class=3D"padding"=
+ style=3D"font-size: 24px; font-family: Helvetica, Arial, sans-serif; color=
+: #333333; padding-bottom: 24px;" align=3D"center"><strong>iyzico ile &Ouml=
+;de'yebilece=C4=9Fin Markalar</strong></td>=0A</tr>=0A</tbody>=0A</table>=
+=0A</td>=0A</tr>=0A<tr>=0A<td style=3D"padding: 0px 0px 32px 0px;">=0A<tabl=
+e border=3D"0" width=3D"600" cellspacing=3D"0" cellpadding=3D"0" align=3D"c=
+enter">=0A<tbody>=0A<tr>=0A<td style=3D"text-align: center;" align=3D"cente=
+r"><a href=3D"http://lb.iyzico.com/p/be/cl/eac6dfa2-5f05-45c1-8542-82bfe73a=
+a49b/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455=
+Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1V=
+m2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pL=
+elvTS1rvBg_e_q__e_q_" target=3D"_blank" rel=3D"noopener" delinkid=3D"eac6df=
+a2-5f05-45c1-8542-82bfe73aa49b"> <img src=3D"https://mailings.iyzico.com/as=
+sets/images/brands_090126.png" width=3D"600"> </a></td>=0A</tr>=0A</tbody>=
+=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A</tbody=
+>=0A</table>=0A<!-- [if (gte mso 9)|(IE)]>=0A=0A=0A=0A</td>=0A=0A=0A=0A</tr=
+>=0A=0A=0A=0A</table>=0A=0A=0A=0A<![endif]--></td>=0A</tr>=0A<tr>=0A<td sty=
+le=3D"padding: 20px 0px;" align=3D"center" bgcolor=3D"#ffffff"><!-- [if (gt=
+e mso 9)|(IE)]>=0A=0A=0A=0A<table role=3D"presentation" align=3D"center" bo=
+rder=3D"0" cellspacing=3D"0" cellpadding=3D"0" width=3D"500">=0A=0A=0A=0A<t=
+r>=0A=0A=0A=0A<td align=3D"center" valign=3D"top" width=3D"500">=0A=0A=0A=
+=0A<![endif]--> <!-- UNSUBSCRIBE COPY -->=0A<table class=3D"responsive-tabl=
+e" style=3D"max-width: 500px;" role=3D"presentation" border=3D"0" width=3D"=
+100%" cellspacing=3D"0" cellpadding=3D"0" align=3D"center">=0A<tbody>=0A<tr=
+ style=3D"display: flex !important; justify-content: center;">=0A<td style=
+=3D"display: flex !important; justify-content: center; text-align: center; =
+margin: 0px auto; align-self: center; align-items: center;" align=3D"center=
+">=0A<table border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0"=
+ align=3D"center">=0A<tbody>=0A<tr>=0A<td align=3D"center"><a href=3D"http:=
+//lb.iyzico.com/p/be/cl/92237a82-45bc-4396-a459-d0d1a3c8a7ae/pNaiAjfQaax82p=
+AOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5W=
+A2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8j=
+waVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q=
+_" delinkid=3D"92237a82-45bc-4396-a459-d0d1a3c8a7ae"><img src=3D"https://ma=
+ilings.iyzico.com/assets/images/logo-new.png" alt=3D"" width=3D"90" border=
+=3D"0" hspace=3D"0" vspace=3D"0"></a></td>=0A</tr>=0A<tr>=0A<td style=3D"fo=
+nt-size: 20px; line-height: 20px;" align=3D"center">&nbsp;</td>=0A</tr>=0A<=
+/tbody>=0A</table>=0A</td>=0A</tr>=0A<tr>=0A<td align=3D"center">=0A<table =
+class=3D"eighty-five" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpad=
+ding=3D"0" align=3D"center">=0A<tbody>=0A<tr>=0A<td class=3D"text_footer_ya=
+sal" style=3D"text-align: center; font-family: Arial; line-height: 1.33; fo=
+nt-size: 14px; color: #999999; padding-left: 33px; padding-right: 33px;" al=
+ign=3D"center">Bu e-posta, <a style=3D"color: #999999; text-decoration: non=
+e;" href=3D"http://lb.iyzico.com/p/be/cl/1fd36970-665c-450f-8430-c8490b5889=
+6d/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om=
+7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2=
+ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLel=
+vTS1rvBg_e_q__e_q_" delinkid=3D"1fd36970-665c-450f-8430-c8490b58896d">iyzic=
+o.com</a>'a <a style=3D"text-align: right; font-family: Arial; font-size: 1=
+4px; color: #999999; text-decoration: none;" href=3D"mailto:iremnr2606@gmai=
+l.com"><strong>iremnr2606@gmail.com</strong></a> adresi ile kay=C4=B1t oldu=
+=C4=9Funuz i&ccedil;in otomatik olarak g&ouml;nderilmi=C5=9Ftir ve cevaplan=
+amamaktad=C4=B1r.</td>=0A</tr>=0A<tr>=0A<td class=3D"hide" style=3D"padding=
+-top: 10px;" align=3D"center">&nbsp;</td>=0A</tr>=0A<tr>=0A<td class=3D"onl=
+ymobile" align=3D"center">&nbsp;</td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=
+=0A</tr>=0A<tr>=0A<td align=3D"center">=0A<table class=3D"eighty-five" bord=
+er=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" align=3D"center=
+">=0A<tbody>=0A<tr>=0A<td class=3D"text_footer_yasal" style=3D"text-align: =
+center; font-family: Arial; line-height: 1.33; font-size: 14px; color: #999=
+999; padding-left: 33px; padding-right: 33px;" align=3D"center">Sorular=C4=
+=B1n=C4=B1z i&ccedil;in <br><a style=3D"color: #4393ff;" href=3D"http://lb.=
+iyzico.com/p/be/cl/ca78b908-77bf-4ec8-914e-608010d9d822/pNaiAjfQaax82pAOJOu=
+uOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnf=
+E6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVch=
+g82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" de=
+linkid=3D"ca78b908-77bf-4ec8-914e-608010d9d822"><u><strong>Yard=C4=B1m Merk=
+ezi</strong></u></a> sayfam=C4=B1z=C4=B1 ziyaret edebilir veya <br><a style=
+=3D"color: #4393ff;" href=3D"http://lb.iyzico.com/p/be/cl/e3f5b343-9ce8-47d=
+5-b083-b70a8bdd98c2/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs=
+_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF9711=
+79bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLd=
+AYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" delinkid=3D"e3f5b343-9ce8-47d5-b083-b7=
+0a8bdd98c2"><u><strong>=C4=B0leti=C5=9Fim Formu</strong></u></a> &uuml;zeri=
+nden bize ula=C5=9Fabilirsiniz.</td>=0A</tr>=0A<tr>=0A<td class=3D"hide" st=
+yle=3D"padding-top: 10px;" align=3D"center">&nbsp;</td>=0A</tr>=0A<tr>=0A<t=
+d class=3D"onlymobile" align=3D"center">&nbsp;</td>=0A</tr>=0A</tbody>=0A</=
+table>=0A</td>=0A</tr>=0A<tr>=0A<td align=3D"center">=0A<table class=3D"eig=
+hty-five" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" a=
+lign=3D"center">=0A<tbody>=0A<tr>=0A<td class=3D"text_footer_yasal" style=
+=3D"text-align: center; font-family: Arial; font-size: 14px; color: #9a9a9a=
+; line-height: 16px; padding-left: 33px; padding-right: 33px;" align=3D"cen=
+ter">iyzi &Ouml;deme ve Elektronik Para Hizmetleri A.=C5=9E. <br>=C4=B0nci =
+&Ccedil;=C4=B1kmaz=C4=B1 Sokak No: 3 Kat: 3 D: 10 Altunizade &Uuml;sk&uuml;=
+dar =C4=B0stanbul. <br>Mersis No: 0483034315700019</td>=0A</tr>=0A<tr>=0A<t=
+d style=3D"text-align: center; font-family: Arial; font-size: 12px; color: =
+#9a9a9a;" align=3D"center">&nbsp;</td>=0A</tr>=0A<tr>=0A<td class=3D"text_f=
+ooter_wb" style=3D"text-align: center; font-family: Arial; font-size: 16px;=
+ color: #999999; padding-left: 33px; padding-right: 33px; margin: 0px auto;=
+ align-self: center; align-items: center;" align=3D"center"><strong><a styl=
+e=3D"text-align: center; font-family: Arial; font-size: 16px; color: #99999=
+9; text-decoration: none;" href=3D"http://lb.iyzico.com/p/be/cl/812803bb-04=
+e2-45fd-bc77-c51dae71b168/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVG=
+eT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRda=
+JF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQ=
+PgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" delinkid=3D"812803bb-04e2-45fd-b=
+c77-c51dae71b168">www.iyzico.com</a></strong></td>=0A</tr>=0A</tbody>=0A</t=
+able>=0A</td>=0A</tr>=0A<tr>=0A<td align=3D"center">&nbsp;</td>=0A</tr>=0A<=
+tr>=0A<td align=3D"center">&nbsp;</td>=0A</tr>=0A<tr style=3D"display: flex=
+; justify-content: center;">=0A<td style=3D"display: flex; justify-content:=
+ center; text-align: center; margin: 0px auto; align-self: center; align-it=
+ems: center;" align=3D"center">=0A<table class=3D"sixty" border=3D"0" cells=
+pacing=3D"0" cellpadding=3D"0" align=3D"center">=0A<tbody>=0A<tr style=3D"d=
+isplay: flex;">=0A<td align=3D"center"><a href=3D"http://lb.iyzico.com/p/be=
+/cl/c89d3b8a-aef3-4675-b1cc-25704756a6c0/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJf=
+bZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomU=
+ZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX=
+_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" delinkid=3D"c89d3=
+b8a-aef3-4675-b1cc-25704756a6c0"><img src=3D"https://mailings.iyzico.com/as=
+sets/images/appstore-en.png" alt=3D"" width=3D"140" border=3D"0" hspace=3D"=
+0" vspace=3D"0"></a></td>=0A<td align=3D"center" width=3D"13">&nbsp;</td>=
+=0A<td align=3D"center"><a href=3D"http://lb.iyzico.com/p/be/cl/f9bfcb5b-69=
+52-4214-a144-8618bb4b8c71/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVG=
+eT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRda=
+JF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQ=
+PgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" delinkid=3D"f9bfcb5b-6952-4214-a=
+144-8618bb4b8c71"><img src=3D"https://mailings.iyzico.com/assets/images/goo=
+gle-play-en.png" alt=3D"" width=3D"140" border=3D"0" hspace=3D"0" vspace=3D=
+"0"></a></td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A<tr>=0A<td al=
+ign=3D"center">&nbsp;</td>=0A</tr>=0A<tr>=0A<td align=3D"center">&nbsp;</td=
+>=0A</tr>=0A<tr style=3D"display: flex; justify-content: center;">=0A<td st=
+yle=3D"display: flex; justify-content: center; text-align: center; margin: =
+0px auto; align-self: center; align-items: center;" align=3D"center">=0A<ta=
+ble border=3D"0" width=3D"180" cellspacing=3D"0" cellpadding=3D"0" align=3D=
+"center">=0A<tbody>=0A<tr style=3D"display: flex; justify-content: center;"=
+>=0A<td align=3D"center"><a href=3D"http://lb.iyzico.com/p/be/cl/8764df3e-c=
+90a-465c-bf2c-bbf9b344d84c/pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNV=
+GeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRd=
+aJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhv=
+QPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" delinkid=3D"8764df3e-c90a-465c-=
+bf2c-bbf9b344d84c"><img style=3D"border-width: 0px; border-style: solid; ma=
+rgin: 0px; width: 28px; height: 28px;" src=3D"https://mailings.iyzico.com/a=
+ssets/images/inc-facebook.png" alt=3D"" width=3D"28" height=3D"28"></a></td=
+>=0A<td align=3D"center" width=3D"10">&nbsp;</td>=0A<td align=3D"center"><a=
+ href=3D"http://lb.iyzico.com/p/be/cl/40ab1a4d-72be-4c37-81f3-410c42a68f78/=
+pNaiAjfQaax82pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9=
+_s_l_tm1stUW5WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY=
+_s_l_SVCRmey8jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS=
+1rvBg_e_q__e_q_" delinkid=3D"40ab1a4d-72be-4c37-81f3-410c42a68f78"><img sty=
+le=3D"border-width: 0px; border-style: solid; margin: 0px; width: 28px; hei=
+ght: 28px;" src=3D"https://mailings.iyzico.com/assets/images/inc-linkedin.p=
+ng" alt=3D"" width=3D"28" height=3D"28"></a></td>=0A<td align=3D"center" wi=
+dth=3D"10">&nbsp;</td>=0A<td align=3D"center" height=3D"28"><a href=3D"http=
+://lb.iyzico.com/p/be/cl/6d528238-8c25-43b0-9723-8bb137818689/pNaiAjfQaax82=
+pAOJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5=
+WA2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8=
+jwaVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_=
+q_" delinkid=3D"6d528238-8c25-43b0-9723-8bb137818689"><img style=3D"border-=
+width: 0px; border-style: solid; margin: 0px; width: 28px; height: 28px;" s=
+rc=3D"https://mailings.iyzico.com/assets/images/inc-twitter.png" alt=3D"" w=
+idth=3D"28" height=3D"28"></a></td>=0A<td align=3D"center" width=3D"10">&nb=
+sp;</td>=0A<td align=3D"center" height=3D"28"><a href=3D"http://lb.iyzico.c=
+om/p/be/cl/6d891ad5-eef0-476d-8d3f-54615bfe314b/pNaiAjfQaax82pAOJOuuOOD2cdE=
+mIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQ=
+NOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA=
+1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" delinkid=
+=3D"6d891ad5-eef0-476d-8d3f-54615bfe314b"><img style=3D"border-width: 0px; =
+border-style: solid; margin: 0px; width: 28px; height: 28px;" src=3D"https:=
+//mailings.iyzico.com/assets/images/inc-instagram-footer.png" alt=3D"" widt=
+h=3D"28" height=3D"28"></a></td>=0A<td align=3D"center" width=3D"10">&nbsp;=
+</td>=0A<td align=3D"center" height=3D"28"><a href=3D"http://lb.iyzico.com/=
+p/be/cl/1a83b8ac-c431-453a-955d-7257118b2bbc/pNaiAjfQaax82pAOJOuuOOD2cdEmIf=
+XDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA2qnfE6WJQnGQNOM=
+JomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jwaVchg82LNCzA1U0=
+EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_" delinkid=3D"1=
+a83b8ac-c431-453a-955d-7257118b2bbc"><img style=3D"border-width: 0px; borde=
+r-style: solid; margin: 0px; width: 28px; height: 28px;" src=3D"https://mai=
+lings.iyzico.com/assets/images/inc-youtube-footer.png" alt=3D"" width=3D"28=
+" height=3D"28"></a></td>=0A</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A<=
+tr>=0A<td align=3D"center">&nbsp;</td>=0A</tr>=0A<tr>=0A<td align=3D"center=
+">&nbsp;</td>=0A</tr>=0A<tr>=0A<td align=3D"center">=0A<table class=3D"eigh=
+ty-five" border=3D"0" width=3D"100%" cellspacing=3D"0" cellpadding=3D"0" al=
+ign=3D"center">=0A<tbody>=0A<tr>=0A<td class=3D"text_footer_yasal" style=3D=
+"text-align: center; font-family: Arial; font-size: 8px; color: #9a9a9a; li=
+ne-height: 16px; padding-left: 33px; padding-right: 33px;" align=3D"center"=
+>Duyurular=C4=B1m=C4=B1z=C4=B1 almak istemiyorsan=C4=B1z l&uuml;tfen <a sty=
+le=3D"color: #999999;" href=3D"http://lb.iyzico.com/p/be/us/pNaiAjfQaax82pA=
+OJOuuOOD2cdEmIfXDJfbZ7djrFsxkspNVGeT3wGs_s_l_2kKJ5Em455Om7L9_s_l_tm1stUW5WA=
+2qnfE6WJQnGQNOMJomUZzKTScX51KzDRdaJF971179bEBvJvJ74KX1Vm2ZiY_s_l_SVCRmey8jw=
+aVchg82LNCzA1U0EALX_p_l_UM3upXkhvQPgzaLdAYUmsd2SFp6f0pLelvTS1rvBg_e_q__e_q_=
+" target=3D"_blank" rel=3D"noopener">t=C4=B1klay=C4=B1n=C4=B1z.</a></td>=0A=
+</tr>=0A</tbody>=0A</table>=0A</td>=0A</tr>=0A</tbody>=0A</table>=0A<!-- [i=
+f (gte mso 9)|(IE)]>=0A=0A=0A=0A</td>=0A=0A=0A=0A</tr>=0A=0A=0A=0A</table>=
+=0A=0A=0A=0A<![endif]--></td>=0A</tr>=0A</tbody>=0A</table>=0A</body>=0A=0A=
+</html>=0A
+--------------040002050209050506050906--
+
+

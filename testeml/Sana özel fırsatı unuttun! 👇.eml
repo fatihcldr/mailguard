@@ -1,0 +1,1089 @@
+Delivered-To: fatihmehmetcildir@gmail.com
+Received: by 2002:a17:907:3c8d:b0:b80:411f:8f7c with SMTP id gl13csp3305068ejc;
+        Mon, 12 Jan 2026 06:34:24 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEvvoxrzpg8f/+DG35HtCOtnPrWlvmGKPH9d3D8VjXI5SA9VCbdknZhkbkh9xfmeHKOKhXj
+X-Received: by 2002:a05:6214:19c6:b0:88a:442c:2988 with SMTP id 6a1803df08f44-89084183823mr241100536d6.6.1768228464212;
+        Mon, 12 Jan 2026 06:34:24 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1768228464; cv=none;
+        d=google.com; s=arc-20240605;
+        b=eH05VNMoDeoAnDjW3BMgh05N20VS3zI7INipyqi4wxtio+eA8GwjXl/iFN33kD2rui
+         KjsPDXC+k3Vq9pbKiVnO2Gt+LuW28SRzcByb5T+IrcMa09xVMsZQ2vhqfr7h+EsHG5j/
+         sFPO2ZZA2r1WQpsgkkCRmpm9rvNiV5iVeHg14RHNHDNMQiFMH71YLJcy2e+YHZrnL/WV
+         21yTwfypvrsEee2+AOOaPaFoyUMZX4GWRifDyo6Wwr7vVaf4v56Y/xiEJD1PYmKY5sFd
+         WYtI3jCH7bBovRiBHhaqMo8nrtbMXoJJOQNfYv56u4+O6g0zHN08fBgX/THOoordtOud
+         it9Q==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=to:list-unsubscribe-post:list-unsubscribe:reply-to:subject
+         :message-id:mime-version:from:date:dkim-signature:dkim-signature;
+        bh=mNnfEjhxQUm893IiZ0KEjqeoUQeBeGW8NHyIcPRDTNw=;
+        fh=WYV/gggVh8wRoruooODJr6S5jhGDMPmLdk3zv5IAnQo=;
+        b=K3SB8ixT0+YOdXF5OnQpPB5GOuCgW8gHWHtep3ecMdBX+CWK2sSCt8OFcDFbg3oCco
+         4Xwk0AnjIMK0D1Pbmv8MsZZPrtBQleEao+TldX6GnZMS34gBmDeXnnngpjS3vhbuai/h
+         A/t1hxT/sqHeQDWC6wvx1+eI/EhLP5zu4FG6k77TKACa7uL/WFYcZTea7iyq20r4YC+e
+         VsIjzOatpNEiJZMa2vqJT+mvsaGh5LTdYMCWdLbx1jnqpTD9Hp8m6G9uPjSAnZH1Qg1D
+         zOtycUhalYnQ9i3tbzxfizInVpPcoDDmsiqcP3E7Qdop0ey9vI9YSX64V9HObif9gZ7Q
+         T6WA==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@mail.yemeksepeti.com header.s=s1 header.b=NPs+qCPC;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=w0e2zt+N;
+       spf=pass (google.com: domain of bounces+15639974-0118-fatihmehmetcildir=gmail.com@abmail.mail.yemeksepeti.com designates 149.72.80.140 as permitted sender) smtp.mailfrom="bounces+15639974-0118-fatihmehmetcildir=gmail.com@abmail.mail.yemeksepeti.com";
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=yemeksepeti.com
+Return-Path: <bounces+15639974-0118-fatihmehmetcildir=gmail.com@abmail.mail.yemeksepeti.com>
+Received: from o2855.abmail.kampanya.yemeksepeti.com (o2855.abmail.kampanya.yemeksepeti.com. [149.72.80.140])
+        by mx.google.com with ESMTPS id 6a1803df08f44-890771cef94si232113716d6.249.2026.01.12.06.34.23
+        for <fatihmehmetcildir@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_128_GCM_SHA256 bits=128/128);
+        Mon, 12 Jan 2026 06:34:24 -0800 (PST)
+Received-SPF: pass (google.com: domain of bounces+15639974-0118-fatihmehmetcildir=gmail.com@abmail.mail.yemeksepeti.com designates 149.72.80.140 as permitted sender) client-ip=149.72.80.140;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@mail.yemeksepeti.com header.s=s1 header.b=NPs+qCPC;
+       dkim=pass header.i=@sendgrid.info header.s=smtpapi header.b=w0e2zt+N;
+       spf=pass (google.com: domain of bounces+15639974-0118-fatihmehmetcildir=gmail.com@abmail.mail.yemeksepeti.com designates 149.72.80.140 as permitted sender) smtp.mailfrom="bounces+15639974-0118-fatihmehmetcildir=gmail.com@abmail.mail.yemeksepeti.com";
+       dmarc=pass (p=QUARANTINE sp=NONE dis=NONE) header.from=yemeksepeti.com
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=mail.yemeksepeti.com;
+	h=content-type:date:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:date:feedback-id:from:subject:to;
+	s=s1; bh=mNnfEjhxQUm893IiZ0KEjqeoUQeBeGW8NHyIcPRDTNw=;
+	b=NPs+qCPC8bGPgbH+MTH0Y/i3lgKFtyaSDu+z2ctc/6jZxQmPBtuXZq51IHbji0S6mHuh
+	zvWvG0e2EeSZgSQ31nJ55ZSITmz6dn8yqlKq9iboyKtuGC5sB9M8CPgK7QqQG10GRXtgzz
+	mknuxzyCTaHnEjZg4nN5AfYZ4N36G/fWEVjKtt5CPlAyKM+HgHs/BwYkEl4+Fy0sc8cNMj
+	unjsszuk6vRqrBsdFuPe6Z7MuJj2SEEJWgup+aHfOxJ4orPbi0gBLHvJ/aQpmvi/ChDAEo
+	JSSamRyTNOxqPSEVY3CdqnT58Jfk/yR3soqFzGKqmF8xOHz1llkxkgDYFNdqpSUg==
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; d=sendgrid.info;
+	h=content-type:date:from:mime-version:subject:reply-to:list-unsubscribe:
+	list-unsubscribe-post:to:cc:content-type:date:feedback-id:from:subject:to;
+	s=smtpapi; bh=mNnfEjhxQUm893IiZ0KEjqeoUQeBeGW8NHyIcPRDTNw=;
+	b=w0e2zt+N97dSBTc4xvf7UATkZXHXHs69TjjYi0naCFFUk48ZZIU7dvtF5Rj4k8Du0MWf
+	aQvsk4PGzmSxJO4fdAq+NNAeJalt4nSXRxZnbbdgJ2y86NLJ7OlFPTWz6m9pLwjAHZER8m
+	oK1AJS+1pLaU3ROHiZHI/7YQJH+XOzil0=
+Received: by recvd-canary-657885c546-tl4d4 with SMTP id recvd-canary-657885c546-tl4d4-1-6965066F-13
+	2026-01-12 14:34:23.313829808 +0000 UTC m=+2219177.222552717
+Received: from MTU2Mzk5NzQ (unknown)
+	by geopod-ismtpd-31 (SG) with HTTP
+	id gJTe1Z20QWakTTxM_PDhZQ
+	Mon, 12 Jan 2026 14:34:23.302 +0000 (UTC)
+Content-Type: multipart/alternative; boundary=a280c1615056f9441460b9dde827350697f5c6e6966b9bde7255c11ba5b8
+Date: Mon, 12 Jan 2026 14:34:23 +0000 (UTC)
+From: Yemeksepeti <no-reply@mail.yemeksepeti.com>
+Mime-Version: 1.0
+Message-ID: <gJTe1Z20QWakTTxM_PDhZQ@geopod-ismtpd-31>
+Subject: Sana =?UTF-8?B?w7Z6ZWwgZsSxcnNhdMSxIHVudXR0dW4hIPCfkYc=?=
+Reply-To: no-reply@mail.yemeksepeti.com
+List-Unsubscribe: 
+ =?us-ascii?Q?=3Chttps=3A=2F=2F01=2Eemailinboundprocessing=2Ecom=2Fenc=5Fuser=2Flist=5Funsubscri?=
+ =?us-ascii?Q?be=3Fd=3D%241%24giUwg8UvaRBbfm%2B9Fx1DFw%3D?=
+ =?us-ascii?Q?%3D%24jOa7N0zzNQ6d6WVzn27XUj64XKOc6gB3%?=
+ =?us-ascii?Q?2FJZNXt2SaWDyeDmqq2sk%2F8EuNH98%0ALxX7S?=
+ =?us-ascii?Q?%2FozzW2s1gPnqOW%2Bs4NiJogsX%2Bu0ApYQzZ?=
+ =?us-ascii?Q?gFqylFymQk6y63AyT094zm%0ATi4WcI7JLiKZOn?=
+ =?us-ascii?Q?mpCrwK9siaUWCysm73nHyHR4IqJMuwv43X%2F2s?=
+ =?us-ascii?Q?Xnn69cbAc%0AMxFWqdaDCs5z%2B2sUuJM0BZTo1?=
+ =?us-ascii?Q?yhX9aRPIwBkiPhojU8YSgb%2F3YjUwwLbXxCP%0?=
+ =?us-ascii?Q?Aq2Tfwzp%2F4HYX%2BU1dHXXUgrhZpmYpcCn2Bm?=
+ =?us-ascii?Q?zccAF1db5SBvSLIxNM4r4e7RA4%0AN1F%2FQSy7?=
+ =?us-ascii?Q?orjgbhZ00JUA27tSAoaEQRrLGEraqWeDcmqVvKo?=
+ =?us-ascii?Q?JQq98r3LdrbPw%0ALsVO77Luau87HOIVxmH%2Ff?=
+ =?us-ascii?Q?6EMsLRGD028AEYpq75P3NM8ng%3D%3D&1=3D1=3E=2C=3Cm?=
+ =?us-ascii?Q?ailto=3A4=5Flnve6fpwy91aiw9voz0dpenx1w11jm8?=
+ =?us-ascii?Q?v6yzb8ljitb68n8mzdta72x=40unsubscribe=2Eema?=
+ =?us-ascii?Q?ilinboundprocessing=2Ecom=3Fsubject=3DUnsubsc?=
+ =?us-ascii?Q?ribe%20pnrcgsq6jp5g1ao1d0lyuwmkijpehu1f?=
+ =?us-ascii?Q?6euq63wxgvuykwxv1nwovcfd&body=3DDO=5FNOT=5FDE?=
+ =?us-ascii?Q?LETE-64zyndaejp0it01kfofznt5harbjqlagws?=
+ =?us-ascii?Q?07kk90hrg6ii8ovsq4ilpakpxvtv1hxdhpwpgo1?=
+ =?us-ascii?Q?a29gjk5g6pd3npm9i5sa6i5-DO=5FNOT=5FDELETE=3E?=
+List-Unsubscribe-Post: List-Unsubscribe=One-Click
+X-SG-EID: 
+ =?us-ascii?Q?u001=2EwdmZ0q2kCoPj8sSk88CMxKeNcqrfWH93bBWNJqyjUwWWgAryeZlcPqA2E?=
+ =?us-ascii?Q?pBdF2IJxTrN8o5Rpu1M0KgS=2F0jkEYn5NVn4tnFe?=
+ =?us-ascii?Q?iKSpWLGnnEbt5a90B8vT8OURvgoNn0zA+NCGqTy?=
+ =?us-ascii?Q?be5zb7YlcnPJ23X0Ug5UWdFMXokE3hZjn1il9BG?=
+ =?us-ascii?Q?XPawXs1XEFm7d5RFFOJ6=2FUCIUpw1dc1YkMG2T5=2F?=
+ =?us-ascii?Q?zApYmHDUQtqVoLB6TtiJ1mNXfW9WCy6DyaCd0nw?=
+ =?us-ascii?Q?CAF0Vlhbb+TJWsXY5Cy=2Fd1ehtw=3D=3D?=
+X-SG-ID: 
+ =?us-ascii?Q?u001=2ESdBcvi+Evd=2FbQef8eZF3BpTL9BgbK5wfSJMJGMsmprDrjDW6011yC6XOo?=
+ =?us-ascii?Q?3uya5MXUsvLvLjh=2FeSVjdGWtKergAkl7q4eJ77=2F?=
+ =?us-ascii?Q?rVzfvdOEz6Y4+DgAbAjXCNg=2Fqb17qpcVpYtn9o2?=
+ =?us-ascii?Q?T8GJnHoDJzSzEF2GCY8EDW1SpAf1+nGPMZy4GHU?=
+ =?us-ascii?Q?wg82zbeUx5M5kNlD39=2FNrczBvwm6LTuTm7Fc1Iy?=
+ =?us-ascii?Q?xFz73uM6KT3IFNJZqJLNxpMVL7hJt4M9wgmATQP?=
+ =?us-ascii?Q?CZx9dVg7HO87DHjfnbc7=2F1M1AHCRPR60iahj6gj?=
+ =?us-ascii?Q?JQcR8K00MGBKIcxa4CPyJQ27cA5K+wYJUeYqh+Q?=
+ =?us-ascii?Q?oRX+bb5jVriHlly52JBpvx=2FBNqZ3vHiTmZipd1G?=
+ =?us-ascii?Q?grdlWTzkn5EEwfXYvVoYxd4sNrg13UvrCyWH2zQ?=
+ =?us-ascii?Q?kp7CtzI3ypopA73jEpNKDoe1nmwHJzhYdRpcvRI?=
+ =?us-ascii?Q?uK8rP2igAZXxswFETtJGrveEQHW2A21ApPNIciI?=
+ =?us-ascii?Q?5ojz0VIAbqUjNbbSoK6qitrL0WPyIZ9QjUM039X?=
+ =?us-ascii?Q?HPnb4y3eIM53Pqo5h+MeRrTyc2jMf4XrCMgcYwi?=
+ =?us-ascii?Q?Sis14e8mwQA5LnD2amJgz0HPG1YSaOjwNQ=3D=3D?=
+To: fatihmehmetcildir@gmail.com
+X-Entity-ID: u001.VayA3nvaHbNMZaI1VZ9ZNQ==
+
+--a280c1615056f9441460b9dde827350697f5c6e6966b9bde7255c11ba5b8
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/plain; charset=utf-8
+Mime-Version: 1.0
+
+200
+TL indirim ve =C3=BCcretsiz
+teslimat!
+
+
+
+
+yemeksepeti   * { font-family: Arial, sans-serif !important;
+}             96
+=CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=
+=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=
+=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=
+=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=
+=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =
+=CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=
+=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=
+=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=
+=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=
+=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =
+=CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=
+=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=
+=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=
+=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=
+=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =
+=CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=
+=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=
+=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=8C =CD=8F=E2=80=
+=8C
+( https://www.yemeksepeti.com )
+         (
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://utsh.adj.st/?c=3Dtr&s=3Dl&adjust_t=3Dcnx3nv_ry6rca&adjust_campaign=
+=3Dcrm_bra_mix_eat_ma_Day5 - Email2_46e22874-ebab-42fb-b3c8-581218f14c72&ad=
+just_deeplink=3Dyemeksepeti%3A%2F%2F%3Fc%3Dtr%26s%3Dl&adjust_redirect=3Dhtt=
+ps%3A%2F%2Fwww.yemeksepeti.com%3Futm_source=3Demail&utm_medium=3Dcrm&utm_ca=
+mpaign=3Dcrm_bra_Day5 - Email2_46e22874-ebab-42fb-b3c8-581218f14c72_ma&utm_=
+keyword=3D )
+=C4=B0lk sipari=C5=9Fini hemen
+ver!
+MARKETLER
+kuponuyla kahvalt=C4=B1l=C4=B1klardan at=C4=B1=C5=9Ft=C4=B1rmal=C4=B1klara,=
+ ev bak=C4=B1m
+=C3=BCr=C3=BCnlerinden i=C3=A7eceklere kadar ihtiyac=C4=B1n olan her =C5=9F=
+eyi Yemeksepeti
+market ya da ma=C4=9Fazalardan sipari=C5=9F ver, se=C3=A7ili i=C5=9Fletmele=
+rde ilk
+sipari=C5=9Finde 200 TL indirim ve
+=C3=BCcretsiz teslimat f=C4=B1rsat=C4=B1n=C4=B1 ka=C3=A7=C4=B1rma!
+=F0=9F=9B=92=F0=9F=8F=A1
+S=C4=B0PAR=C4=B0=C5=9E
+VER (
+ )
+
+Kupon Kullan=C4=B1m Ko=C5=9Fullar=C4=B1: =E2=80=A2 =C4=B0lk
+Yemeksepeti market ve ma=C4=9Faza sipari=C5=9Finizde sadece online kredi
+kart=C4=B1 ile =C3=B6deme se=C3=A7ene=C4=9Fi i=C3=A7in ge=C3=A7erlidir. =E2=
+=80=A2 Adrese teslim
+sipari=C5=9Flerde se=C3=A7ili i=C5=9Fletmelerde ge=C3=A7erlidir. =E2=80=A2 =
+Ge=C3=A7erlilik tarihi
+ve minimum sepet tutar=C4=B1 detaylar=C4=B1 Kuponlar=C4=B1m b=C3=B6l=C3=BCm=
+=C3=BCnde
+belirtilmektedir. =E2=80=A2 Size =C3=B6zeldir ve ba=C5=9Fkalar=C4=B1 taraf=
+=C4=B1ndan
+kullan=C4=B1lamaz. =E2=80=A2 Di=C4=9Fer kuponlarla birle=C5=9Ftirilemez. =
+=E2=80=A2 Tek
+kullan=C4=B1ml=C4=B1kt=C4=B1r ve nakde =C3=A7evrilmesi m=C3=BCmk=C3=BCn de=
+=C4=9Fildir. =E2=80=A2 Joker
+indirimiyle birlikte
+kullan=C4=B1lamaz.
+
+           social-icons=20
+( https://www.facebook.com/yemeksepeti )     social-icons=20
+( https://twitter.com/yemeksepeti )     social-icons=20
+( https://www.instagram.com/yemeksepeti )     social-icons=20
+( https://www.youtube.com/user/yemeksepeti )           Bu e-postay=C4=B1
+Yemeksepeti izinli ticari ileti=C5=9Fim veri taban=C4=B1na dahil oldu=C4=9F=
+unuz
+i=C3=A7in almaktas=C4=B1n=C4=B1z.
+Dan=C4=B1=C5=9Fmak istedi=C4=9Finiz konularla ilgili info@yemeksepeti.com
+=C3=BCzerinden bizimle temasa ge=C3=A7ebilirsiniz. E-posta almak
+istemiyorsan=C4=B1z l=C3=BCtfen t=C4=B1klay=C4=B1n=C4=B1z (
+https://01.emailinboundprocessing.com/enc_user/unsubscribe?d=3D%241%24F4dI8=
+qm8frRha2rT%2B80%2BGQ%3D%3D%24X6uCzfu6Xkh3e7Q7MbUM%2BEQw68IAswZfkHT58c%2BIN=
+PpQuKFwBXAZjbZEFpUu%0AKdT3zXM1E90MfAvIDA7OWihGlqymyY4sJ1B%2B8xZN0G5XMi26NqV=
+eMn1toTZ5%0AHiuSrHnE4bp19tq8SzrGhzPq%2FuyxeUA%2BDApzuucQ1waRBFAK1PhTR3IydqX=
+A%0AvUCJm3uP8dUW4jSI0QVv1YusxYSjjVFrfTtjOCTK1d4Qd0cj3CPdo0V7xtzD%0AMfDJsSgq=
+%2Fmy%2B%2BCsLSHWd1BDLjyBGx2dPLyLvVLX5itfHm9%2F3ylROJQTKn8pv%0AVNFTvQPefEW5=
+S9Ih0r%2Bw5HHB8G4cASMTIn%2BBvkjfCxsX%2FD70xuP4TFbnxMYq%0A%2BGFniqxgteea4QxY=
+WwSDcDXN&1=3D1 ).         Yemek Sepeti
+Elektronik =C4=B0leti=C5=9Fim Perakende G=C4=B1da Anonim =C5=9Eirketi
+Esentepe Mahallesi, Dede Korkut Sokak, No: 28/1, =C5=9Ei=C5=9Fli, =C4=B0sta=
+nbul
+Mersis No: 0947045746800015 ( # )        logo=20
+( https://utsh.adj.st/?s=3Dhs&adjust_t=3Dcnx3nv_ry6rca&adjust_campaign=3Dcr=
+m_bra_mix_eat_ma_Day5 - Email2_46e22874-ebab-42fb-b3c8-581218f14c72&adjust_=
+deeplink=3Dyemeksepeti%3A%2F%2F%3Fs%3Dhs&adjust_redirect=3Dhttps%3A%2F%2Fww=
+w.yemeksepeti.com%3Futm_source=3Demail&utm_medium=3Dcrm&utm_campaign=3Dcrm_=
+bra_Day5 - Email2_46e22874-ebab-42fb-b3c8-581218f14c72_ma&utm_keyword=3D )
+--a280c1615056f9441460b9dde827350697f5c6e6966b9bde7255c11ba5b8
+Content-Transfer-Encoding: quoted-printable
+Content-Type: text/html; charset=utf-8
+Mime-Version: 1.0
+
+<!DOCTYPE html>
+<html style=3D"height: 100% !important; width: 100% !important; -ms-text-si=
+ze-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0 auto; padding: 0=
+;">
+<head>
+<meta http-equiv=3D"Content-Type" content=3D"text/html; charset=3DUTF-8">
+<style>@font-face {
+font-family: 'Montserrat'; font-style: normal; font-weight: 300; src: url('=
+https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFg=
+pCs16Hw5aX8.ttf') format('truetype');
+}
+@font-face {
+font-family: 'Montserrat'; font-style: normal; font-weight: 500; src: url('=
+https://fonts.gstatic.com/s/montserrat/v31/JTUHjIg1_i6t8kCHKm4532VJOt5-QNFg=
+pCtZ6Hw5aX8.ttf') format('truetype');
+}
+body {
+margin: 0 auto !important; padding: 0 !important; height: 100% !important; =
+width: 100% !important;
+}
+img {
+-ms-interpolation-mode: bicubic;
+}
+.cta-yellow:hover {
+background-color: #ff9900 !important;
+}
+body {
+margin: 0 auto !important; padding: 0 !important; height: 100% !important; =
+width: 100% !important;
+}
+img {
+-ms-interpolation-mode: bicubic;
+}
+.cta-yellow:hover {
+background-color: #ff9900 !important;
+}
+@media only screen and (min-device-width: 320px) and (max-device-width: 480=
+px) {
+  .email-container {
+    min-width: 375px !important;
+  }
+  .email-container {
+    min-width: 375px !important;
+  }
+}
+@media screen and (max-width: 480px) {
+  .fluid {
+    width: 100% !important; max-width: 100% !important; height: auto !impor=
+tant; margin-left: auto !important; margin-right: auto !important;
+  }
+  .wrapper {
+    width: 100% !important;
+  }
+  .font-10 {
+    font-size: 10px !important; line-height: 14px !important;
+  }
+  .font-12 {
+    font-size: 12px !important; line-height: 16px !important;
+  }
+  .font-13 {
+    font-size: 13px !important; line-height: 19px !important;
+  }
+  .font-14 {
+    font-size: 14px !important; line-height: 18px !important;
+  }
+  .font-16 {
+    font-size: 16px !important; line-height: 20px !important;
+  }
+  .font-16-n {
+    font-size: 16px !important; line-height: 18px !important; padding: 30px=
+ 15px 0 15px !important;
+  }
+  .font-16-pad {
+    font-size: 16px !important; line-height: 18px !important; padding-top: =
+40px !important;
+  }
+  .font-25 {
+    font-size: 25px !important;
+  }
+  .height-0 {
+    height: 0 !important;
+  }
+  .height-10 {
+    height: 10px !important;
+  }
+  .height-25 {
+    height: 25px !important; padding-left: 35px !important;
+  }
+  .height-30 {
+    height: 30px !important; padding-left: 35px !important;
+  }
+  .height-50 {
+    height: 50px !important; padding-left: 35px !important;
+  }
+  .pad-left-50 {
+    padding-left: 50px !important;
+  }
+  .display-none {
+    display: none !important;
+  }
+  .pad-text {
+    padding: 36px 33px 40px 31px !important;
+  }
+  .pad-top {
+    padding-top: 22px !important;
+  }
+  .pad-left {
+    padding: 22px 0 20px 15px !important;
+  }
+  .pad-texf {
+    padding: 0 48px 40px 43px !important;
+  }
+  .mob-height-th {
+    height: 125px !important;
+  }
+  .mob-h-deal-th {
+    height: 147px !important; border-radius: 30px !important;
+  }
+  .mob-th-width {
+    width: 300px !important;
+  }
+  .mob-th-width-2 {
+    width: 179px !important; height: 209px !important;
+  }
+  .mob-th-width-3 {
+    width: 149px !important; height: 179px !important;
+  }
+  .app-banner {
+    width: 190px !important;
+  }
+  .app-cta {
+    width: 120px !important; padding: 5px 0 !important;
+  }
+  .mob-cta-w {
+    width: 285px !important; padding: 0 0 0 15px !important;
+  }
+  .mob-cta-w-b {
+    width: 180px !important; padding: 0 0 0 120px !important;
+  }
+  .mob-cta-w-c {
+    width: 135px !important; background-color: #5EFFB6 !important;
+  }
+  .mob-cta {
+    width: 120px !important; border-top: 6px #5EFFB6 solid !important; bord=
+er-bottom: 6px #5EFFB6 solid !important; font-size: 14px !important;
+  }
+  .mob-pad-left {
+    padding: 0 75px 10px 15px !important;
+  }
+  .mob-pad-right {
+    padding: 0 0 10px 120px !important;
+  }
+  .mob-img-w {
+    background-size: 190px !important; background-position: center right !i=
+mportant;
+  }
+  .fluid {
+    width: 100% !important; max-width: 100% !important; height: auto !impor=
+tant; margin-left: auto !important; margin-right: auto !important;
+  }
+  .wrapper {
+    width: 100% !important;
+  }
+  .font-10 {
+    font-size: 10px !important; line-height: 14px !important;
+  }
+  .font-12 {
+    font-size: 12px !important; line-height: 16px !important;
+  }
+  .font-13 {
+    font-size: 13px !important; line-height: 19px !important;
+  }
+  .font-14 {
+    font-size: 14px !important; line-height: 18px !important;
+  }
+  .font-16 {
+    font-size: 16px !important; line-height: 20px !important;
+  }
+  .font-16-n {
+    font-size: 16px !important; line-height: 18px !important; padding: 30px=
+ 15px 0 15px !important;
+  }
+  .font-16-pad {
+    font-size: 16px !important; line-height: 18px !important; padding-top: =
+40px !important;
+  }
+  .font-25 {
+    font-size: 25px !important;
+  }
+  .height-0 {
+    height: 0 !important;
+  }
+  .height-10 {
+    height: 10px !important;
+  }
+  .height-25 {
+    height: 25px !important; padding-left: 35px !important;
+  }
+  .height-30 {
+    height: 30px !important; padding-left: 35px !important;
+  }
+  .height-50 {
+    height: 50px !important; padding-left: 35px !important;
+  }
+  .pad-left-50 {
+    padding-left: 50px !important;
+  }
+  .display-none {
+    display: none !important;
+  }
+  .pad-text {
+    padding: 36px 33px 40px 31px !important;
+  }
+  .pad-top {
+    padding-top: 22px !important;
+  }
+  .pad-left {
+    padding: 22px 0 20px 15px !important;
+  }
+  .pad-texf {
+    padding: 0 48px 40px 43px !important;
+  }
+  .mob-height-th {
+    height: 125px !important;
+  }
+  .mob-h-deal-th {
+    height: 147px !important; border-radius: 30px !important;
+  }
+  .mob-th-width {
+    width: 300px !important;
+  }
+  .mob-th-width-2 {
+    width: 179px !important; height: 209px !important;
+  }
+  .mob-th-width-3 {
+    width: 149px !important; height: 179px !important;
+  }
+  .app-banner {
+    width: 190px !important;
+  }
+  .app-cta {
+    width: 120px !important; padding: 5px 0 !important;
+  }
+  .mob-cta-w {
+    width: 285px !important; padding: 0 0 0 15px !important;
+  }
+  .mob-cta-w-b {
+    width: 180px !important; padding: 0 0 0 120px !important;
+  }
+  .mob-cta-w-c {
+    width: 135px !important; background-color: #5EFFB6 !important;
+  }
+  .mob-cta {
+    width: 120px !important; border-top: 6px #5EFFB6 solid !important; bord=
+er-bottom: 6px #5EFFB6 solid !important; font-size: 14px !important;
+  }
+  .mob-pad-left {
+    padding: 0 75px 10px 15px !important;
+  }
+  .mob-pad-right {
+    padding: 0 0 10px 120px !important;
+  }
+  .mob-img-w {
+    background-size: 190px !important; background-position: center right !i=
+mportant;
+  }
+}
+@media (prefers-color-scheme:dark) {
+  .mob-cta-w-c :not([class^=3D"x_"]) {
+    width: 135px !important; background-color: #5EFFB6 !important;
+  }
+  .mob-cta-w-c :not([class^=3D"x_"]) {
+    width: 135px !important; background-color: #5EFFB6 !important;
+  }
+}
+</style>
+</head>
+<body style=3D"height: 100% !important; width: 100% !important; -ms-text-si=
+ze-adjust: 100%; -webkit-text-size-adjust: 100%; margin: 0 auto; padding: 0=
+;">
+<div style=3D"display:none !important;visibility:hidden;mso-hide:all;font-s=
+ize:1px;color:#ffffff;line-height:1px;max-height:0px;max-width:0px;opacity:=
+0;overflow:hidden;">200 TL indirim ve =C3=BCcretsiz teslimat!</div>
+<p style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+
+
+
+
+
+</p>
+  <meta charset=3D"utf-8" style=3D"-ms-text-size-adjust: 100%; -webkit-text=
+-size-adjust: 100%;">
+  <meta name=3D"viewport" content=3D"width=3Ddevice-width" style=3D"-ms-tex=
+t-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+  <meta http-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge" style=3D"-ms-t=
+ext-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+  <meta name=3D"x-apple-disable-message-reformatting" style=3D"-ms-text-siz=
+e-adjust: 100%; -webkit-text-size-adjust: 100%;">
+  <title style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100=
+%;">yemeksepeti</title>
+  <!--[if mso]>
+  <style>
+  * {
+  font-family: Arial, sans-serif !important;
+}
+</style>
+<![endif]-->
+
+<!--[if !mso]><!-->
+
+<!--<![endif]-->
+
+<!-- Web Font / @font-face : END -->
+
+<!-- CSS -->
+
+<!--[if gte mso 9]>
+<xml>
+<o:OfficeDocumentSettings>
+<o:AllowPNG/>
+<o:PixelsPerInch>96</o:PixelsPerInch>
+</o:OfficeDocumentSettings>
+</xml>
+<![endif]-->
+
+
+  <center style=3D"width: 100%; background-color: #F1F1F1; text-align: left=
+; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+
+    <!-- Visually Hidden Preheader Text : BEGIN -->
+    <div style=3D"display: none; font-size: 1px; line-height: 1px; max-heig=
+ht: 0px; max-width: 0px; opacity: 0; overflow: hidden; mso-hide: all; font-=
+family: Arial, sans-serif; -ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;">
+    </div>
+    <!-- Visually Hidden Preheader Text : END -->
+   =20
+    <!-- Preheader white space hack --><div style=3D"display: none; max-hei=
+ght: 0px; overflow: hidden; -ms-text-size-adjust: 100%; -webkit-text-size-a=
+djust: 100%;" align=3D"left">=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=
+=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C=
+&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=
+=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nb=
+sp;&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=
+=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C=
+&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=
+=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;&nbsp;=CD=8F=E2=80=
+=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=
+=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C=
+&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=
+=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=
+=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=
+=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C=
+&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=
+=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nb=
+sp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=
+=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=
+=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;&nbsp;=CD=8F=
+=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nb=
+sp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=
+=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=
+=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=
+=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nbsp;=CD=8F=E2=80=8C&nb=
+sp;</div>
+
+    <div style=3D"max-width: 600px; -ms-text-size-adjust: 100%; -webkit-tex=
+t-size-adjust: 100%; margin: auto;" class=3D"wrapper">
+      <!--[if mso]>
+      <table role=3D"presentation" cellspacing=3D"0" cellpadding=3D"0" bord=
+er=3D"0" width=3D"600" align=3D"center">
+      <tr>
+      <th>
+      <![endif]-->
+
+      <!-- EMAIL BODY : BEGIN -->
+      <table role=3D"presentation" bgcolor=3D"ffffff" cellspacing=3D"0" cel=
+lpadding=3D"0" border=3D"0" align=3D"center" width=3D"600" style=3D"max-wid=
+th: 600px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-=
+table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-spac=
+ing: 0 !important; border-collapse: collapse !important; table-layout: fixe=
+d !important; margin: 0 auto;" class=3D"wrapper email-container">
+     =20
+     =20
+        <!-- ////////// LOGO YEMEKSEPETI : BEGIN /////////// -->
+        <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: =
+100%;">
+          <th style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust=
+: 100%;">
+            <table align=3D"left" role=3D"presentation" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"-ms-text-size-adjust:=
+ 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; ms=
+o-table-rspace: 0pt !important; border-spacing: 0 !important; border-collap=
+se: collapse !important; table-layout: fixed !important; margin: 0 auto;">
+              <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;">
+                <th align=3D"center" style=3D"-ms-text-size-adjust: 100%; -=
+webkit-text-size-adjust: 100%; padding: 0;">
+                  <!-- YEMEKSEPETI LOGO : BEGIN -->
+                  <a href=3D"https://www.yemeksepeti.com" target=3D"_blank"=
+ style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+                    <img class=3D"wrapper" src=3D"https://braze-images.com/=
+appboy/communication/assets/image_assets/images/6729e4023d3cff0063998823/or=
+iginal.png?1730798594" border=3D"0" style=3D"font-family: Arial, Helvetica,=
+ sans-serif; font-size: 15px; line-height: 20px; color: #D61F26; width: aut=
+o; max-width: 100%; height: auto; -ms-text-size-adjust: 100%; -webkit-text-=
+size-adjust: 100%; -ms-interpolation-mode: bicubic; margin: 0 auto;">
+                  </a>
+                  <!-- YEMEKSEPETI LOGO : END -->
+                </th>
+              </tr>
+            </table>
+          </th>
+        </tr>
+        <!-- ////////// LOGO YEMEKSEPETI : END /////////// -->
+
+
+        <!-- ////////// HERO IMAGE YEMEKSEPETI : BEGIN /////////// -->
+        <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: =
+100%;">
+          <th style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust=
+: 100%;">
+            <table align=3D"left" role=3D"presentation" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" width=3D"100%" style=3D"-ms-text-size-adjust:=
+ 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; ms=
+o-table-rspace: 0pt !important; border-spacing: 0 !important; border-collap=
+se: collapse !important; table-layout: fixed !important; margin: 0 auto;">
+              <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;">
+                <th align=3D"center" style=3D"-ms-text-size-adjust: 100%; -=
+webkit-text-size-adjust: 100%;">
+                  <!-- IMAGE : BEGIN -->
+                  <a href=3D"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://utsh.adj.st/?c=3Dtr&amp;s=3Dl&amp;adjust_t=3Dcnx3nv_ry6rca&amp;adju=
+st_campaign=3Dcrm_bra_mix_eat_ma_Day5 - Email2_46e22874-ebab-42fb-b3c8-5812=
+18f14c72&amp;adjust_deeplink=3Dyemeksepeti%3A%2F%2F%3Fc%3Dtr%26s%3Dl&amp;ad=
+just_redirect=3Dhttps%3A%2F%2Fwww.yemeksepeti.com%3Futm_source=3Demail&amp;=
+utm_medium=3Dcrm&amp;utm_campaign=3Dcrm_bra_Day5 - Email2_46e22874-ebab-42f=
+b-b3c8-581218f14c72_ma&amp;utm_keyword=3D" target=3D"_blank" style=3D"-ms-t=
+ext-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+                    <img class=3D"wrapper" src=3D"
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+https://braze-images.com/appboy/communication/assets/image_assets/images/64=
+22d98a679bdd10e5e45f93/original.png?1680005514
+
+" width=3D"600" border=3D"0" style=3D"font-family: Arial, Helvetica, sans-s=
+erif; font-size: 15px; line-height: 20px; color: #D61F26; -ms-text-size-adj=
+ust: 100%; -webkit-text-size-adjust: 100%; -ms-interpolation-mode: bicubic;=
+">
+                  </a>
+                  <!-- IMAGE : END -->
+                </th>
+              </tr>
+            </table>
+          </th>
+        </tr>
+        <!-- ////////// HERO IMAGE YEMEKSEPETI : END /////////// -->
+
+    <!-- ////////// MAIN TEXT & TITLE: BEGIN //////////  -->
+    <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%=
+;">
+      <td bgcolor=3D"#ffffff" class=3D"pad-text" style=3D"-ms-text-size-adj=
+ust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important=
+; mso-table-rspace: 0pt !important; padding: 30px 50px;">
+        <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-sp=
+acing: 0 !important; border-collapse: collapse !important; table-layout: fi=
+xed !important; margin: 0 auto;">
+          <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust=
+: 100%;">
+            <td style=3D"font-family: Arial, sans-serif; font-size: 20px; l=
+ine-height: 28px !important; font-weight: bold; color: #fa0050; padding-bot=
+tom: 22px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-=
+table-lspace: 0pt !important; mso-table-rspace: 0pt !important;" align=3D"c=
+enter">
+              =C4=B0lk sipari=C5=9Fini hemen ver!
+            </td>
+          </tr>
+          <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust=
+: 100%;">
+            <td style=3D"font-family: Arial, sans-serif; font-size: 16px; l=
+ine-height: 24px !important; font-weight: 300; color: #02171a; padding-bott=
+om: 22px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; mso-t=
+able-lspace: 0pt !important; mso-table-rspace: 0pt !important;" align=3D"ce=
+nter">
+             MARKETLER kuponuyla kahvalt=C4=B1l=C4=B1klardan at=C4=B1=C5=9F=
+t=C4=B1rmal=C4=B1klara, ev bak=C4=B1m =C3=BCr=C3=BCnlerinden i=C3=A7ecekler=
+e kadar ihtiyac=C4=B1n olan her =C5=9Feyi Yemeksepeti market ya da ma=C4=9F=
+azalardan sipari=C5=9F ver, se=C3=A7ili i=C5=9Fletmelerde ilk sipari=C5=9Fi=
+nde 200 TL indirim ve =C3=BCcretsiz teslimat f=C4=B1rsat=C4=B1n=C4=B1 ka=C3=
+=A7=C4=B1rma! =F0=9F=9B=92=F0=9F=8F=A1
+            </td>
+          </tr>
+          <!-- CTA begins -->
+          <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust=
+: 100%;">
+            <th class=3D"mob-pad-left-b mob-cta-w" width=3D"100%" style=3D"=
+border-radius: 8px; display: inline-block; text-transform: uppercase; -ms-t=
+ext-size-adjust: 100%; -webkit-text-size-adjust: 100%;" align=3D"center">
+              <a class=3D"mob-cta" href=3D"" target=3D"_blank" style=3D"bor=
+der-top-width: 7px; border-top-color: #5EFFB6; border-top-style: solid; bor=
+der-bottom-width: 7px; border-bottom-color: #5EFFB6; border-bottom-style: s=
+olid; border-radius: 8px; background-color: #5EFFB6; font-size: 18px; font-=
+family: Arial, sans-serif; font-weight: bold; color: #000000; width: 135px;=
+ text-decoration: none; display: inline-block; text-align: center; -ms-text=
+-size-adjust: 100%; -webkit-text-size-adjust: 100%;"> S=C4=B0PAR=C4=B0=C5=
+=9E VER
+              </a>
+            </th>
+          </tr>
+          <!-- CTA ends -->
+        </table>
+      </td>
+    </tr>
+    <!-- ////////// MAIN TEXT & TITLE: END ////////// -->
+
+    <!-- ////////// MAIN TEXT & TITLE: BEGIN //////////  -->
+    <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%=
+;">
+      <td bgcolor=3D"#ffffff" class=3D"pad-text" style=3D"-ms-text-size-adj=
+ust: 100%; -webkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important=
+; mso-table-rspace: 0pt !important; padding: 30px 50px;">
+        <table width=3D"100%" border=3D"0" cellspacing=3D"0" cellpadding=3D=
+"0" style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; ms=
+o-table-lspace: 0pt !important; mso-table-rspace: 0pt !important; border-sp=
+acing: 0 !important; border-collapse: collapse !important; table-layout: fi=
+xed !important; margin: 0 auto;">
+        =20
+          <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust=
+: 100%;">
+            <td style=3D"font-family: Arial, sans-serif; font-size: 12px !i=
+mportant; line-height: 22px !important; font-weight: 300; color: #02171a; p=
+adding-bottom: 22px; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: =
+100%; mso-table-lspace: 0pt !important; mso-table-rspace: 0pt !important;" =
+align=3D"left">
+             Kupon Kullan=C4=B1m Ko=C5=9Fullar=C4=B1:
+=E2=80=A2 =C4=B0lk Yemeksepeti market ve ma=C4=9Faza sipari=C5=9Finizde sad=
+ece online kredi kart=C4=B1 ile =C3=B6deme se=C3=A7ene=C4=9Fi i=C3=A7in ge=
+=C3=A7erlidir.
+=E2=80=A2 Adrese teslim sipari=C5=9Flerde se=C3=A7ili i=C5=9Fletmelerde ge=
+=C3=A7erlidir.
+=E2=80=A2 Ge=C3=A7erlilik tarihi ve minimum sepet tutar=C4=B1 detaylar=C4=
+=B1 Kuponlar=C4=B1m b=C3=B6l=C3=BCm=C3=BCnde belirtilmektedir.
+=E2=80=A2 Size =C3=B6zeldir ve ba=C5=9Fkalar=C4=B1 taraf=C4=B1ndan kullan=
+=C4=B1lamaz.
+=E2=80=A2 Di=C4=9Fer kuponlarla birle=C5=9Ftirilemez.
+=E2=80=A2 Tek kullan=C4=B1ml=C4=B1kt=C4=B1r ve nakde =C3=A7evrilmesi m=C3=
+=BCmk=C3=BCn de=C4=9Fildir.
+=E2=80=A2 Joker indirimiyle birlikte kullan=C4=B1lamaz.
+            </td>
+          </tr>
+        =20
+        </table>
+      </td>
+    </tr>
+    <!-- ////////// MAIN TEXT & TITLE: END ////////// -->
+
+
+
+
+<!-- ////////// FOOTER & SOCIAL : BEGIN ////////// -->
+<tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+  <th style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;"=
+>
+    <table dir=3D"ltr" role=3D"presentation" cellspacing=3D"0" cellpadding=
+=3D"0" border=3D"0" width=3D"100%" style=3D"-ms-text-size-adjust: 100%; -we=
+bkit-text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rs=
+pace: 0pt !important; border-spacing: 0 !important; border-collapse: collap=
+se !important; table-layout: fixed !important; margin: 0 auto;">
+
+      <!-- SOCIAL ICONS : BEGIN -->
+      <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 10=
+0%;">
+        <th width=3D"96" style=3D"-ms-text-size-adjust: 100%; -webkit-text-=
+size-adjust: 100%; padding: 32px;" align=3D"center">
+
+          <table align=3D"center" role=3D"presentation" cellspacing=3D"0" c=
+ellpadding=3D"0" border=3D"0" style=3D"-ms-text-size-adjust: 100%; -webkit-=
+text-size-adjust: 100%; mso-table-lspace: 0pt !important; mso-table-rspace:=
+ 0pt !important; border-spacing: 0 !important; border-collapse: collapse !i=
+mportant; table-layout: fixed !important; margin: 0 auto;">
+            <!-- FACEBOOK : BEGIN --->
+            <th style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%; padding: 0 20px 0 0;">
+              <a href=3D"https://www.facebook.com/yemeksepeti" target=3D"_b=
+lank" alias=3D"social-icons" conversion=3D"true" style=3D"-ms-text-size-adj=
+ust: 100%; -webkit-text-size-adjust: 100%;">
+                <img src=3D"https://braze-images.com/appboy/communication/a=
+ssets/image_assets/images/62d6970ddad59d4c1ffcf088/original.png?1658230541"=
+ width=3D"32" style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust=
+: 100%; -ms-interpolation-mode: bicubic; margin: 0; border-style: none;" bo=
+rder=3D"0" alt=3D"social-icons">
+              </a>
+            </th>
+            <!-- FACEBOOK : END --->
+
+            <!-- TWITTER : BEGIN --->
+            <th style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adju=
+st: 100%; padding: 0 20px 0 0;">
+              <a href=3D"https://twitter.com/yemeksepeti" target=3D"_blank"=
+ alias=3D"social-icons" conversion=3D"true" style=3D"-ms-text-size-adjust: =
+100%; -webkit-text-size-adjust: 100%;">
+                <img src=3D"https://braze-images.com/appboy/communication/a=
+ssets/image_assets/images/654c8a3fe2b78c004bb11501/original.png?1699514942"=
+ width=3D"32" style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust=
+: 100%; -ms-interpolation-mode: bicubic; margin: 0; padding: 0; border-styl=
+e: none;" border=3D"0" alt=3D"social-icons"></a>
+              </th>
+              <!-- TWITTER : END --->
+
+              <!-- instagram : BEGIN --->
+              <th style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%; padding: 0 20px 0 0;">
+                <a href=3D"https://www.instagram.com/yemeksepeti" target=3D=
+"_blank" alias=3D"social-icons" conversion=3D"true" style=3D"-ms-text-size-=
+adjust: 100%; -webkit-text-size-adjust: 100%;">
+                  <img src=3D"https://images.deliveryhero.io/image/adcatalo=
+g/210824-instagramYemeksepeti_CRM.png" width=3D"32" style=3D"-ms-text-size-=
+adjust: 100%; -webkit-text-size-adjust: 100%; -ms-interpolation-mode: bicub=
+ic; margin: 0; padding: 0; border-style: none;" border=3D"0" alt=3D"social-=
+icons">
+                </a>
+              </th>
+              <!-- instagram : END --->
+
+              <!-- youtube : BEGIN --->
+              <th style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;">
+                <a href=3D"https://www.youtube.com/user/yemeksepeti" target=
+=3D"_blank" alias=3D"social-icons" conversion=3D"true" style=3D"-ms-text-si=
+ze-adjust: 100%; -webkit-text-size-adjust: 100%;">
+                  <img src=3D"https://images.deliveryhero.io/image/adcatalo=
+g/210824-youtubeYemeksepeti_CRM.png" width=3D"32" style=3D"-ms-text-size-ad=
+just: 100%; -webkit-text-size-adjust: 100%; -ms-interpolation-mode: bicubic=
+; margin: 0; padding: 0; border-style: none;" border=3D"0" alt=3D"social-ic=
+ons">
+                </a>
+              </th>
+              <!-- youtube : END --->
+            </table>
+          </th>
+        </tr>
+        <!-- SOCIAL ICONS : END -->
+
+        <!-- UNSUBSCRIBE : BEGIN -->
+        <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: =
+100%;">
+          <th width=3D"422" class=3D"pad-texf" style=3D"font-family: Arial,=
+ sans-serif !important; font-size: 10px; line-height: 18px; color: #02171a;=
+ font-weight: 500; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 10=
+0%; padding: 0px 90px 30px;" align=3D"center">
+            <span style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;">
+              Bu e-postay=C4=B1 Yemeksepeti izinli ticari ileti=C5=9Fim ver=
+i taban=C4=B1na dahil oldu=C4=9Funuz i=C3=A7in almaktas=C4=B1n=C4=B1z.<br s=
+tyle=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+              Dan=C4=B1=C5=9Fmak istedi=C4=9Finiz konularla ilgili <a href=
+=3D"mailto:info@yemeksepeti.com" target=3D"_blank" style=3D"color: #fa0050;=
+ text-decoration: underline; -ms-text-size-adjust: 100%; -webkit-text-size-=
+adjust: 100%;">info@yemeksepeti.com</a> =C3=BCzerinden bizimle temasa ge=C3=
+=A7ebilirsiniz. E-posta almak istemiyorsan=C4=B1z l=C3=BCtfen <a href=3D"ht=
+tps://01.emailinboundprocessing.com/enc_user/unsubscribe?d=3D%241%24F4dI8qm=
+8frRha2rT%2B80%2BGQ%3D%3D%24X6uCzfu6Xkh3e7Q7MbUM%2BEQw68IAswZfkHT58c%2BINPp=
+QuKFwBXAZjbZEFpUu%0AKdT3zXM1E90MfAvIDA7OWihGlqymyY4sJ1B%2B8xZN0G5XMi26NqVeM=
+n1toTZ5%0AHiuSrHnE4bp19tq8SzrGhzPq%2FuyxeUA%2BDApzuucQ1waRBFAK1PhTR3IydqXA%=
+0AvUCJm3uP8dUW4jSI0QVv1YusxYSjjVFrfTtjOCTK1d4Qd0cj3CPdo0V7xtzD%0AMfDJsSgq%2=
+Fmy%2B%2BCsLSHWd1BDLjyBGx2dPLyLvVLX5itfHm9%2F3ylROJQTKn8pv%0AVNFTvQPefEW5S9=
+Ih0r%2Bw5HHB8G4cASMTIn%2BBvkjfCxsX%2FD70xuP4TFbnxMYq%0A%2BGFniqxgteea4QxYWw=
+SDcDXN&1=3D1" target=3D"_blank" style=3D"color: #fa0050; text-decoration: u=
+nderline; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">t=C4=
+=B1klay=C4=B1n=C4=B1z</a>.
+            </span>
+          </th>
+        </tr>
+        <!-- UNSUBSCRIBE : END -->
+
+        <!-- CONTACT : BEGIN -->
+        <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: =
+100%;">
+          <th style=3D"font-family: Arial, sans-serif !important; font-size=
+: 10px; line-height: 18px; color: #02171a; font-weight: 300; -ms-text-size-=
+adjust: 100%; -webkit-text-size-adjust: 100%; padding: 0px 40px 30px;" alig=
+n=3D"center">
+            <span style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-ad=
+just: 100%;">
+             Yemek Sepeti Elektronik =C4=B0leti=C5=9Fim Perakende G=C4=B1da=
+ Anonim =C5=9Eirketi<br style=3D"-ms-text-size-adjust: 100%; -webkit-text-s=
+ize-adjust: 100%;">
+              <a href=3D"#" target=3D"_self" style=3D"color: #02171a; text-=
+decoration: none; -ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100=
+%;">
+                Esentepe Mahallesi, Dede Korkut Sokak, No: 28/1, =C5=9Ei=C5=
+=9Fli, =C4=B0stanbul <br style=3D"-ms-text-size-adjust: 100%; -webkit-text-=
+size-adjust: 100%;">
+              Mersis No: 0947045746800015
+            </a>
+            </span>
+          </th>
+        </tr>
+        <!-- CONTACT : END -->
+        <tr style=3D"-ms-text-size-adjust: 100%; -webkit-text-size-adjust: =
+100%;">
+          <th align=3D"center" valign=3D"bottom" style=3D"-ms-text-size-adj=
+ust: 100%; -webkit-text-size-adjust: 100%;">
+            <!-- YEMEKSEPETI LOGO : BEGIN -->
+            <a href=3D"https://utsh.adj.st/?s=3Dhs&amp;adjust_t=3Dcnx3nv_ry=
+6rca&amp;adjust_campaign=3Dcrm_bra_mix_eat_ma_Day5 - Email2_46e22874-ebab-4=
+2fb-b3c8-581218f14c72&amp;adjust_deeplink=3Dyemeksepeti%3A%2F%2F%3Fs%3Dhs&a=
+mp;adjust_redirect=3Dhttps%3A%2F%2Fwww.yemeksepeti.com%3Futm_source=3Demail=
+&amp;utm_medium=3Dcrm&amp;utm_campaign=3Dcrm_bra_Day5 - Email2_46e22874-eba=
+b-42fb-b3c8-581218f14c72_ma&amp;utm_keyword=3D" target=3D"_blank" style=3D"=
+-ms-text-size-adjust: 100%; -webkit-text-size-adjust: 100%;">
+              <img class=3D"wrapper" src=3D"https://images.deliveryhero.io/=
+image/adcatalog/210824-LogoFooter_Yemeksepeti_CRM.png" width=3D"600" alt=3D=
+"logo" border=3D"0" style=3D"font-family: Arial, Helvetica, sans-serif; fon=
+t-size: 15px; line-height: 20px; color: #D61F26; vertical-align: bottom; -m=
+s-text-size-adjust: 100%; -webkit-text-size-adjust: 100%; -ms-interpolation=
+-mode: bicubic;">
+            </a>
+            <!-- YEMEKSEPETI LOGO : END -->
+          </th>
+        </tr>
+      </table>
+    </th>
+  </tr>
+  <!-- ////////// FOOTER & SOCIAL : END ////////// -->
+
+</table>
+<!-- Email Body : END -->
+
+<!--[if mso]>
+</td>
+</tr>
+</table>
+<![endif]-->
+</div>
+
+</center>
+
+
+</table>
+</div>
+</center>
+<img src=3D"http://ablink.mail.yemeksepeti.com/wf/open?upn=3Du001.182-2FxsZ=
+WqNSxr96-2BM-2BwpwtRa-2BSDjO4wg8QIBZkEpjbanoiCK0YW1uSlyQfkXQ6x-2F3jiZuAtJ7Z=
+AxPAJLHhYpb02sZ0iG3R0wc-2B2EecidJcwrocFgudkkHCP6w-2FX7-2FjpVgDRsfk65q3HqmWw=
+SqwZIkjGuz852U6T1TVoc8mxGPuln6baKNatAH-2BLx9HHk3xzbxTaXdNQphGSFYhi8-2F-2B4K=
+3NFRC27wa5COyWsgO4dKNnSv4PsyjVYWVrJpgbGFv6JRvQb9AReejPrD14DVfvyYfUVCTlCQcbb=
+jzKE4LZNLiXU7pGx6dXEPYn4EspsDhQkfIZYfZa-2FVQ1QUcxg5k1t-2FwanXkf9d7a05Z2p4RB=
+kLrcWaH1hGNw4C-2BZnHDTckHenoLjZMRRmCNyXa62MQ1ee-2FDoHZti5SJcAOXqLdHHQItW-2F=
+MBBi9jWkaU7XL5BGuQS8T2xZmPXYeN5xHCr9-2BquV8R8pNVti5ULvagqrXoAHIl69SViWgwq9G=
+gJdbqhcLpGIK7kAhnHphAy1z0v4NiMqrCcndQO0vQEx5WhgHRogPwYjuwoa-2F5B9FwTtv5OUG-=
+2FsAT0vBm-2FYxofx-2B-2FxXPxdCbsvUt62XcBNUP3FdGey-2BfKHIyxdecUMe5tqwdfl1FPbc=
+xDkOYLtSiJMKNv2GekxKL8XK1iOfaLlTpKyYHHKaoYewxgil8hlRQ0LcGVD0KDdq4PGkFYKRsLD=
+uu2m77O2rI4COjogFwMUEXzvgJWLCgDXa3g-2FBiAJeiDsTG411ij7RmVkUas07d-2F2-2FW7zO=
+wzkZQ12w-3D-3D" alt=3D"" width=3D"1" height=3D"1" border=3D"0" style=3D"hei=
+ght:1px !important;width:1px !important;border-width:0 !important;margin-to=
+p:0 !important;margin-bottom:0 !important;margin-right:0 !important;margin-=
+left:0 !important;padding-top:0 !important;padding-bottom:0 !important;padd=
+ing-right:0 !important;padding-left:0 !important;"/></body>
+</html>
+
+--a280c1615056f9441460b9dde827350697f5c6e6966b9bde7255c11ba5b8--

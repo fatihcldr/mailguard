@@ -1,0 +1,411 @@
+Delivered-To: iremnr2606@gmail.com
+Received: by 2002:a05:6a11:a21a:b0:678:b336:1a0d with SMTP id fp26csp515460pxc;
+        Sat, 1 Nov 2025 03:15:29 -0700 (PDT)
+X-Google-Smtp-Source: AGHT+IFzgzwzbZrG550Z394BDwZ0uuRUd7pMNdCFb/Xr0yso2aHyd0VmImBcTXoS04f/AeOIDkzV
+X-Received: by 2002:a17:907:2683:b0:b40:cfe9:ed2c with SMTP id a640c23a62f3a-b70708b14ecmr664842166b.64.1761992129490;
+        Sat, 01 Nov 2025 03:15:29 -0700 (PDT)
+ARC-Seal: i=1; a=rsa-sha256; t=1761992129; cv=none;
+        d=google.com; s=arc-20240605;
+        b=MAU/x2T46caUukI2DcopasujkL3VYhG36Cj3fI68OZq70EvfUpToj6leX/GFKNgolw
+         kdz4VOaeqbqLjRjcwUPuPNgBuM/Z/H6RkW96MVkGmapKGyWOOMrrMQfh0zYeoOtyJxlL
+         oAsoKSAhyUa2atSu+Xs/0Y8EnD03jhWnctDnfKuMXQyE+KCH/IAQWpQRBSGo9i1pAI6g
+         ardZMs+6DH1nS3fPn73kwsVnY629Zs7FXdY94NxjkfynyciZAbBtYK4Fow3IMBzZYL4j
+         7EP4+jy9Ozs1bTQN8Gf2R9K93KxI1s95cuAf9S9yBtEf5HZB32UzcJQUKJxmN18mKqPH
+         8+mg==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=list-unsubscribe:subject:to:reply-to:from:content-transfer-encoding
+         :date:mime-version:dkim-signature:message-id;
+        bh=+U56qn877OQct+RpRaI5GkOF2b9tWCM8FG7QZlCPwXs=;
+        fh=z43PlvtvL2tjKoqDZpeZDzHO0fV5pW/rtc+FWrJPf1Y=;
+        b=br/zy2FWI9C+yyrdYY8ceW9xRr8hF6xPwghX7o9/XnKWgIUjbtGGXcLlimJhvkOr4Z
+         dvr5Y2AUptpy0mIAE2XnESKC3dUELztm0wMflGuB6C3NycnozXH0hueFLoGpOhHjaCrq
+         MRvqQqmV0D2o+9/zvZHeYDAuOIUcH1BTXcqiBhPUk9kOdYJgRFpvZkq4DPO6DadnQn8r
+         X5dyi3L2QuSi5yI/Xr4MtUUfqscIifE8iP7e1Q4L2vIVifxc+FpLrS+LNoV/ZaIXfIvy
+         nkbAvI2XtmIpAsSUGVNVRGRPEMpObht4eMAS0Lrm/toBQW12alvgUQB9CnJ8VgQbRHsx
+         hAtQ==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@trendyolmail.com header.s=dengage header.b=r+TY2L3Q;
+       spf=pass (google.com: domain of info@trendyolmail.com designates 195.42.241.26 as permitted sender) smtp.mailfrom=info@trendyolmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=trendyolmail.com
+Return-Path: <info@trendyolmail.com>
+Received: from static-mail-241-26.engines.dengage.net (static-mail-241-26.engines.dengage.net. [195.42.241.26])
+        by mx.google.com with ESMTPS id a640c23a62f3a-b7077974398si206992666b.103.2025.11.01.03.15.29
+        for <iremnr2606@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-CHACHA20-POLY1305 bits=256/256);
+        Sat, 01 Nov 2025 03:15:29 -0700 (PDT)
+Received-SPF: pass (google.com: domain of info@trendyolmail.com designates 195.42.241.26 as permitted sender) client-ip=195.42.241.26;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@trendyolmail.com header.s=dengage header.b=r+TY2L3Q;
+       spf=pass (google.com: domain of info@trendyolmail.com designates 195.42.241.26 as permitted sender) smtp.mailfrom=info@trendyolmail.com;
+       dmarc=pass (p=NONE sp=NONE dis=NONE) header.from=trendyolmail.com
+Message-ID: <6905ddc1.170a0220.c49ac.c43aSMTPIN_ADDED_BROKEN@mx.google.com>
+X-Google-Original-Message-ID: a4096cce60772adb39d4ce7ed5fcff5815148540
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed; q=dns/txt;
+ d=trendyolmail.com; s=dengage;
+ h=mime-version:date:message-id:subject:from:to:content-type;
+ bh=+U56qn877OQct+RpRaI5GkOF2b9tWCM8FG7QZlCPwXs=;
+ b=r+TY2L3QilJqjdbEeXzDs/Pm4j92VEprBzeIqnPilqdprzXak+J7TyysF9DTLfyONmDu
+ ZZFaifafrFoWfjrucU+mmlIhvLu0LkO8vUKvyYCdOXLtYBC+i+ehRGGiG2QqXi8xOdsDhu
+ OU2PD3EKFk4/iZfnNgN99FtOx9vfX9zJlOS5Ur3/EARktuYXc1ekupcpNUBVzWtzPQsAN4
+ 6h9MptMsdJg9TfYi3nMkzMEf7etF2L0LlEw7ibMFM0hbUEPbuGJyY17qpQ+4WEC5J1tk9P
+ HUgcQdK05v35bRAWojnho2OYTCzPi3Z6cnf44MAcWYmw/kmOtncSN7dGXB5tsj3w==
+MIME-Version: 1.0
+Date: Sat, 01 Nov 2025 10:14:44 +0000
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+X-Priority: 3 (Normal)
+From: Trendyol <info@trendyolmail.com>
+Reply-To: Trendyol <info@trendyolmail.com>
+To: iremnr2606@gmail.com
+Subject: =?utf-8?B?xLBhZGVuIG9uYXlsYW5kxLEg8J+Ssw==?=
+X-VirtualMTA: trendyol-email-bulk
+X-MMP-UID: 9e316d13-bad5-4460-9f39-af2f11aa314b
+X-MMP-REST: yes
+X-From-Id: 0
+X-Reply-Id: 0
+X-Pool-Id: 118
+X-Mailer: dEngage MMP Platform
+List-Unsubscribe: <mailto:mmpejmrp@dengage.com?subject=lu:pmta:sODIzk9rnsLnBw5jtxz7LhscpkQudovT5dvvp0jMftsQ4UDJVZQvf0crun3Hr6IM_s_l_zn9qD6ejLVymDkWzXujyeZHrW4qxpOisnHLY9_p_l_7cHg_e_q_>
+
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.=
+w3.org/TR/html4/loose.dtd">=0A<html lang=3D"tr">=0A=0A<head>=0A    <meta na=
+me=3D"viewport" content=3D"width=3Ddevice-width,initial-scale=3D1"><meta ht=
+tp-equiv=3D"X-UA-Compatible" content=3D"IE=3Dedge"><meta charset=3D"utf-8">=
+<link rel=3D"preconnect" href=3D"https://fonts.googleapis.com"><link rel=3D=
+"preconnect" href=3D"https://fonts.gstatic.com" crossorigin><link href=3D"h=
+ttps://fonts.googleapis.com/css2?family=3DInter:ital,opsz,wght@0,14..32,100=
+=2E.900;1,14..32,100..900&display=3Dswap" rel=3D"stylesheet"><style type=3D=
+"text/css">body{margin:0 !important;padding:0 !important;background-color:#=
+fff;font-family:Inter,sans-serif;font-optical-sizing:auto;font-style:normal=
+;font-size:16px;line-height:20px;color:#5f5d5d}table{border-spacing:0}td{pa=
+dding:0}img{border:0}table[class=3D"default-talbe"]{width:100% !important;p=
+adding:0;margin:0}.image-fluid{width:100% !important;height:auto !important=
+;max-width:600px !important}.wrapper{width:100%;table-layout:fixed;backgrou=
+nd-color:#fff;padding-bottom:40px}.main{background-color:#fff;margin:0 auto=
+;width:100%;max-width:600px;border-spacing:0;color:#4a4a4a}.content-table{b=
+order:1px solid #000;border-radius:8px;text-align:left;padding:30px}.subTit=
+le{font-weight:700;font-size:18px;line-height:22px;color:#5f5d5d;padding-bo=
+ttom:10px;padding-top:20px}.default-talbe .product-table{background-color:#=
+f7f7f7;border-radius:15px;width:100% !important}.one-col{padding:10px;float=
+:left;max-width:130px}.one-col img{width:110px;height:165px;border-radius:6=
+px}.two-col{padding-top:20px;padding-right:20px;padding-bottom:10px;float:l=
+eft;width:70%;display:block}.two-col .product-title{font-weight:700;font-si=
+ze:16px;line-height:28px}.two-col .product-desc{font-weight:400;font-size:1=
+3px;line-height:22px;width:100%;overflow:hidden;text-overflow:ellipsis;disp=
+lay:inline-block;white-space:nowrap;max-width:380px}.two-col .product-price=
+{font-weight:700;font-size:18px;line-height:36px}.two-col .product-rate-btn=
+{font-size:12px}.two-col .product-rate-btn a{border:2px solid #ff6720;backg=
+round-color:#ff6720;color:#fff;padding:5px 10px;border-radius:15px;text-dec=
+oration:none}.downloadBannerMoible{display:none}.downloadBannerWeb{display:=
+block}@media screen and (max-width:600px){.downloadBannerWeb{display:none}.=
+downloadBannerMoible{display:block}.one-col{padding:10px;float:left;max-wid=
+th:100px}.one-col img{width:80px;height:120px;border-radius:6px}.two-col{pa=
+dding-top:150px;padding-right:20px;padding-bottom:10px;float:left;width:61%=
+;display:block}.two-col .product-title{font-weight:700;font-size:14px;line-=
+height:19px}.two-col .product-desc{font-weight:400;font-size:12px;line-heig=
+ht:18px;width:100%;max-width:190px !important;overflow:hidden;text-overflow=
+:ellipsis;display:inline-block;white-space:nowrap}.two-col .mobile-hidden{d=
+isplay:none}.two-col .product-rate-btn{font-size:12px}.two-col .product-rat=
+e-btn a{border:2px solid #ff6720;background-color:#ff6720;color:#fff;paddin=
+g:5px 10px;border-radius:15px;text-decoration:none}}@media(prefers-color-sc=
+heme:dark){.darkMode{display:block !important;width:auto !important;overflo=
+w:visible !important;float:none !important;max-height:inherit !important;ma=
+x-width:inherit !important;line-height:auto !important;margin-top:0 !import=
+ant;visibility:inherit !important;padding-bottom:30px !important}.lightMode=
+{display:none;display:none !important;visibility:hidden !important}.content=
+-table{border:1px solid #fff !important}}[data-ogsc] .darkMode{display:bloc=
+k !important;width:auto !important;overflow:visible !important;float:none !=
+important;max-height:inherit !important;max-width:inherit !important;line-h=
+eight:auto !important;margin-top:0 !important;visibility:inherit !important=
+;padding-bottom:30px !important}[data-ogsc] .lightMode{display:none;display=
+:none !important;visibility:hidden !important}[data-ogsc] .content-table{bo=
+rder:1px solid #fff !important}</style><title>Trendyol</title>=0A</head>=0A=
+=0A=0A=0A<body>=0A    <div=0A        style=3D"display:none;font-size:0px;co=
+lor:#999999;line-height:0px;max-height:0px;max-width:0px;opacity:0;overflow=
+:hidden;">=0A        &nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=
+=80=8C&nbsp;=E2=80=8C&nbsp;&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=E2=80=8C&nb=
+sp;=E2=80=8C&nbsp;=E2=80=8C&nbsp;=0A    </div>=0A    <center class=3D"wrapp=
+er">=0A        <table class=3D"main" width=3D"100%">=0A            <tr>=0A =
+               <td>=0A                    <!--LOGO-->
+<table width=3D"100%" style=3D"margin-bottom: 10px; border: 0px; border-rad=
+ius: 8px; min-width: 100%; max-width: 100%; padding: 15px;background-image:=
+url('https://cdn.dsmcdn.com/mrktng/crm/TRX2025/bg_white-r.jpg')!important; =
+background-repeat: repeat; -webkit-filter: none !important;filter: none !im=
+portant;">
+    <tr>
+        <td align=3D"center">
+            <a href=3D"https://www.trendyol.com" style=3D"text-align: cente=
+r;">
+                <img src=3D"https://cdn.dsmcdn.com/mrktng/crm/TRX2025/TY_lo=
+go_r.png" alt=3D"Trendyol Logo" style=3D"max-width: 300px; display: block; =
+margin: 0px auto;">
+            </a>
+        </td>
+    </tr>
+</table><!--LOGO end-->=0A                    <!--ContentContainer-->=0A   =
+                 <table width=3D"100%" class=3D"main content-table">=0A    =
+                    <tr>=0A                            <td>=0A             =
+                   <!--MESSAGE-->=0A                                <table =
+width=3D"100%" class=3D"default-talbe">=0A                                 =
+   <tr>=0A                                        <td>=0A                  =
+                          Merhaba, <br><br>=0A                             =
+               =0A                                                =0A      =
+                                              =0A                          =
+                              =0A                                          =
+                  =0A                                            <strong>10=
+593567103</strong> numaral=C4=B1 sipari=C5=9Finin iade i=C5=9Flemini=0A    =
+                                        ger=C3=A7ekle=C5=9Ftirdik.<br><br>=
+=0A                                                            =0A         =
+                                               =0A                         =
+                           =0A                                             =
+   =0A                                            =0A                      =
+                      =0A                                        </td>=0A  =
+                                  </tr>=0A                                <=
+/table>=0A                                <!--MESSAGE end-->=0A            =
+                    <!--ClaimInfo Title-->=0A                              =
+  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" cl=
+ass=3D"default-talbe">=0A                                    <tr>=0A       =
+                                 <td class=3D"subTitle"=0A                 =
+                           style=3D"font-weight: bold; font-size: 18px; lin=
+e-height: 22px; color:#5F5D5D; padding-bottom: 0px; padding-top: 20px;">=0A=
+                                            =C4=B0ade Bilgilendirmesi:=0A  =
+                                      </td>=0A                             =
+       </tr>=0A                                    <tr>=0A                 =
+                       <td=0A                                            st=
+yle=3D"padding-left: 20px; padding-top: 5px; font-size: 12px; line-height: =
+12px;">=0A=0A                                            <br>=0A           =
+                             </td>=0A                                    </=
+tr>=0A                                </table>=0A                          =
+      <!--ClaimInfo Title end-->=0A                                <!--Clai=
+mInfo Message-->=0A                                <table width=3D"100%" cl=
+ass=3D"default-talbe">=0A                                    <tr>=0A       =
+                                 <td>=0A                                   =
+         =0A                                            =0A                =
+                            =0A=0A                                         =
+   =0A                                            =0A                      =
+                      =C3=9Ccret iaden, birka=C3=A7 g=C3=BCn i=C3=A7inde <s=
+trong> **** 4314</strong> numaral=C4=B1=0A                                 =
+           kart=C4=B1na <strong>509.15 TRY</strong> olarak=0A              =
+                              yans=C4=B1yacakt=C4=B1r.=0A                  =
+                          =0A=0A                                           =
+ =0A=0A                                            =0A                     =
+                       =0A=0A                                            =
+=0A                                            <strong>528732435996</strong=
+> referans numaras=C4=B1 ile bankandan=0A                                  =
+          takibini yapabilirsin.=0A                                        =
+    =0A                                            =0A                     =
+                       =0A=0A                                            =
+=0A                                            <br><br>=0A                 =
+                           =C4=B0ade s=C3=BCreci ile ilgili merak ettikleri=
+n i=C3=A7in <a=0A                                                href=3D"=
+=0A=0A=0A=0Ahttps://app.adjust.com/jsr?url=3Dhttps%3A%2F%2Fp8zh.adj.st%2Fei=
+1zb4_q4nmai%3Fadjust_t%3Dei1zb4_q4nmai%26Page%3DHelpDetail%26adjust_adgroup=
+%3Dall%26adjust_campaign%3DTY_TRX_Trendyol_ReturnChargeApproved-tr%26adjust=
+_creative%3DTY_TRX_Trendyol_ReturnChargeApproved-tr%26adjust_tracker_limit%=
+3D999999999%26utm_source%3Demail%26utm_medium%3Dfree%26utm_campaign%3DTY_TR=
+X_Trendyol_ReturnChargeApproved-tr%26adjust_deeplink%3Dty%253A%252F%252F%25=
+3FPage%253DHelpDetail%2526adjust_t%253Dei1zb4_q4nmai%2526utm_source%253Dema=
+il%2526utm_medium%253Dfree%2526utm_campaign%253DTY_TRX_Trendyol_ReturnCharg=
+eApproved-tr%2526adjust_adgroup%253Dall%2526adjust_campaign%253DTY_TRX_Tren=
+dyol_ReturnChargeApproved-tr%2526adjust_creative%253DTY_TRX_Trendyol_Return=
+ChargeApproved-tr%2526adjust_tracker_limit%253D999999999%26adjust_redirect%=
+3Dhttps%253A%252F%252Fwww.trendyol.com%252Fyardim%252Fsorular%253Fadjust_t%=
+253Dei1zb4_q4nmai%2526utm_source%253Demail%2526utm_medium%253Dfree%2526utm_=
+campaign%253DTY_TRX_Trendyol_ReturnChargeApproved-tr%2526adjust_adgroup%253=
+Dall%2526adjust_campaign%253DTY_TRX_Trendyol_ReturnChargeApproved-tr%2526ad=
+just_creative%253DTY_TRX_Trendyol_ReturnChargeApproved-tr%2526adjust_tracke=
+r_limit%253D999999999=0A=0A=0A=0A=0A=0A"=0A                                =
+                target=3D"_blank" title=3D"yardim-sayfasi"=0A              =
+                                  style=3D"color:#000006; font-weight: bold=
+; text-decoration:underline">buraya</a>=0A                                 =
+           t=C4=B1klayabilirsin.=0A                                        =
+    =0A                                            =0A                     =
+                       =0A                                            <ul>=
+=0A                                                <li>=C3=9Ccret iaden ban=
+kaya ba=C4=9Fl=C4=B1 olarak=0A                                             =
+       <strong>2-10</strong> i=C5=9F g=C3=BCn=C3=BC i=C3=A7erisinde =C3=B6d=
+eme=0A                                                    yapm=C4=B1=C5=9F =
+oldu=C4=9Fun kart=C4=B1na geri =C3=B6denir.=0A                             =
+                   </li>=0A                                                =
+<li>Taksitli al=C4=B1=C5=9Fveri=C5=9Flerde =C3=BCcret iadesi tek seferde=0A=
+                                                    yap=C4=B1l=C4=B1r, anca=
+k kart ekstrelerinde taksitli =C5=9Fekilde=0A                              =
+                      g=C3=B6r=C3=BCnt=C3=BClenir. </li>=0A                =
+                            </ul>=0A                                       =
+     =0A                                            =0A                    =
+                        =0A                                        </td>=0A=
+                                    </tr>=0A                               =
+ </table>=0A                                <!--ClaimInfo Message end-->=0A=
+                                <!--Claim PRODUCT Title-->=0A              =
+                  <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" w=
+idth=3D"100%" class=3D"default-talbe">=0A                                  =
+  <tr>=0A                                        <td class=3D"subTitle"=0A =
+                                           style=3D"font-weight: bold; font=
+-size: 18px; line-height: 22px; color:#5F5D5D; padding-bottom: 0px; padding=
+-top: 20px;">=0A                                            =C4=B0ade Edile=
+n =C3=9Cr=C3=BCnler:=0A                                        </td>=0A    =
+                                </tr>=0A                                   =
+ <tr>=0A                                        <td=0A                     =
+                       style=3D"padding-left: 20px; padding-top: 5px; font-=
+size: 12px; line-height: 12px;">=0A=0A                                     =
+       <br>=0A                                        </td>=0A             =
+                       </tr>=0A                                </table>=0A =
+                               <!--Claim PRODUCT Title end-->=0A           =
+                     <!--Claim PRODUCT Table-->=0A                         =
+       <table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100=
+%"=0A                                    class=3D"default-talbe product-tab=
+le" style=3D"background-color: #F7F7F7;">=0A                               =
+     =0A                                    <tr>=0A                        =
+                <td>=0A                                            <table c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" class=3D"one-col"=0A       =
+                                         style=3D"padding: 10px; float: lef=
+t; max-width: 130px;">=0A                                                <t=
+r>=0A                                                    <td>=0A           =
+                                             <a href=3D"=0A=0A=0A=0A=0A=0A=
+=0A=0Ahttps://app.adjust.com/jsr?url=3Dhttps%3A%2F%2Fp8zh.adj.st%2Fei1zb4_q=
+4nmai%3Fadjust_t%3Dei1zb4_q4nmai%26ContentId%3D772742832%26ProductId%3D7727=
+42832%26Page%3DProduct%26utm_source%3Demail%26utm_medium%3Dfree%26utm_campa=
+ign%3DTY_TRX_Trendyol_ReturnChargeApproved-tr%26adjust_adgroup%3Dall%26adju=
+st_campaign%3DTY_TRX_Trendyol_ReturnChargeApproved-tr%26adjust_tracker_limi=
+t%3D999999999%26adjust_deeplink%3Dty%253A%252F%252F%253FContentId%253D77274=
+2832%2526ProductId%253D772742832%2526Page%253DProduct%2526adjust_t%253Dei1z=
+b4_q4nmai%2526utm_source%253Demail%2526utm_medium%253Dfree%2526utm_campaign=
+%253DTY_TRX_Trendyol_ReturnChargeApproved-tr%2526adjust_adgroup%253Dall%252=
+6adjust_campaign%253DTY_TRX_Trendyol_ReturnChargeApproved-tr%2526adjust_tra=
+cker_limit%253D999999999%26adjust_redirect%3Dhttps%253A%252F%252Fwww.trendy=
+ol.com%252Fx%252Fx-p-772742832%253FmerchantId%253D678547%2526adjust_t%253De=
+i1zb4_q4nmai%2526utm_source%253Demail%2526utm_medium%253Dfree%2526utm_campa=
+ign%253DTY_TRX_Trendyol_ReturnChargeApproved-tr%2526adjust_adgroup%253Dall%=
+2526adjust_campaign%253DTY_TRX_Trendyol_ReturnChargeApproved-tr%2526adjust_=
+creative%253DTY_TRX_Trendyol_ReturnChargeApproved-tr%2526adjust_tracker_lim=
+it%253D999999999=0A=0A"=0A                                                 =
+           target=3D"_blank"=0A                                            =
+                style=3D"display: block !important; text-decoration: none !=
+important;">=0A                                                            =
+<img src=3D"https://cdn.dsmcdn.com//ty1685/prod/QC/20250524/12/dbdc3c08-93c=
+3-3c3b-9bdc-8d70658503ae/1_org_thumb.jpg" width=3D"110" height=3D"165" alt=
+=3D"=C3=9Cr=C3=BCn g=C3=B6rseli" style=3D"border-radius: 6px;">=0A         =
+                                               </a>=0A                     =
+                               </td>=0A                                    =
+            </tr>=0A                                            </table>=0A=
+                                            <table cellpadding=3D"0" cellsp=
+acing=3D"0" border=3D"0" class=3D"two-col"=0A                              =
+                  style=3D"padding-top: 20px; padding-right: 0px; padding-b=
+ottom: 10px; float: left;">=0A                                             =
+   <tr>=0A                                                    <td class=3D"=
+product-title">&nbsp;=0A=0A                                                =
+    </td>=0A                                                </tr>=0A       =
+                                         <tr>=0A                           =
+                         <td class=3D"product-desc">12 Adet Kapa=C4=9F=C4=
+=B1 Kulplu Ve Vakumlu Vintage Baharatl=C4=B1k Ve Etiketli Baharat Seti 370 =
+ml</td>=0A                                                </tr>=0A         =
+                                       <tr class=3D"mobile-hidden">=0A     =
+                                               <td>&nbsp;</td>=0A          =
+                                      </tr>=0A                             =
+                   <tr>=0A                                                 =
+   <td>=0A                                                        =0A      =
+                                                  <table=0A                =
+                                            style=3D"width: 80%; height: au=
+to; font-size: 11px; text-align: left; color: #000000;"=0A                 =
+                                           cellspacing=3D"7" cellpadding=3D=
+"0" align=3D"left">=0A                                                     =
+       =0A                                                            =0A  =
+                                                          <tr>=0A          =
+                                                      <td>=C3=96dedi=C4=9Fi=
+niz tutar:</td>=0A                                                         =
+       <td>509.15=0A                                                       =
+             TRY </td>=0A                                                  =
+          </tr>=0A                                                         =
+   <tr style=3D"color: #f26928;">=0A                                       =
+                         <td>=C4=B0ade edilen tutar:</td>=0A               =
+                                                 <td>509.15=0A             =
+                                                       TRY </td>=0A        =
+                                                    </tr>=0A               =
+                                         </table>=0A                       =
+                                 =0A                                       =
+             </td>=0A                                                </tr>=
+=0A                                                <!--<tr>=0A             =
+                                       <td class=3D"product-rate-btn">=0A  =
+                                                      <a href=3D"https://ww=
+w.trendyol.com" target=3D"_blank">=0A                                      =
+                      =C3=9Cr=C3=BCn=C3=BC De=C4=9Ferlendir=0A             =
+                                           </a>=0A                         =
+                           </td>=0A                                        =
+        </tr>-->=0A                                            </table>=0A =
+                                       </td>=0A                            =
+        </tr>=0A                                    =0A                    =
+            </table>=0A                                <!--Claim PRODUCT Ta=
+ble end-->=0A                                <!--SPACER Table--><table><tr>=
+<td><img src=3D"https://cdn.dsmcdn.com/mrktng/crm/2022/mails/Sep/11/space.g=
+if" style=3D"display: block;" alt=3D"" width=3D"1" height=3D"20"></td></tr>=
+</table><!--SPACER Table end--><!--INFO--><!--WEB downloadBanner--><table c=
+ellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=3D"100%" class=3D"def=
+ault-talbe downloadBannerWeb"><tr><td><img src=3D"https://cdn.dsmcdn.com/mr=
+ktng/crm/Inapp/automationimages/lovemark_mail.gif" class=3D"image-fluid" al=
+t=3D""></td></tr></table><!--MOBILE downloadBanner--><table cellpadding=3D"=
+0" cellspacing=3D"0" border=3D"0" width=3D"%100" class=3D"default-talbe dow=
+nloadBannerMoible"><tr><td><img src=3D"https://cdn.dsmcdn.com/mrktng/crm/In=
+app/automationimages/lovemark_mail.gif" class=3D"image-fluid" alt=3D""></td=
+></tr></table><!--SPACER Table--><table><tr><td><img src=3D"https://cdn.dsm=
+cdn.com/mrktng/crm/2022/mails/Sep/11/space.gif" style=3D"display: block;" a=
+lt=3D"" width=3D"1" height=3D"40"></td></tr></table><!--SPACER Table end-->=
+<!--FOOTER--><table cellpadding=3D"0" cellspacing=3D"0" border=3D"0" width=
+=3D"100%" class=3D"default-talbe"><tr><td align=3D"center" style=3D"color: =
+#494949; font-size: 15px; font-weight: 600;">T=C3=BCrkiye=E2=80=99nin Trend=
+yol=E2=80=99u </td></tr><tr><td style=3D"padding: 8px 0 15px;" align=3D"cen=
+ter"><a href=3D"#"><img src=3D"https://cdn.dsmcdn.com/mrktng/crm/TRX2025/fb=
+=2Epng" alt=3D"facebook" width=3D"30" style=3D"padding-right: 14px;"></a><a=
+ href=3D"#"><img src=3D"https://cdn.dsmcdn.com/mrktng/crm/TRX2025/insta.png=
+" alt=3D"instagram" width=3D"30" style=3D"padding-right: 14px;"></a><a href=
+=3D"#"><img src=3D"https://cdn.dsmcdn.com/mrktng/crm/TRX2025/yt.png" alt=3D=
+"youtube" width=3D"30" style=3D"padding-right: 14px;"></a><a href=3D"#"><im=
+g src=3D"https://cdn.dsmcdn.com/mrktng/crm/TRX2025/tt.png" alt=3D"tiktok" w=
+idth=3D"30" style=3D"padding-right: 14px;"></a><a href=3D"#"><img src=3D"ht=
+tps://cdn.dsmcdn.com/mrktng/crm/TRX2025/x.png" alt=3D"X" width=3D"30"></a><=
+/td></tr><tr><td align=3D"center" style=3D"font-size: 10px; color: #B7B7B7;=
+ line-height: 13px;">DSM Grup Dan=C4=B1=C5=9Fmanl=C4=B1k =C4=B0leti=C5=9Fim=
+ ve Sat=C4=B1=C5=9F Ticaret A.=C5=9E. Maslak Mahallesi Saat Sokak Spine tow=
+er No:5 <br>=C4=B0=C3=A7 Kap=C4=B1:19 Sar=C4=B1yer/=C4=B0stanbul Telefon:+9=
+0(212) 331 3250 Mersis No:0313055766900016 </td></tr></table><!--FOOTER end=
+-->=0A                            </td>=0A                        </tr>=0A =
+                   </table>=0A                    <!--ContentContainer end-=
+->=0A                </td>=0A            </tr>=0A        </table>=0A       =
+ <!--.main table end-->=0A    </center>=0A    <!--.wrapper end-->=0A</body>=
+=0A=0A</html>
+
+

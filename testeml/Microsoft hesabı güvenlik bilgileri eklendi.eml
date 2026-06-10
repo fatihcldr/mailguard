@@ -1,0 +1,214 @@
+Delivered-To: fatihmehmetcildir@gmail.com
+Received: by 2002:a17:907:eb07:b0:b76:7ec0:826c with SMTP id cf7csp9229800ejd;
+        Wed, 3 Dec 2025 13:11:43 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEoteUMIZcKvqK5fdkyBDO6pAGsaIKFf4l5lg6caxh+ldswzrCkl4fPDB6rAerPzymPaFVK
+X-Received: by 2002:a17:903:1104:b0:295:55fc:67a0 with SMTP id d9443c01a7336-29d9ec32352mr10420805ad.2.1764796302947;
+        Wed, 03 Dec 2025 13:11:42 -0800 (PST)
+ARC-Seal: i=2; a=rsa-sha256; t=1764796302; cv=pass;
+        d=google.com; s=arc-20240605;
+        b=h63wMTm/R0tz65I7Vm4bGo2T7aKQR3wLLH1TbTROOv+k9HEeaffce/geYOZKlI1d+s
+         +P6VQxDC4fpwB7aYsrhFuEFePrav73aWW9KzxaETujzd1YR8FFI2OYdAtAM5JRtCw6dB
+         IgD3dfMC4UAddi12R9Wqr+ROJjJDP2sdlqt0zson+srAkK8UzYy4mczbtMmd5nl+TXSb
+         NnBSLYN06kiZo7YK1uS8s+t5JxmiNzbzaBlLCb+jEd7g5mCCANoa/51YyiJwYoWRRu6p
+         TuXsJVghCPqr7JVWZ3Ick0UQ6A73fpH1Dy51rwT0fpQzmXnJ68plsEq2SaL68QrSEG02
+         CqlQ==
+ARC-Message-Signature: i=2; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:message-id:to:subject:date:from:dkim-signature;
+        bh=keARgXCKnMpRF/XUNSMvIU1WUE+94O+wGk1rt4OV2Xs=;
+        fh=WYV/gggVh8wRoruooODJr6S5jhGDMPmLdk3zv5IAnQo=;
+        b=JcYf/3wvv5sZ0Wcc3tUNZ1H7TPgHd+0eN2+a5cdbqYo2LqEPO7Oj1KLUv8W3Gcpr+q
+         hUK960fVH66ftB5CGcYhFkrvysw1/9NiSfATDHrZU9zopDbyvsjSQMmYuCkrrNXbI9+6
+         iRD/gHZcXHqq4sJP1T+RejcRg7CKpcnA8pPRBmkyl0ZII0c/Kj5ubEL5JFA13tSpD3Ot
+         LdGAjOyeyGA2NkipSEM1GH11hmKv70EelnRpY/U0XZdvPwPJgnUC2hpqN/zv9vLtGQ5g
+         BdNug+dsoZBTUx/fi9MScGhSbPCKes+eVhrMpdjy4OAYooz4I5TKILHsa0w2uHE9MBig
+         PMSA==;
+        dara=google.com
+ARC-Authentication-Results: i=2; mx.google.com;
+       dkim=pass header.i=@accountprotection.microsoft.com header.s=selector1 header.b=lGcPJSf2;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of account-security-noreply@accountprotection.microsoft.com designates 2a01:111:f403:c107::1 as permitted sender) smtp.mailfrom=account-security-noreply@accountprotection.microsoft.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=accountprotection.microsoft.com
+Return-Path: <account-security-noreply@accountprotection.microsoft.com>
+Received: from PH8PR06CU001.outbound.protection.outlook.com (mail-westus3azlp170120001.outbound.protection.outlook.com. [2a01:111:f403:c107::1])
+        by mx.google.com with ESMTPS id 41be03b00d2f7-be5076c0132si9720516a12.486.2025.12.03.13.11.42
+        for <fatihmehmetcildir@gmail.com>
+        (version=TLS1_3 cipher=TLS_AES_256_GCM_SHA384 bits=256/256);
+        Wed, 03 Dec 2025 13:11:42 -0800 (PST)
+Received-SPF: pass (google.com: domain of account-security-noreply@accountprotection.microsoft.com designates 2a01:111:f403:c107::1 as permitted sender) client-ip=2a01:111:f403:c107::1;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@accountprotection.microsoft.com header.s=selector1 header.b=lGcPJSf2;
+       arc=pass (i=1);
+       spf=pass (google.com: domain of account-security-noreply@accountprotection.microsoft.com designates 2a01:111:f403:c107::1 as permitted sender) smtp.mailfrom=account-security-noreply@accountprotection.microsoft.com;
+       dmarc=pass (p=REJECT sp=REJECT dis=NONE) header.from=accountprotection.microsoft.com
+ARC-Seal: i=1; a=rsa-sha256; s=arcselector10001; d=microsoft.com; cv=none;
+ b=AbpL3gemqTk5iC7OX4FjVwebyltb7gDpDeXCSj8xyJRRYJLyLzRD1IIAt+FSx9N7wrmTDOzDX7U/C262peOavVqYdGeVyKtXYhNKsbd8WOd/r6Z0lJxyeB1pLjUcxDd4SS7MvZty+Ts35AVl+nOsi13AKjK252HudMC5N5utz2XeYg66yQNoKrX1cFwtgy/gMLkxxBWT4gn6CmyZ+wBpAv2AfHZTqNT2+emz2JHzRopDlVoDZWWUmFs/dd9n1fEFYihoatlIEwedC84VHIpGqX0BPcW2bO+CpllTxX0pvzBXLp4ywoN3UKef9qhGnJN2P45+HPgZ3ts4ReQD4ELi9A==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=microsoft.com;
+ s=arcselector10001;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-AntiSpam-MessageData-ChunkCount:X-MS-Exchange-AntiSpam-MessageData-0:X-MS-Exchange-AntiSpam-MessageData-1;
+ bh=keARgXCKnMpRF/XUNSMvIU1WUE+94O+wGk1rt4OV2Xs=;
+ b=BjJXfopHCOSVqGZ9I/4i+rWB/y9qvaMiqKHG2HZoIJ0SCY2cJy94TUCJvxnVVy8Ik+wINMOtmkVNPmZhugGiIULFWaV9F5VNBUnqDfGkLXIca6Nwwg9Q/3MZXbQbJKXFXc0WtZR1bTQ2lGJKxf4bbdksH7+6hYzUK4v40JmtElpdB3dqn1OYFFLp5ilW1X8SeGxb/1CcPiN89wMWMKRftcE39bSp9eDOSLppt4ZCqNUDvyuNs7Y2ECNV4AdLDzhMZjxGObO97YEezUXnbdQNwQ7+VzRGiJ+1q4rLO0YP7CwwKKAxlaV5Rc/ULcmfxB+3MSKvBadnAro8h3pD20ilZw==
+ARC-Authentication-Results: i=1; mx.microsoft.com 1; spf=none; dmarc=none
+ action=none header.from=accountprotection.microsoft.com; dkim=none (message
+ not signed); arc=none
+DKIM-Signature: v=1; a=rsa-sha256; c=relaxed/relaxed;
+ d=accountprotection.microsoft.com; s=selector1;
+ h=From:Date:Subject:Message-ID:Content-Type:MIME-Version:X-MS-Exchange-SenderADCheck;
+ bh=keARgXCKnMpRF/XUNSMvIU1WUE+94O+wGk1rt4OV2Xs=;
+ b=lGcPJSf2ofKvG1+my2YpaN2az9AoCSgL4o5ykTgughh4uIb6EsAI2rEnSrqMB1SSQSqHOdoAzBoy7JoLacpVCEeX4t5vJ4HvRwB0VWHFRj0JH+rojD25NgSI4j4uK2D/kMC2kEXOZekCPTrxKdVcLHNTKFsP7tSmDVYOzvAsCco=
+Received: from BY5PR20CA0035.namprd20.prod.outlook.com (2603:10b6:a03:1f4::48)
+ by LV8PR16MB5910.namprd16.prod.outlook.com (2603:10b6:408:1f4::9) with
+ Microsoft SMTP Server (version=TLS1_2,
+ cipher=TLS_ECDHE_RSA_WITH_AES_256_GCM_SHA384) id 15.20.9366.17; Wed, 3 Dec
+ 2025 21:11:41 +0000
+Received: from SJ5PEPF000001F7.namprd05.prod.outlook.com
+ (2603:10b6:a03:1f4:cafe::19) by BY5PR20CA0035.outlook.office365.com
+ (2603:10b6:a03:1f4::48) with Microsoft SMTP Server (version=TLS1_3,
+ cipher=TLS_AES_256_GCM_SHA384) id 15.20.9366.17 via Frontend Transport; Wed,
+ 3 Dec 2025 21:11:40 +0000
+X-MS-Exchange-Authentication-Results: spf=none (sender IP is 23.98.229.239)
+ smtp.mailfrom=accountprotection.microsoft.com; dkim=none (message not signed)
+ header.d=none;dmarc=none action=none
+ header.from=accountprotection.microsoft.com;
+Received: from accountprotection.microsoft.com (23.98.229.239) by
+ SJ5PEPF000001F7.mail.protection.outlook.com (10.167.242.75) with Microsoft
+ SMTP Server (version=TLS1_3, cipher=TLS_AES_256_GCM_SHA384) id 15.20.9388.8
+ via Frontend Transport; Wed, 3 Dec 2025 21:11:40 +0000
+From: Microsoft hesap ekibi
+	<account-security-noreply@accountprotection.microsoft.com>
+Date: Wed, 03 Dec 2025 13:11:40 -0800
+Subject: Microsoft =?utf-8?b?aGVzYWLEsSBnw7x2ZW5saWs=?= bilgileri eklendi
+To: fatihmehmetcildir@gmail.com
+X-Priority: 3
+X-MSAPipeline: MessageDispatcherEOP
+Message-ID: <DGQ48CLZVRU4.AJYWOXWQRHVN3@sn1pepf0003b6ea>
+X-MSAMetaData: =?utf-8?q?DpO!3TNrsS!84ArQailQXDFloM3RVsPa5Xv*RxAOYUmwp8Xnff7tHLyhg9m0h?=
+ =?utf-8?q?pZwnriJ2mKOEj8XRZDVdhLDeUbbY18yDthdBJjIOrh8k3XENRblrki9JCTxk8?=
+ =?utf-8?q?03EA5s2w$$?=
+MIME-Version: 1.0
+Content-Type: multipart/alternative; boundary="=-OYYcvLsd4FDzJENBrw6piQ=="
+Return-Path: account-security-noreply@accountprotection.microsoft.com
+X-MS-TrafficTypeDiagnostic:
+	SJ5PEPF000001F7:EE_FirstParty-MicrosoftAccount-V3-System|LV8PR16MB5910:EE_FirstParty-MicrosoftAccount-V3-System
+X-MS-PublicTrafficType: Email
+X-MS-Office365-Filtering-Correlation-Id: 9966cc5c-6199-4483-9ebe-08de32b08dd7
+X-MS-Exchange-SenderADCheck: 1
+X-MS-Exchange-AntiSpam-Relay: 0
+X-Microsoft-Antispam:
+	BCL:0;ARA:13230040|61400799027|376014|8096899003|13003099007;
+X-Microsoft-Antispam-Message-Info:
+	=?utf-8?B?dFlxRlIwT0VDOHVMZzRMeDhLWjlYNUxUclJDaGo2ZmFYOGg1YU8zQWltcE55?=
+ =?utf-8?B?ZDVzcUE4WXFDWndlbXR4cnJTb1VkUlU4RnN1MEpSRUQ1eXZ2UVI1dUNsT0k0?=
+ =?utf-8?B?b09ocUNoSHFLc2FVc3FVT1RRRXd2YlFoWjYvYThNTnF0alljRC91SGRXSXVH?=
+ =?utf-8?B?Y3hmblg3UWwwRzJRaytTUjVNOWhCcnJ0b1JmU3FCdTlhdkdLNStlUGhhOEZH?=
+ =?utf-8?B?bzg2bjAveXhLbGtTamMxSDcxeHVRV1VzZ09Pbm5ScVpIMHBLaldUOVBURXAz?=
+ =?utf-8?B?VHc4ZHJqOG04WUlNT09jUjZDTkoxVDE5bURnTThTZm9vS2NCUk02dytsUW5j?=
+ =?utf-8?B?MjBNN3FwdWdLK3ZEb21HdHAxU3RQeFNCb2FyM3dTK0hUalVMeTcweG9KMS9H?=
+ =?utf-8?B?RHg3Y2trRTQ0R3hIV1ZMK2FyTDFCcEljUUtiYko1SitOSFVjeVBkSjNDeFpM?=
+ =?utf-8?B?UTN6N2JHZERRL1o5a0hYazZNbmx1TXQ2VXN2M3QyQ1pNZFU0dFdlVEZHdGFM?=
+ =?utf-8?B?NGJUYVl3RWtieVhYZVpZTDV6VytoTWlpTmRiaURUS3lZRGFiUVhrU01XSTJ3?=
+ =?utf-8?B?Y3cxbkVpcFd5UFRxVEhXb2dXWC95WjJLUW1GWU5FcjZxNzdBZXAyaFF0dXhl?=
+ =?utf-8?B?Y3Y3ZmdMMDdaVTRlTnNwdVMwVzgyWTdiVDNMNlViYW1QWStEV2s0R3pkWVF0?=
+ =?utf-8?B?MlBDZ3pEcWhHTU94dmhuSExFY1lEVzlTVTZzODVMaDhrUmdUL2pPQTkzNm13?=
+ =?utf-8?B?azJ0cm1tYmNCR2xIY1lwUGFyMytqd0l6ejZjT2Q4OStRWmR2NTRtcW1CQ1U4?=
+ =?utf-8?B?M29INytGcnNvTEl6ZXh0ZHhUSERhVVF5MUtCRUVYNEczU3g0anByZGpFYTFt?=
+ =?utf-8?B?SFlHZnB0eFBRc0Jpbjg5c2orQm5ycFoyczJ4UHE1dUhKbDROc3NMazhXKzlx?=
+ =?utf-8?B?VW9XL21sWUNtQ1docklMNmwyYjF3ZStiRjNwVHoxRGtjci8wNjgxMllucnY2?=
+ =?utf-8?B?SFZITG10UVlsTnpRMVpDTXNjcmQ0YitQcE9OYkI0ZlBkRmJlYUo2RjIzWU5L?=
+ =?utf-8?B?UjhJOTFSM3BKWHZFQlViWDJWM3ExUVNwVjZtRG82NmpYRko1Nk5mS3djYjBF?=
+ =?utf-8?B?eTVUOHNSZnlUdTNvQVNiRDZOdVREOWNsdFJnMkl6Q0d4ejM5RFVNT3FxRG02?=
+ =?utf-8?B?RkRCb05GT0M5OWNoRVFiOGx3NEpZZXFFT1FHOXlFcE9CUGFwdVVZYkQ5UW9M?=
+ =?utf-8?B?V0hJdVUyV0QwZFhnVTlQc01DWi9jVWhvQ002Qm5rT25tNGI4cE9iYS93c21Q?=
+ =?utf-8?B?QjlWcmF2ZG5NSjZYdUhodmRyWmIzR21INmI2d1grOHdFRkdTUHFXM25yRlps?=
+ =?utf-8?B?R1lGWG5GR1RUVWhYTG9rSFNDdE4yMXk1NVdRMG5mSEpWTkdUTXI1bmJwUU1v?=
+ =?utf-8?B?akRLVzdQdXdjdkxlMTE2eXlBZVlEL1NIUDNWQXpvZFA2WlVEQitOYWdVcEZ5?=
+ =?utf-8?B?VUVkZFREQ25tWWM0ODRoSVJyYWNPNnFqSDEyMjNxZFkyaFZPZXNESG1JVWlm?=
+ =?utf-8?B?RW1ENXppUHhOcnRjZGRxWTUyYnpOQ3dZMUVhT25tMDhrZ2QwMG40Wm40cS8v?=
+ =?utf-8?B?TlRZei9yUGI4Zm1vMGVqL1kvVG41RDVQZXNPVlFROXNJcmZ5YXB6MTdrT2lu?=
+ =?utf-8?B?cDBjZWxHd1QxamYxMXNHRS8wWE5pVXI3ZWFtbitkVUJMNVh4c251RWRFWGpk?=
+ =?utf-8?B?QytaRnArSHQ2VFV4WU5rQ3B3bzJiM2VjUFYrY3owSjYxY3kvS1IxdVZZN1pn?=
+ =?utf-8?B?UDZQUitESHBzTmo3Nk12Zmpjakcxd2QyeE5pYUk5MWN2Si9vMEZqUDd2SHRr?=
+ =?utf-8?B?bnk4dStia1FkUnQvZkJrbTFvVmRXeThLYWVUa3AwQ0hJSGtxUXVDY1BENkh4?=
+ =?utf-8?B?b2ZxSGlWV0pGOTV3azl0Wk0ydVJOcU1oSmgxT0ZGUzBJZDNyTmhmSG9QRjVw?=
+ =?utf-8?B?blFzRVdrU0N6Uksra0NYbEpDQmVJYWFrZ0RRa21tcThYdXZsSUJuSk9oeHlX?=
+ =?utf-8?B?S3ovdkFvWHh4d0szU01OZzc5NHFDNGhHRGF5ZElHQ0RoWGVKMTU3YkdrMm1R?=
+ =?utf-8?B?NC9TTVIxN0ZkanV2NXdpYWpvQUNZWWVPZmlJdzNVYmtlcjFkakhGWVhrejc4?=
+ =?utf-8?Q?KtgCgfMK7DAw5il0pdkR53g=3D?=
+X-Forefront-Antispam-Report:
+	CIP:23.98.229.239;CTRY:US;LANG:tr;SCL:1;SRV:;IPV:NLI;SFV:NSPM;H:accountprotection.microsoft.com;PTR:InfoDomainNonexistent;CAT:NONE;SFS:(13230040)(61400799027)(376014)(8096899003)(13003099007);DIR:OUT;SFP:1102;
+X-MS-Exchange-AntiSpam-MessageData-ChunkCount: 1
+X-MS-Exchange-AntiSpam-MessageData-0:
+	E6NZBrhO8jhvJZM/8Z8ZKRbPbFQm25IwTDTWHWvAsA6siBHXS9YY4KNiYTpqjHVe3n6mLhX2KlHDo4ofP1zkqq/zbvND/vNoxS6YIZUvH8fUWNDKg/gpGa67cqeAcdlGBXmjXs+J0WwQbTQw5X99HtlU7uPv2WfRnkahfZWFOr75FfvVwnRfa1aQL+ydI5tOR/+m0azMuIlusIz1pDrJNdvXcBeR+MwhIlBXdt9+NhGcM2iVx7RwHpgSEZIVL+u4zoRxPSBB82xl+aBvJgEJ22TFYp1lDj2G6LN07TjthNreLu0q+qnBvTUghMuSLjK3svTIts2LRsIZq0/102Bj6TzeQXZXnegrZ+MdPBuNhNoO0UBunZx5opCeIcNqD99P3Gw36+bivy2E57ABAnMUVQJHR8NJ6WxdO6tT9xwVX5YXSqTqOLXwTZckQiq+7rWOxpW1ada8hVnLkHMTKHPWv2m9MbFseqlgJ/9LrT3OU9pGwj5mYraU2CSULnJMA85MU/wN5BhFNp4paOUf8ig89Q==
+X-OriginatorOrg: accountprotection.microsoft.com
+X-MS-Exchange-CrossTenant-OriginalArrivalTime: 03 Dec 2025 21:11:40.6265
+ (UTC)
+X-MS-Exchange-CrossTenant-Network-Message-Id: 9966cc5c-6199-4483-9ebe-08de32b08dd7
+X-MS-Exchange-CrossTenant-Id: 5ba90553-c2cd-460e-b5fd-ab93ad9155c7
+X-MS-Exchange-CrossTenant-OriginalAttributedTenantConnectingIp: TenantId=5ba90553-c2cd-460e-b5fd-ab93ad9155c7;Ip=[23.98.229.239];Helo=[accountprotection.microsoft.com]
+X-MS-Exchange-CrossTenant-AuthAs: Internal
+X-MS-Exchange-CrossTenant-AuthSource: TreatMessagesAsInternal-SJ5PEPF000001F7.namprd05.prod.outlook.com
+X-MS-Exchange-CrossTenant-FromEntityHeader: Internet
+X-MS-Exchange-Transport-CrossTenantHeadersStamped: LV8PR16MB5910
+
+--=-OYYcvLsd4FDzJENBrw6piQ==
+Content-Type: text/plain; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+Kısa bir süre önce aşağıdaki güvenlik bilgileri fa**r@gmail.com adlı Microsoft hesabına eklendi:
+
+Passkey
+
+Siz yaptıysanız bu e-postayı görmezden gelebilirsiniz.
+
+Siz yapmadıysanız, kötü niyetli bir kullanıcı hesabınıza erişim elde etmiş demektir. Lütfen en son etkinliklerinizi gözden geçirin ve size hesabınızın güvenliğini sağlama konusunda yardımcı olalım.
+
+En son etkinliği inceleyin https://account.microsoft.com/activity.
+
+Geri çevirmek veya güvenlik bildirimlerini nereden alacağınızı değiştirmek için buraya tıklayın https://account.live.com/SecurityNotifications/Update.
+
+Teşekkürler,
+Microsoft hesap ekibi 
+Gizlilik Bildirimi: https://go.microsoft.com/fwlink/?LinkId=521839
+Microsoft Corporation, One Microsoft Way, Redmond, WA 98052
+
+--=-OYYcvLsd4FDzJENBrw6piQ==
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: 8bit
+
+ <!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" dir="ltr"> 
+<head>
+<style type="text/css">
+ .link:link, .link:active, .link:visited {
+       color:#2672ec !important;
+       text-decoration:none !important;
+ }
+
+ .link:hover {
+       color:#4284ee !important;
+       text-decoration:none !important;
+ }
+</style>
+<title></title>
+</head>
+<body>
+<table dir="ltr">
+      <tr><td id="i1" style="padding:0; font-family:'Segoe UI Semibold', 'Segoe UI Bold', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size:17px; color:#707070;">Microsoft hesabı</td></tr>
+      <tr><td id="i2" style="padding:0; font-family:'Segoe UI Light', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size:41px; color:#2672ec;">Güvenlik bilgileri eklendi</td></tr>
+      <tr><td id="i3" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">Kısa bir süre önce aşağıdaki güvenlik bilgileri <a dir="ltr" id="iAccount" class="link" style="color:#2672ec; text-decoration:none" href="mailto:fa**r@gmail.com">fa**r@gmail.com</a> adresli Microsoft hesabına eklendi:</td></tr>
+      <tr><td id="i4" style="padding:0; padding-top:6px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">
+         <ul>
+          <li>Passkey</li>
+         </ul>
+      </td></tr>
+      <tr><td id="i5" style="padding:0; padding-top:6px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">Siz yaptıysanız bu e-postayı görmezden gelebilirsiniz.</td></tr>
+      <tr><td id="i6" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">Siz yapmadıysanız, kötü niyetli bir kullanıcı hesabınıza erişim elde etmiş demektir. Lütfen en son etkinliklerinizi gözden geçirin ve size hesabınızın güvenliğini sağlama konusunda yardımcı olalım.</td></tr>
+      <tr><td style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">
+         <table border="0" cellspacing="0"><tr><td bgcolor="#2672ec" style="background-color:#2672ec; padding-top: 5px; padding-right: 20px; padding-bottom: 5px; padding-left: 20px; min-width:50px;"><a id="i7" style="font-family: 'Segoe UI Semibold', 'Segoe UI Bold', 'Segoe UI', 'Helvetica Neue Medium', Arial, sans-serif; font-size:14px; text-align:center; text-decoration:none; font-weight:600; letter-spacing:0.02em; color:#fff;" href="https://account.microsoft.com/activity">En son etkinliği incele</a></td></tr></table>
+      </td></tr>
+      <tr><td id="i8" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">Geri çevirmek veya güvenlik bildirimlerini nereden alacağınızı değiştirmek için <a id="iLink2" class="link" style="color:#2672ec; text-decoration:none" href="https://account.live.com/SecurityNotifications/Update">buraya tıklayın</a>.</td></tr>      
+      <tr><td id="i9" style="padding:0; padding-top:25px; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">Teşekkürler,</td></tr>
+      <tr><td id="i10" style="padding:0; font-family:'Segoe UI', Tahoma, Verdana, Arial, sans-serif; font-size:14px; color:#2a2a2a;">Microsoft hesap ekibi</td></tr>
+</table>
+<div lang="tr" style="margin-top:20px;margin-bottom:10px;"><a class="link" href="https://go.microsoft.com/fwlink/?LinkId=521839">Gizlilik Bildirimi</a><div style="margin-top:10px;">Microsoft Corporation, One Microsoft Way, Redmond, WA 98052</div></div></body>
+</html>
+--=-OYYcvLsd4FDzJENBrw6piQ==--

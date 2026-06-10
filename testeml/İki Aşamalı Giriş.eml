@@ -1,0 +1,335 @@
+Delivered-To: fatihmehmetcildir@gmail.com
+Received: by 2002:a17:907:eb07:b0:b76:7ec0:826c with SMTP id cf7csp2870743ejd;
+        Tue, 25 Nov 2025 13:57:19 -0800 (PST)
+X-Google-Smtp-Source: AGHT+IEl3aOFaxYLI6wAlBxT+XvlvdB4eKP2eikVX5nBURy9gudvV6x9TKTuQFLNEhONr5gi8K0z
+X-Received: by 2002:a17:907:3ea3:b0:b73:9792:918b with SMTP id a640c23a62f3a-b76c5514ebcmr519997066b.27.1764107839423;
+        Tue, 25 Nov 2025 13:57:19 -0800 (PST)
+ARC-Seal: i=1; a=rsa-sha256; t=1764107839; cv=none;
+        d=google.com; s=arc-20240605;
+        b=QD1CQ3QCbDR34Sg/0qadJ05EOIxNo0wVbFJFcz6/Svg3mSv9wzdV+ksNByZb6ydw3d
+         9heUROiOEopyQq5xl7UZiuDGYhHe/xVxE4F6/CTBJm5Wihzdc5TqiT3t4gm+sMKnUB0t
+         2sautbzFWVcrQrHfBwlWPmEHarvPnvE1A/KYP8js+2jwBSvgV8z+s7ti25LTK54Pm+v8
+         3WcUW0TrGn7tc2k/y5XZeEA60+9nGjR9m/dLfOO38aldzTCYC9ajOnHvSxokQcO37I3C
+         kyIqxkB2yQ9FspO/5gOQ2u31jU5fdKf7hUbjdM9LM0wZ0rCKk8na9FSqIT3yMUqFbacp
+         ijJQ==
+ARC-Message-Signature: i=1; a=rsa-sha256; c=relaxed/relaxed; d=google.com; s=arc-20240605;
+        h=mime-version:subject:message-id:to:from:date:dkim-signature;
+        bh=Gr/0FIZxuJxt27uGllv7FXnshN772A44xmWONvPN9d0=;
+        fh=WYV/gggVh8wRoruooODJr6S5jhGDMPmLdk3zv5IAnQo=;
+        b=lIbzDhujOEqrbmX5JC7LJmSWil557OqVJrPgYyRfh0e6y0V/yRYmaGoDl51nXl+Pmp
+         4JDS56t2/oXnwtzdhREp2QfjyLh7cOKQhOrKP5OjGQ0yAuxkqJYiM+ae9yWzLGDCTcfB
+         a5ok1hyC1fC3pwxYTF7Vyid97+rCMXXGjeu/gxV/ogLpCUcql4v7+e7miMvFr0bvqWZX
+         qQEygd4+gGkUTy9fLItdSaCnhJ3NzTe0YA2qzNWzsmtLvgxr86q2Mqb+s9rmQWcXAfIu
+         AgQ0dJxmB96hIjNruWa26/1s7Kr3SlfrBWzlqDhDNExE5wpLfEUD6tUy4qJ4IS+kiF6d
+         zG/A==;
+        dara=google.com
+ARC-Authentication-Results: i=1; mx.google.com;
+       dkim=pass header.i=@bireysel.turkiye.gov.tr header.s=dkim header.b=KSCPqj7O;
+       spf=pass (google.com: domain of bilgi@bireysel.turkiye.gov.tr designates 94.55.120.204 as permitted sender) smtp.mailfrom=bilgi@bireysel.turkiye.gov.tr;
+       dmarc=pass (p=REJECT sp=NONE dis=NONE) header.from=turkiye.gov.tr
+Return-Path: <bilgi@bireysel.turkiye.gov.tr>
+Received: from mta13.turkiye.gov.tr (mta13.turkiye.gov.tr. [94.55.120.204])
+        by mx.google.com with ESMTPS id a640c23a62f3a-b7654cf0408si800464666b.177.2025.11.25.13.57.18
+        for <fatihmehmetcildir@gmail.com>
+        (version=TLS1_2 cipher=ECDHE-ECDSA-AES128-GCM-SHA256 bits=128/128);
+        Tue, 25 Nov 2025 13:57:19 -0800 (PST)
+Received-SPF: pass (google.com: domain of bilgi@bireysel.turkiye.gov.tr designates 94.55.120.204 as permitted sender) client-ip=94.55.120.204;
+Authentication-Results: mx.google.com;
+       dkim=pass header.i=@bireysel.turkiye.gov.tr header.s=dkim header.b=KSCPqj7O;
+       spf=pass (google.com: domain of bilgi@bireysel.turkiye.gov.tr designates 94.55.120.204 as permitted sender) smtp.mailfrom=bilgi@bireysel.turkiye.gov.tr;
+       dmarc=pass (p=REJECT sp=NONE dis=NONE) header.from=turkiye.gov.tr
+DKIM-Signature: v=1; a=rsa-sha1; c=relaxed/relaxed; s=dkim; d=bireysel.turkiye.gov.tr;
+ h=Date:From:To:Message-ID:Subject:MIME-Version:Content-Type; i=bilgi@bireysel.turkiye.gov.tr;
+ bh=KXneTs2KbTWpBsstJhPeqn2GKeI=;
+ b=KSCPqj7OCfV97H3+Z1qejsbL7AjxutgSpoIu7qEUh2Hgy+sDT+KBZTuZSWXdmHSoNXte6jGZgt56
+   1KUiFfQh8Siw0AHDWwuo4zZxkTQ308EfEJEnre4+FCAlYe7ujaORLRTHJqyU9+LEJcOvUkLB7PiT
+   Sakp+cTljX5SN+NS4NA=
+Received: from notification-emailsender (192.168.116.253) by mta13.turkiye.gov.tr id h4oj3u20hpkt for <fatihmehmetcildir@gmail.com>; Tue, 25 Nov 2025 18:50:48 +0300 (envelope-from <bilgi@bireysel.turkiye.gov.tr>)
+Date: Tue, 25 Nov 2025 18:50:48 +0300 (EET)
+From: =?UTF-8?Q?e-Devlet_Kap=C4=B1s=C4=B1?= <bilgi@bireysel.turkiye.gov.tr>
+To: fatihmehmetcildir@gmail.com
+Message-ID: <161631071.8823587.1764085848153.JavaMail.root@notification-emailsender>
+Subject: =?UTF-8?Q?=C4=B0ki_A=C5=9Famal=C4=B1_Giri=C5=9F?=
+MIME-Version: 1.0
+Content-Type: multipart/mixed; 
+	boundary="----=_Part_8823583_1265990088.1764085848153"
+x-mail-sender-version: TurksatE-DevletMailSender-V5
+x-external-id: 8068548748863156319
+x-campaign-id: e3d28b7d-fbfa-4c34-8238-d870729aeb29
+x-tg-id: 4
+x-s-id: 1
+X-Mailer: Turksat-EDK
+x-priority: 1
+
+------=_Part_8823583_1265990088.1764085848153
+Content-Type: text/html; charset=utf-8
+Content-Transfer-Encoding: quoted-printable
+
+<meta name=3D"viewport" content=3D"width=3Ddevice-width" /><meta http-equiv=
+=3D"Content-Type" content=3D"text/html; charset=3DUTF-8" />
+<title></title>
+<table bgcolor=3D"#4284be" style=3D"width: 100%; background-color:#4284be;"=
+>
+=09<tbody>
+=09=09<tr>
+=09=09=09<td></td>
+=09=09=09<td align=3D"" style=3D"display:block!important;
+=09max-width:600px!important;
+=09margin:0 auto!important;=20
+=09clear:both!important;">
+=09=09=09<div style=3D"padding:10px;
+=09max-width:600px;
+=09margin:0 auto;
+=09display:block; ">
+=09=09=09<table bgcolor=3D"#4284be" style=3D"width: 100%;  background-color=
+:#4284be;">
+=09=09=09=09<tbody>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td><a href=3D"https://www.turkiye.gov.tr/" target=3D"_bl=
+ank"><img src=3D"https://cdn.e-devlet.gov.tr/themes/ankara/images/mail/ekap=
+ilogo.png" style=3D"height:50px;" /></a></td>
+=09=09=09=09=09=09<td align=3D"right"><a href=3D"https://www.turkiye.gov.tr=
+/" style=3D"font-family:'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;=
+ line-height: 1.1; margin-bottom:15px; color:#FFF;  font-weight:200; font-s=
+ize: 22px; text-decoration:none; margin:0;" target=3D"_blank">e-Devlet Kap=
+=C4=B1s=C4=B1</a></td>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</div>
+=09=09=09</td>
+=09=09=09<td></td>
+=09=09</tr>
+=09</tbody>
+</table>
+
+<table bgcolor=3D"" class=3D"mobilecontext" style=3D"width: 100%;">
+=09<tbody>
+=09=09<tr>
+=09=09=09<td></td>
+=09=09=09<td align=3D"" bgcolor=3D"#FFFFFF" style=3D"display:block!importan=
+t;
+=09max-width:600px!important;
+=09margin:0 auto!important;=20
+=09clear:both!important;"><!-- content -->
+=09=09=09<div style=3D"padding:15px;
+=09max-width:600px;
+=09margin:0 auto;
+=09display:block;">
+=09=09=09<table style=3D"width: 100%;">
+=09=09=09=09<tbody>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td>
+=09=09=09=09=09=09<h1 style=3D"font-weight:normal; font-size: 30px; line-he=
+ight: 1.1; margin-bottom:15px; margin-top:15px; color:#000; font-family:'He=
+lvetica Neue', 'Helvetica', 'Arial', sans-serif;">e-Devlet Kap=C4=B1s=C4=B1=
+&nbsp;=C4=B0ki A=C5=9Famal=C4=B1&nbsp;Giri=C5=9F</h1>
+
+=09=09=09=09=09=09<table align=3D"center" cellpadding=3D"15">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09<h3><strong>Sn.&nbsp;FAT=C4=B0H MEHMET&nbsp;=C3=
+=87ILDIR,</strong></h3>
+
+=09=09=09=09=09=09=09=09=09<p>e-Devlet Kap=C4=B1s=C4=B1&nbsp;hesab=C4=B1n=
+=C4=B1z=C4=B1n g&uuml;venli=C4=9Fini en &uuml;st d&uuml;zeye &ccedil;=C4=B1=
+karmak amac=C4=B1yla sunulan <strong>=C4=B0ki A=C5=9Famal=C4=B1&nbsp;Giri=
+=C5=9F</strong>&nbsp;&ouml;zelli=C4=9Fi, mevcut =C5=9Fifrenize ek olarak <s=
+trong>SMS do=C4=9Frulama kodu</strong> veya <strong>mobil bildirim</strong>=
+ arac=C4=B1l=C4=B1=C4=9F=C4=B1yla ikinci bir do=C4=9Frulama ad=C4=B1m=C4=B1=
+&nbsp;gerektiren geli=C5=9Fmi=C5=9F&nbsp;bir g&uuml;venlik katman=C4=B1d=C4=
+=B1r. e-Devlet Kap=C4=B1s=C4=B1&nbsp;&uuml;zerinden sunulan baz=C4=B1 hizme=
+tlerin kullan=C4=B1labilmesi i&ccedil;in iki A=C5=9Famal=C4=B1&nbsp;Giri=C5=
+=9F&nbsp;&ouml;zelli=C4=9Finin etkinle=C5=9Ftirilmi=C5=9F&nbsp;olmas=C4=B1&=
+nbsp;<strong>zorunlu bir g&uuml;venlik gereksinimidir.</strong></p>
+
+=09=09=09=09=09=09=09=09=09<p>e-Devlet Kap=C4=B1s=C4=B1 hizmetlerinden <str=
+ong>kesintisiz ve g&uuml;venli</strong> bir =C5=9Fekilde yararlanmaya devam=
+ edebilmeniz i&ccedil;in, hesab=C4=B1n=C4=B1zda =C4=B0ki A=C5=9Famal=C4=B1 =
+Giri=C5=9F &ouml;zelli=C4=9Fini <strong>en k=C4=B1sa s&uuml;rede etkinle=C5=
+=9Ftirmeniz &ouml;nemle rica olunur.</strong></p>
+
+=09=09=09=09=09=09=09=09=09<p><strong>=C4=B0ki A=C5=9Famal=C4=B1 Giri=C5=9F=
+ Detayl=C4=B1 Bilgi ve Kullan=C4=B1m Rehberi:</strong><br />
+=09=09=09=09=09=09=09=09=09<a href=3D"https://www.turkiye.gov.tr/2fa-taniti=
+m">https://www.turkiye.gov.tr/2fa-tanitim</a></p>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td><strong>Sayg=C4=B1lar=C4=B1m=C4=B1zla,<br />
+=09=09=09=09=09=09=09=09=09e-Devlet Kap=C4=B1s=C4=B1</strong></td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</div>
+
+=09=09=09<div style=3D"padding-left:15px; padding-right:15px; padding-botto=
+m:5px; padding-top:5px;
+=09max-width:600px;
+=09margin:0 auto;
+=09display:block;"></div>
+
+=09=09=09<div style=3D"max-width:600px;  margin-left:auto; padding-top:10px=
+; border-top:1px solid #DDD;=09margin-right:auto; display:block; ">
+=09=09=09<table bgcolor=3D"" style=3D"width: 100%; ">
+=09=09=09=09<tbody>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td>
+=09=09=09=09=09=09<table bgcolor=3D"" style=3D"width:100%;" width=3D"100%">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td>
+=09=09=09=09=09=09=09=09=09<table border=3D"0" cellpadding=3D"0" cellspacin=
+g=3D"0" style=3D"border-collapse: collapse; border-spacing: 0; padding: 0;"=
+>
+=09=09=09=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"margin: 0=
+; padding: 0;  padding-right: 10px; border-collapse: collapse; border-spaci=
+ng: 0;" valign=3D"middle"><a href=3D"https://www.facebook.com/edevletkapi" =
+style=3D"text-decoration: none;" target=3D"_blank"><img alt=3D"F" border=3D=
+"0" height=3D"30" hspace=3D"0" src=3D"https://cdn.e-devlet.gov.tr/themes/iz=
+mir/images/mailing/facebook.png" style=3D"padding: 0; margin: 0; outline: n=
+one; text-decoration: none; -ms-interpolation-mode: bicubic; border: none; =
+display: inline-block;
+                    color: #000000;" title=3D"Facebook" vspace=3D"0" width=
+=3D"30" /></a></td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"margin: 0=
+; padding: 0;  padding-right: 10px; border-collapse: collapse; border-spaci=
+ng: 0;" valign=3D"middle"><a href=3D"https://twitter.com/ekapi" style=3D"te=
+xt-decoration: none;" target=3D"_blank"><img alt=3D"T" border=3D"0" height=
+=3D"30" hspace=3D"0" src=3D"https://cdn.e-devlet.gov.tr/themes/izmir/images=
+/mailing/twitter.png" style=3D"padding: 0; margin: 0; outline: none; text-d=
+ecoration: none; -ms-interpolation-mode: bicubic; border: none; display: in=
+line-block;
+                    color: #000000;" title=3D"Twitter" vspace=3D"0" width=
+=3D"30" /></a></td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"margin: 0=
+; padding: 0;  padding-right: 10px; border-collapse: collapse; border-spaci=
+ng: 0;" valign=3D"middle"><a href=3D"https://www.youtube.com/channel/UChX28=
+IHPQ2jyaBatdfRqGSQ" style=3D"text-decoration: none;" target=3D"_blank"><img=
+ alt=3D"Y" border=3D"0" height=3D"30" hspace=3D"0" src=3D"https://cdn.e-dev=
+let.gov.tr/themes/izmir/images/mailing/youtube.png" style=3D"padding: 0; ma=
+rgin: 0; outline: none; text-decoration: none; -ms-interpolation-mode: bicu=
+bic; border: none; display: inline-block;
+                    color: #000000;" title=3D"Youtube" vspace=3D"0" width=
+=3D"30" /></a></td>
+=09=09=09=09=09=09=09=09=09=09=09=09<td align=3D"center" style=3D"margin: 0=
+; padding: 0;  padding-right: 10px; border-collapse: collapse; border-spaci=
+ng: 0;" valign=3D"middle"><a href=3D"https://www.instagram.com/edevletkapis=
+i" style=3D"text-decoration: none;" target=3D"_blank"><img alt=3D"I" border=
+=3D"0" height=3D"30" hspace=3D"0" src=3D"https://cdn.e-devlet.gov.tr/themes=
+/izmir/images/mailing/instagram.png" style=3D"padding: 0; margin: 0; outlin=
+e: none; text-decoration: none; -ms-interpolation-mode: bicubic; border: no=
+ne; display: inline-block;
+                    color: #000000;" title=3D"Instagram" vspace=3D"0" width=
+=3D"30" /></a></td>
+=09=09=09=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09=09=09=09</table>
+
+=09=09=09=09=09=09=09=09=09<div style=3D"display: block; clear: both;"></di=
+v>
+=09=09=09=09=09=09=09=09=09</td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09=09<td>
+=09=09=09=09=09=09<table align=3D"center" bgcolor=3D"" cellpadding=3D"" sty=
+le=3D"width: 100%;">
+=09=09=09=09=09=09=09<tbody>
+=09=09=09=09=09=09=09=09<tr>
+=09=09=09=09=09=09=09=09=09<td><a href=3D"https://play.google.com/store/app=
+s/details?id=3Dtr.gov.turkiye.edevlet.kapisi" style=3D"text-decoration: non=
+e;" target=3D"_blank"><img border=3D"0" height=3D"40" hspace=3D"0" src=3D"h=
+ttps://cdn.e-devlet.gov.tr/themes/izmir/images/mailing/playstore.png" style=
+=3D"padding: 0; float:right; margin-left:15px; margin-top:5px; margin-botto=
+m:5px; outline: none; text-decoration: none; -ms-interpolation-mode: bicubi=
+c; border: none; display: inline-block;
+                    color: #000000;" vspace=3D"0" /></a> <a href=3D"https:/=
+/itunes.apple.com/tr/app/e-devlet/id976505454?mt=3D8" style=3D"text-decorat=
+ion: none;" target=3D"_blank"><img border=3D"0" height=3D"40" hspace=3D"0" =
+src=3D"https://cdn.e-devlet.gov.tr/themes/izmir/images/mailing/appstore.png=
+" style=3D"padding: 0; margin-top:5px; margin-bottom:5px;  float:right;  ou=
+tline: none; text-decoration: none; -ms-interpolation-mode: bicubic; border=
+: none; display: inline-block;
+                   " vspace=3D"0" /></a></td>
+=09=09=09=09=09=09=09=09</tr>
+=09=09=09=09=09=09=09</tbody>
+=09=09=09=09=09=09</table>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</div>
+=09=09=09</td>
+=09=09</tr>
+=09</tbody>
+</table>
+
+<table style=3D"width: 100%;=09clear:both!important; background-color:#f5f6=
+f7; border-top:1px solid #DDDDDD">
+=09<tbody>
+=09=09<tr>
+=09=09=09<td style=3D"display:block!important;
+=09max-width:600px!important;
+=09margin:0 auto!important;
+=09clear:both!important;">
+=09=09=09<div style=3D"padding-bottom:15px; padding-left:15px; padding-righ=
+t:15px;
+=09max-width:600px;
+=09margin:0 auto;
+=09display:block;">
+=09=09=09<table style=3D" width: 100%;" width=3D"100%">
+=09=09=09=09<tbody>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td colspan=3D"2">
+=09=09=09=09=09=09<p style=3D"border-top: 1px solid rgb(215,215,215); borde=
+r-bottom: 1px solid rgb(215,215,215);  padding-top:10px;=09 padding-bottom:=
+10px; margin-bottom: 10px;  font-family:'Helvetica Neue', 'Helvetica', 'Ari=
+al', sans-serif;
+=09font-weight: normal; font-size:10px; line-height:1.6; color:#666666;">e-=
+Devlet Kap=C4=B1s=C4=B1 ile ilgili t&uuml;m sorular i&ccedil;in <strong>160=
+</strong>&#39;=C4=B1 arayabilir veya <strong>bilgi@turkiye.gov.tr </strong>=
+adresine e-posta g&ouml;nderebilirsiniz. =C4=B0leti=C5=9Fim adresimiz: T&uu=
+ml;rksat A.=C5=9E., 40 KM. Konya Yolu, PK: 06839, G&ouml;lba=C5=9F=C4=B1 / =
+Ankara&nbsp;</p>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09=09<tr>
+=09=09=09=09=09=09<td style=3D"width:180px;">
+=09=09=09=09=09=09<p style=3D" padding-top:0px;=09margin-bottom: 10px;"><im=
+g border=3D"0" height=3D"24" hspace=3D"0" src=3D"https://cdn.e-devlet.gov.t=
+r/themes/nevsehir/images/DDO-logo.png" style=3D"display:block;" /></p>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09=09<td>
+=09=09=09=09=09=09<p style=3D" padding-top:0px;=09margin-bottom: 10px; font=
+-family:'Helvetica Neue', 'Helvetica', 'Arial', sans-serif;
+=09font-weight: normal; font-size:10px; line-height:1.6; color:#666666;">&c=
+opy;2025&nbsp; e-Devlet Kap=C4=B1s=C4=B1&rsquo;n=C4=B1n kurulmas=C4=B1 ve y=
+&ouml;netilmesi g&ouml;revi&nbsp;<a class=3D"externalLink" href=3D"http://w=
+ww.cbddo.gov.tr/" rel=3D"external" style=3D"color:#4284be; text-decoration:=
+none; "> T.C. Cumhurba=C5=9Fkanl=C4=B1=C4=9F=C4=B1 Dijital D&ouml;n&uuml;=
+=C5=9F&uuml;m Ofisi Ba=C5=9Fkanl=C4=B1=C4=9F=C4=B1</a>&nbsp;taraf=C4=B1ndan=
+ y&uuml;r&uuml;t&uuml;lmekte olup, sistemin geli=C5=9Ftirilmesi ve i=C5=9Fl=
+etilmesi&nbsp;<a class=3D"externalLink" href=3D"http://www.turksat.com.tr/"=
+ rel=3D"external" style=3D"color:#4284be; text-decoration:none; ">T&uuml;rk=
+sat A.=C5=9E.</a>&nbsp;taraf=C4=B1ndan yap=C4=B1lmaktad=C4=B1r.</p>
+=09=09=09=09=09=09</td>
+=09=09=09=09=09</tr>
+=09=09=09=09</tbody>
+=09=09=09</table>
+=09=09=09</div>
+=09=09=09</td>
+=09=09=09<td></td>
+=09=09</tr>
+=09</tbody>
+</table>
+
+------=_Part_8823583_1265990088.1764085848153--

@@ -1,0 +1,189 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1"/>
+  <title>Analiz Sonuçları</title>
+  <link href="/static/styles.css" rel="stylesheet">
+</head>
+<body>
+  <div class="page">
+    <div class="card">
+      <div class="header">
+        <h1>Analiz Sonuçları</h1>
+        <p class="muted">İşlem sonucu aşağıda gösterilir.</p>
+      </div>
+
+      <div id="loading" class="loadingPanel">
+        <div class="spinner" aria-hidden="true"></div>
+        <div>Sonuçlar hazırlanıyor...</div>
+      </div>
+
+      <div id="content" class="hidden">
+        <div class="meta">
+          <div class="metaRow">
+            <div class="metaKey">Seçilen dosya</div>
+            <div class="metaVal" id="fileName">-</div>
+          </div>
+          <div class="metaRow">
+            <div class="metaKey">İşlem süresi</div>
+            <div class="metaVal" id="procTime">-</div>
+          </div>
+          <div class="metaRow">
+            <div class="metaKey">Karar</div>
+            <div class="metaVal" id="finalVerdict">-</div>
+          </div>
+        </div>
+
+        <div class="sectionTitle">Yapısal Analiz (XGBoost)</div>
+        <div class="panel">
+          <div class="panelTop">
+            <div class="badge" id="xgbBadge">-</div>
+          </div>
+          <div class="panelBody">
+            <div class="kv">
+              <div class="k">Tahmin</div>
+              <div class="v" id="xgbText">-</div>
+            </div>
+          </div>
+        </div>
+
+        <div class="sectionTitle">Metin Analizi (SVM)</div>
+        <div class="panel">
+          <div class="panelTop">
+            <div class="badge" id="svmBadge">-</div>
+          </div>
+          <div class="panelBody">
+            <div class="kv">
+              <div class="k">Model Güveni</div>
+              <div class="v" id="svmProbText">%0</div>
+            </div>
+            <div class="probability-bar">
+              <div id="svmBar" class="probability-fill" style="width:0%"></div>
+            </div>
+          </div>
+        </div>
+
+        <a class="backLink" href="/">Ana sayfaya dön</a>
+      </div>
+
+      <p id="err" class="error hidden"></p>
+    </div>
+  </div>
+
+  <script>
+    const loading = document.getElementById("loading");
+    const content = document.getElementById("content");
+    const err = document.getElementById("err");
+
+    const fileNameEl = document.getElementById("fileName");
+    const procTimeEl = document.getElementById("procTime");
+    const finalVerdictEl = document.getElementById("finalVerdict");
+
+    const xgbBadge = document.getElementById("xgbBadge");
+    const xgbText = document.getElementById("xgbText");
+
+    const svmBadge = document.getElementById("svmBadge");
+    const svmProbText = document.getElementById("svmProbText");
+    const svmBar = document.getElementById("svmBar");
+
+    function showError(msg) {
+      err.textContent = msg;
+      err.classList.remove("hidden");
+    }
+
+    function safeText(v) {
+      if (v === null || v === undefined) return "";
+      return String(v);
+    }
+
+    function parseSvm(raw) {
+      // Beklenen format: "HAM (%100)" veya "SPAM (%87)"
+      const s = safeText(raw).trim();
+      const m = s.match(/([A-ZÇĞİÖŞÜ]+)\s*\(%(\d{1,3})\)/);
+      if (!m) return { label: s || "BILINMIYOR", percent: 0 };
+      return { label: m[1], percent: Math.max(0, Math.min(100, parseInt(m[2], 10) || 0)) };
+    }
+
+    function setBadge(badgeEl, label) {
+      badgeEl.textContent = label;
+      badgeEl.classList.remove("ok", "bad", "neutral");
+      if (label === "SPAM" || label === "PHISHING") badgeEl.classList.add("bad");
+      else if (label === "HAM") badgeEl.classList.add("ok");
+      else badgeEl.classList.add("neutral");
+    }
+
+    function render(data) {
+      loading.classList.add("hidden");
+      content.classList.remove("hidden");
+
+      // file fallback: server -> redis -> querystring
+      const params = new URLSearchParams(window.location.search);
+      const qFile = params.get("file") || "";
+      const file = safeText(data.file).trim() || qFile || "-";
+      fileNameEl.textContent = file;
+
+      const pt = (typeof data.process_time === "number")
+        ? data.process_time
+        : (typeof data.time_ms === "number" ? data.time_ms / 1000 : null);
+
+      procTimeEl.textContent = (pt !== null) ? (pt.toFixed(2) + " sn") : "-";
+
+      const finalVerdict = safeText(data.final_verdict).trim() || "-";
+      finalVerdictEl.textContent = finalVerdict;
+
+      const xgbRes = safeText(data.xgb_result).trim() || "BILINMIYOR";
+      setBadge(xgbBadge, xgbRes);
+      xgbText.textContent = xgbRes;
+
+      let svmRaw = safeText(data.svm_result).trim();
+
+      // Eğer whitelist/instant ham’da svm_result eksik gelirse bile 100’e sabitle:
+      if (!svmRaw && safeText(data.reason).toLowerCase().includes("whitelist") && finalVerdict === "HAM") {
+        svmRaw = "HAM (%100)";
+      }
+
+      const { label: svmLabel, percent: svmPercent } = parseSvm(svmRaw);
+      setBadge(svmBadge, svmLabel);
+      svmProbText.textContent = "%" + svmPercent;
+
+      svmBar.classList.remove("bar-ok", "bar-bad", "bar-neutral");
+      if (svmLabel === "SPAM" || svmLabel === "PHISHING") svmBar.classList.add("bar-bad");
+      else if (svmLabel === "HAM") svmBar.classList.add("bar-ok");
+      else svmBar.classList.add("bar-neutral");
+
+      requestAnimationFrame(() => {
+        svmBar.style.width = svmPercent + "%";
+      });
+    }
+
+    window.onload = async function () {
+      const params = new URLSearchParams(window.location.search);
+      const jobId = params.get("id");
+      if (!jobId) {
+        showError("Hata: İşlem kimliği bulunamadı.");
+        loading.classList.add("hidden");
+        return;
+      }
+
+      try {
+        const response = await fetch(`/analyze/${jobId}`);
+        const data = await response.json();
+
+        if (data.status === "NOT_FOUND") {
+          showError("Sonuç bulunamadı.");
+          loading.classList.add("hidden");
+          return;
+        }
+
+        // INSTANT_HAM bile gelse artık Redis’te COMPLETED formatında duracak.
+        render(data);
+
+      } catch (e) {
+        showError("Sunucu hatası: sonuç alınamadı.");
+        loading.classList.add("hidden");
+      }
+    };
+  </script>
+</body>
+</html>
