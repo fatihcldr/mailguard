@@ -19,8 +19,8 @@ from xgboost import XGBClassifier #karar agaclari ile karmasikliklari yakalar ra
 # --- AYARLAR ---
 TESSERACT_PATH = r"C:\Program Files\Tesseract-OCR\tesseract.exe" #tesseractin yolu
 WKHTMLTOIMAGE_PATH = r"C:\Program Files\wkhtmltopdf\bin\wkhtmltoimage.exe" #wkhtmltoimage yolu html2imageden daha hizli ve basarili overheadi azalttim
-CSV_TEXT_PATH = "yeni_egitim_verisi.csv" #svm icin veri setim
-CSV_META_PATH = "xgboost_data_v2.csv"#ayni verilerle fakat farkli iceriklere sahip tree tabanli ml algoritmalari (benim modelimde xgboost) icin verisetim.
+CSV_TEXT_PATH = "sample_data.csv" #svm icin veri seti
+CSV_META_PATH = "xgboost_data_v1.csv"#ayni verilerle fakat farkli iceriklere sahip tree tabanli ml algoritmalari (benim modelimde xgboost) icin verisetim.
 OCR_LANG = 'turfast+engfast'
 
 pytesseract.pytesseract.tesseract_cmd = TESSERACT_PATH

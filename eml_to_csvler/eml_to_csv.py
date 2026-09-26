@@ -6,12 +6,13 @@ from email.parser import BytesParser
 from bs4 import BeautifulSoup
 import re
 
+#kendi ham spam ve phishing maillerinizi klasor yollarinda ki sekilde yapip csv elde edebilirsiniz.
 # 1. Klasör Yolları 
 PATH_HAM = r"dataset/ham" 
 PATH_SPAM = r"dataset/spam"
 PATH_PHISHING = r"dataset/phishing"
 
-OUTPUT_CSV = "yeni_egitim_verisi.csv"
+OUTPUT_CSV = "egitim_verisi.csv"
 
 def clean_html(html_content):
     """HTML etiketlerini temizler ve sadece metni alır."""

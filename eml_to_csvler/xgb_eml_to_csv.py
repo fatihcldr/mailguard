@@ -6,12 +6,12 @@ from email.parser import BytesParser
 from bs4 import BeautifulSoup
 from urllib.parse import urlparse #url parse islemi icin 
 
-
+#kendi ham spam ve phishing maillerinizi klasor yollarinda ki sekilde yapip csv elde edebilirsiniz.
 # EML KLASÖRLERİ
 PATH_HAM = r"dataset/ham"
 PATH_SPAM = r"dataset/spam"
 PATH_PHISHING = r"dataset/phishing"
-OUTPUT_CSV = "xgboost_data_v2.csv"
+OUTPUT_CSV = "xgboost_data_v1.csv"
 
 #  ÖZNİTELİK ÇIKARMA
 
